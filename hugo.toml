@@ -1,0 +1,105 @@
+baseURL = "https://lightbi-hugo-theme.netlify.app/"
+DefaultContentLanguage = "en"
+languageCode = "en-us"
+title = "InsightfulScript"
+theme = "lightbi-hugo"
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+#pygmentsUseClasses = true
+#pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+disqusShortname = "@anothertechs"
+googleAnalytics = "G-WY6TT5EQVC"
+enableRobotsTXT = true
+enableGitInfo = false
+Paginate = 6
+summaryLength  = "30"
+
+[Params]
+selfHosted = true
+mainSections = ["post","posts"]
+dateFormat = "2 January 2023"
+comments = false
+readingTime = true
+wordCount = false
+useHLJS = true
+socialShare = true
+delayDisqus = true
+showRelatedPosts = true
+summaryLength  = "9"
+lunrSearch = true
+gcse = false
+lastmod = false
+rss = false
+pagination = "10"
+hideAuthor = false
+authorInfo = "Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning"
+description= "InsightfulScript: Your gateway to the world of intelligent coding, unraveling the secrets of programming and machine learning with precision and passion."
+previewCardImagePlacement = "bottom"
+
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[Author]
+  Gelegram = "@include_Hatim"
+  name = "Hatim Master"
+  website = "/"
+  email = "sample@gmail.com"
+  instagram = "hatim_master"
+#  youtube = "user/username" # or channel/channelname
+#  threads = "username"
+  linkedin = "hatim-master"
+  github = "Master52"
+  #gitlab = "username"
+  #bitbucket = "username"
+  reddit = "hatim112"
+  #xing = "username"
+  #stackoverflow = "users/XXXXXXX/username"
+  #snapchat = "username"
+  #soundcloud = "username"
+  #spotify = "username"
+  #bandcamp = "username"
+  #itchio = "username"
+  #vk = "username"
+  #paypal = "username"
+  #500px = "username"
+  #codepen = "username"
+  #mastodon = "url"
+  #kaggle = "username"
+  #weibo = "username"
+  #slack = "username"
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+#[[menu.main]]
+#    name = "Notes"
+#    url = "/notes/"
+#    weight = 2
+
+[[menu.main]]
+    name = "Tags"
+    url = "/tags"
+    weight = 3
+
+[[menu.main]]
+    name = "Blogs"
+    url = "/collections/"
+    weight = 4
+
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 5
+
+
+
+
