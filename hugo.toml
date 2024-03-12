@@ -43,7 +43,6 @@ previewCardImagePlacement = "bottom"
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
-  filename = "sitemap.xml"
 
 [Author]
   Gelegram = "@include_Hatim"
