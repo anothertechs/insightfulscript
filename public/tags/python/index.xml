@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on InsightfulScript</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Mon, 19 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scheduling python program using Cron Jobs</title>
+      <link>http://localhost:1313/collections/programming/python/schedule-python-scripts-as-cron-jobs/</link>
+      <pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/schedule-python-scripts-as-cron-jobs/</guid>
+      <description>Scheduling python program using Cron Jobs Whether you are a website owner or just someone who needs to schedule execution of Python scripts, Cron jobs can be very helpful.&#xA;Introduction to Cron Jobs A cron job is a time-based task that is set to run at specific intervals.</description>
+    </item>
+    <item>
+      <title>Reshaping Numpy Arrays- A Comprehensive Guide to Numpy Array Reshape</title>
+      <link>http://localhost:1313/collections/programming/python/numpy/numpy-array-reshape/</link>
+      <pubDate>Wed, 31 Aug 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/numpy/numpy-array-reshape/</guid>
+      <description>Reshaping Numpy Arrays: A Comprehensive Guide to Numpy Array ReshapeNumpy Reshape You might frequently want to reshape an existing array into an array with a different number of dimensions while working with Numpy arrays.</description>
+    </item>
+    <item>
+      <title>Python Array - Everything you need to know about</title>
+      <link>http://localhost:1313/collections/programming/python/python-array/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/python-array/</guid>
+      <description>Python Array This article will teach you how to use Python arrays. You&amp;rsquo;ll learn how to define them as well as the various methods for performing operations on them.&#xA;The article discusses arrays created by importing the array module in python.</description>
+    </item>
+    <item>
+      <title>Python Class Method Decorator- A Comprehensive Guide</title>
+      <link>http://localhost:1313/collections/programming/python/python-class-method-decorator/</link>
+      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/python-class-method-decorator/</guid>
+      <description>Python Class Method Decorator: A Comprehensive Guide Python is a powerful programming language that supports many features that make programming easier and more efficient. One of these features is the class method decorator.</description>
+    </item>
+    <item>
+      <title>Everything you need to know about Python Pandas Data Profiling</title>
+      <link>http://localhost:1313/collections/programming/python/pandas-data-profiling/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/pandas-data-profiling/</guid>
+      <description>What is Pandas Data Profiling ? The Pandas library has a large number of functions. It aids in data manipulation and offers a diverse set of features for practically any activity.</description>
+    </item>
+    <item>
+      <title>Python Data Structure Cheat Sheet- Your Complete Guide</title>
+      <link>http://localhost:1313/collections/programming/python/python-data-structure-cheat-sheet-2021/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/python-data-structure-cheat-sheet-2021/</guid>
+      <description>Python Data Structure Cheat Sheet: Your Complete Guide Python is a popular programming language that is widely used in various fields such as data science, machine learning, web development, and more.</description>
+    </item>
+    <item>
+      <title>Downloading YouTube videos using Python</title>
+      <link>http://localhost:1313/collections/programming/python/downloading-youtube-video-using-python/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/downloading-youtube-video-using-python/</guid>
+      <description>Tutorial- Downloading YouTube videos using Python Requirements Python (Obvious) pytube Installing pip install pytube Downloading Youtube video After installing pytube, return to the text editor, open the Python file and import pytube:</description>
+    </item>
+  </channel>
+</rss>

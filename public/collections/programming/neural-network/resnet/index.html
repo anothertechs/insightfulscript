@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>ResNet -  Understanding the Revolutionary Neural Network Architecture for Deep Learning - InsightfulScript</title>
+<meta name="description" content="Explore the latest advancements in neural network technology with ResNet, a revolutionary deep learning architecture. Understand how it works, its benefits, and potential applications.">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/neural-network\/resnet\/",
+          "name": "Res net understanding the revolutionary neural network architecture for deep learning"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim"
+  },
+  "headline": "ResNet -  Understanding the Revolutionary Neural Network Architecture for Deep Learning",
+  "description" : "Explore the latest advancements in neural network technology with ResNet, a revolutionary deep learning architecture. Understand how it works, its benefits, and potential applications.",
+  "inLanguage" : "en",
+  "wordCount":  1487 ,
+  "datePublished" : "2021-09-02T00:00:00",
+  "dateModified" : "2021-09-02T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, Neural Network" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/neural-network\/resnet\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="ResNet -  Understanding the Revolutionary Neural Network Architecture for Deep Learning" />
+<meta name="twitter:title" content="ResNet -  Understanding the Revolutionary Neural Network Architecture for Deep Learning">
+<meta property="og:description" content="Explore the latest advancements in neural network technology with ResNet, a revolutionary deep learning architecture. Understand how it works, its benefits, and potential applications.">
+<meta name="twitter:card" content="Explore the latest advancements in neural network technology with ResNet, a revolutionary deep learning architecture. Understand how it works, its benefits, and potential applications.">
+<meta name="twitter:description" content="Explore the latest advancements in neural network technology with ResNet, a revolutionary deep learning architecture. Understand how it works, its benefits, and potential applications.">
+<meta property="og:image" content="http://localhost:1313/images/resnet-arch.jpg" />
+<meta name="twitter:image" content="http://localhost:1313/images/resnet-arch.jpg">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/neural-network/resnet/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/neural-network/resnet/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="resnet,python,Convolutional,neural,network,pytorch">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                ResNet -  Understanding the Revolutionary Neural Network Architecture for Deep Learning
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/images/resnet-arch.jpg" alt="/images/resnet-arch.jpg" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="resnet-understanding-the-revolutionary-neural-network-architecture-for-deep-learning">ResNet: Understanding the Revolutionary Neural Network Architecture for Deep Learning</h1>
+<p>ResNet (Residual Network) is a powerful convolutional neural network architecture that has revolutionized the field of deep learning. It was introduced in a research paper by Microsoft Research Asia in 2015 and has since become one of the most popular deep learning models due to its high accuracy and efficiency.</p>
+<p>ResNet addresses the problem of vanishing gradients that often occur in very deep neural networks. When a neural network has many layers, the gradients can become very small, which makes it difficult for the network to learn. ResNet solves this problem by introducing shortcut connections, also known as skip connections, that allow the network to skip over certain layers and directly propagate the input to deeper layers. This helps to preserve the gradient and make it easier for the network to learn.</p>
+<h2 id="deep-convolutional-neural-network">Deep Convolutional Neural Network</h2>
+<p>In our <a href="https://anothertechs.com/programming/neural-network/cn/">last article</a> we have seen how a simple Convolutional neural network works.A <strong>Deep Convolution Neural Network</strong> are the network which consists of many hidden layer for examples <em>AlexNet</em> which consist of 8 layer where first 5 were convlutional layer and last 3 were full connected layer or <em>VGGNet</em> which consists of 16 Convolutional layer.</p>
+<p>The problem with these deep neural network were as you increase the layer we start seeing degradation problem. Or to put it in another word as we increase depth of the network the accuracy gets saturated and starts degrading rapidly. In a deep neural network as we perform back-propogation, repeated mulitplication for finding optimal solution makes gradient very small which result in degradation. This problem is often called vanishing gradient/exploding gradient.</p>
+<h2 id="resnetor-residual-network">ResNet(or Residual Network)</h2>
+<p>ResNet solve this degradation problem, is by skipping connection or layer. Skipping connection means, consider input x and this input is passed through stack of neural network layers and produce f(x) and this f(x) is then added to original input x.So our ouput will be:</p>
+<p>H(x) = f(x) + x</p>
+<p><img src="./resnet.webp" alt="resnet image skip"></p>
+<p>So, instead of mapping direct function of x -&gt; y with a function f(x), here we define a residual function using f(x) = H(x) - x. Which can be reframed to H(x) = f(x) + x, where f(x) represent stack of non-linear layers and x represent identity function. From this if the identity mapping is optimal we can easily put f(x) = 0 simply by putting value of weight to 0. So the f(x) is what authors call residual function.</p>
+<p>This mapping ensure that higher layer will perfrom at least as good as lower layer, and not worse.</p>
+<p>The ResNet architecture consists of several blocks, each of which contains multiple convolutional layers, batch normalization layers, and ReLU activation functions. The shortcut connections are added between these blocks, allowing the network to learn more complex features and improve its accuracy.</p>
+<p>One of the major benefits of ResNet is its ability to train very deep neural networks with high accuracy. It has been used in a variety of applications, including image classification, object detection, and segmentation. In fact, ResNet is the backbone architecture for many state-of-the-art computer vision models, such as Faster R-CNN and Mask R-CNN.</p>
+<h2 id="implimenting-resnet">Implimenting ResNet</h2>
+<p>Now let&rsquo;s impliment ResNet model. Here I will be using ResNet18 model which consists of 18 layers. The dataset I will be using is <em>dog-vs-cat</em> which i have downloaded form kaggle websites. Our model will classify images of dogs and cats.</p>
+<h3 id="architecture">Architecture</h3>
+<p><img src="./resnet-arch.webp" alt="ResNet Architecture"></p>
+<p>In the above diagram first we take input image which consists 3 channel(RGB) passed it to Convolutional layer of <em>kernel_size</em> = 3 and get 64 channel ouput.
+The Convolutional block between the curved arrow represent a <em>Residual Block</em> which will consists of:
+Convolutional layer -&gt; Batch Normalization -&gt; ReLU activation -&gt; Convolutional layer.</p>
+<p>Ouput of these rediual block is than added to the initial input(i.e x) of residual block.After adding the ouput is than passed to ReLU activation function for next layer.</p>
+<p>The dotted arrow represent that the output dimenssion of residual has changed so we also have to change the dimenssion of the input which is passed to that rediual block(i.e x) for adding it because adding is only possbile if the dimenssion are same.</p>
+<p>The last layer of this architecture is a <em>Linear Layer</em> which will take the input and gives us ouput i.e wheater it is dog or cat.</p>
+<h3 id="code">Code</h3>
+<p>Let&rsquo;s first our import necessay libraries:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold">from</span> <span style="color:#555">PIL</span> <span style="font-weight:bold">import</span> Image
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> <span style="color:#555">torch.optim</span> <span style="font-weight:bold">as</span> <span style="color:#555">optim</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">from</span> <span style="color:#555">tqdm</span> <span style="font-weight:bold">import</span> tqdm
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">from</span> <span style="color:#555">torchvision</span> <span style="font-weight:bold">import</span> transforms
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> <span style="color:#555">torch.nn.functional</span> <span style="font-weight:bold">as</span> <span style="color:#555">F</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> <span style="color:#555">torch.nn</span> <span style="font-weight:bold">as</span> <span style="color:#555">nn</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> <span style="color:#555">torchvision.datasets</span> <span style="font-weight:bold">as</span> <span style="color:#555">dt</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> <span style="color:#555">torch</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> <span style="color:#555">os</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>device <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>device(<span style="color:#b84">&#34;cuda:0&#34;</span> <span style="font-weight:bold">if</span> torch<span style="font-weight:bold">.</span>cuda<span style="font-weight:bold">.</span>is_available() <span style="font-weight:bold">else</span> <span style="color:#b84">&#34;cpu&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PREPROCESS <span style="font-weight:bold">=</span> transforms<span style="font-weight:bold">.</span>Compose([transforms<span style="font-weight:bold">.</span>Resize(<span style="color:#099">256</span>),
+</span></span><span style="display:flex;"><span>                        transforms<span style="font-weight:bold">.</span>CenterCrop(<span style="color:#099">224</span>),
+</span></span><span style="display:flex;"><span>                        transforms<span style="font-weight:bold">.</span>ToTensor(),
+</span></span><span style="display:flex;"><span>                        transforms<span style="font-weight:bold">.</span>Normalize(mean <span style="font-weight:bold">=</span> [<span style="color:#099">0.485</span>,<span style="color:#099">0.456</span>,<span style="color:#099">0.406</span>],std <span style="font-weight:bold">=</span> [<span style="color:#099">0.229</span>,<span style="color:#099">0.224</span>,<span style="color:#099">0.225</span>])])
+</span></span></code></pre></div><p>PyTorch provides very good class <code>transforms</code> which are use for modifying and transfoming image.<code>transforms.Compose</code> is use to combine or chained different transformation of image. This is used to build transformation pipeline.</p>
+<p>Now let&rsquo;s get out dataset:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold">def</span> <span style="color:#900;font-weight:bold">get_dataset</span>(train <span style="font-weight:bold">=</span> <span style="font-weight:bold">True</span>):
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span> train:
+</span></span><span style="display:flex;"><span>        trainset <span style="font-weight:bold">=</span> dt<span style="font-weight:bold">.</span>ImageFolder(root <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;./train/&#34;</span>,transform <span style="font-weight:bold">=</span> PREPROCESS)
+</span></span><span style="display:flex;"><span>        train_loader <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>utils<span style="font-weight:bold">.</span>data<span style="font-weight:bold">.</span>DataLoader(trainset,batch_size <span style="font-weight:bold">=</span> <span style="color:#099">8</span>,shuffle<span style="font-weight:bold">=</span><span style="font-weight:bold">True</span>)
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> train_loader
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>        testset <span style="font-weight:bold">=</span> dt<span style="font-weight:bold">.</span>ImageFolder(root <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;./test/&#34;</span>,transform <span style="font-weight:bold">=</span> PREPROCESS)
+</span></span><span style="display:flex;"><span>        test_loader <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>utils<span style="font-weight:bold">.</span>data<span style="font-weight:bold">.</span>DataLoader(trainset,batch_size <span style="font-weight:bold">=</span> <span style="color:#099">8</span>,shuffle<span style="font-weight:bold">=</span><span style="font-weight:bold">True</span>)
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> test_loader
+</span></span></code></pre></div><p>Next let&rsquo;s write our <em>Residual Block</em>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold">class</span> <span style="color:#458;font-weight:bold">ResidualBlock</span>(nn<span style="font-weight:bold">.</span>Module):
+</span></span><span style="display:flex;"><span>    expansion <span style="font-weight:bold">=</span> <span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">def</span> __init__(self, inchannel, outchannel, stride<span style="font-weight:bold">=</span><span style="color:#099">1</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#999">super</span>(ResidualBlock, self)<span style="font-weight:bold">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>conv1 <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Sequential(
+</span></span><span style="display:flex;"><span>                        nn<span style="font-weight:bold">.</span>Conv2d(inchannel, outchannel, kernel_size<span style="font-weight:bold">=</span><span style="color:#099">3</span>, stride<span style="font-weight:bold">=</span>stride, padding<span style="font-weight:bold">=</span><span style="color:#099">1</span>, bias<span style="font-weight:bold">=</span><span style="font-weight:bold">False</span>),
+</span></span><span style="display:flex;"><span>                        nn<span style="font-weight:bold">.</span>BatchNorm2d(outchannel),
+</span></span><span style="display:flex;"><span>                        )
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>conv2  <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Sequential(
+</span></span><span style="display:flex;"><span>                        nn<span style="font-weight:bold">.</span>Conv2d(outchannel, outchannel, kernel_size<span style="font-weight:bold">=</span><span style="color:#099">3</span>, stride<span style="font-weight:bold">=</span><span style="color:#099">1</span>, padding<span style="font-weight:bold">=</span><span style="color:#099">1</span>, bias<span style="font-weight:bold">=</span><span style="font-weight:bold">False</span>),
+</span></span><span style="display:flex;"><span>                        nn<span style="font-weight:bold">.</span>BatchNorm2d(outchannel)
+</span></span><span style="display:flex;"><span>                    )
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>skip <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Sequential()
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">if</span> stride <span style="font-weight:bold">!=</span> <span style="color:#099">1</span> <span style="font-weight:bold">or</span> inchannel <span style="font-weight:bold">!=</span> self<span style="font-weight:bold">.</span>expansion <span style="font-weight:bold">*</span> outchannel:
+</span></span><span style="display:flex;"><span>            self<span style="font-weight:bold">.</span>skip <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Sequential(
+</span></span><span style="display:flex;"><span>                nn<span style="font-weight:bold">.</span>Conv2d(inchannel, self<span style="font-weight:bold">.</span>expansion <span style="font-weight:bold">*</span> outchannel, kernel_size<span style="font-weight:bold">=</span><span style="color:#099">1</span>, stride<span style="font-weight:bold">=</span>stride, bias<span style="font-weight:bold">=</span><span style="font-weight:bold">False</span>),
+</span></span><span style="display:flex;"><span>                nn<span style="font-weight:bold">.</span>BatchNorm2d(self<span style="font-weight:bold">.</span>expansion <span style="font-weight:bold">*</span> outchannel)
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">def</span> <span style="color:#900;font-weight:bold">forward</span>(self, X):
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> F<span style="font-weight:bold">.</span>relu(self<span style="font-weight:bold">.</span>conv1(X))
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>conv2(out)
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">+=</span> self<span style="font-weight:bold">.</span>skip(X)
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> F<span style="font-weight:bold">.</span>relu(out)
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> out
+</span></span></code></pre></div><p>In the <a href="https://anothertechs.com/programming/neural-network/cnn/">last</a> article I have explain why we use <code>nn.Module</code> in our class so, I am going to skip that part.
+We have created two Convolutional layer <code>self.conv1</code> and <code>self.conv2</code> just like in diagram.
+The <code>self.skip</code> is our shortcut layer which will be added to the output of <code>self.conv2</code>.
+The &ldquo;if&rdquo; part in <code>__init__()</code> method checks weather the dimenssion of <code>self.conv2</code> will change or not. If it changes than we have to change the ouput dimenssion of input by passing it to <code>nn.Conv2d</code> layer.
+In <code>forward()</code> method it is straight forward that how our data will flow.</p>
+<p>Now let&rsquo;s write our Model class or ResNet class:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Model</span>(nn<span style="font-weight:bold">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">def</span> __init__(self, ResidualBlock, num_classes):
+</span></span><span style="display:flex;"><span>        <span style="color:#999">super</span>(Model, self)<span style="font-weight:bold">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>inchannel <span style="font-weight:bold">=</span> <span style="color:#099">64</span>
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>conv1 <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Sequential(
+</span></span><span style="display:flex;"><span>            nn<span style="font-weight:bold">.</span>Conv2d(<span style="color:#099">3</span>, <span style="color:#099">64</span>, kernel_size<span style="font-weight:bold">=</span><span style="color:#099">3</span>, stride<span style="font-weight:bold">=</span><span style="color:#099">1</span>, padding<span style="font-weight:bold">=</span><span style="color:#099">1</span>, bias<span style="font-weight:bold">=</span><span style="font-weight:bold">False</span>),
+</span></span><span style="display:flex;"><span>            nn<span style="font-weight:bold">.</span>BatchNorm2d(<span style="color:#099">64</span>),
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>layer1 <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>make_layer(ResidualBlock, <span style="color:#099">64</span>,  <span style="color:#099">2</span>, stride<span style="font-weight:bold">=</span><span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>layer2 <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>make_layer(ResidualBlock, <span style="color:#099">128</span>, <span style="color:#099">2</span>, stride<span style="font-weight:bold">=</span><span style="color:#099">2</span>)
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>layer3 <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>make_layer(ResidualBlock, <span style="color:#099">256</span>, <span style="color:#099">2</span>, stride<span style="font-weight:bold">=</span><span style="color:#099">2</span>)
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>layer4 <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>make_layer(ResidualBlock, <span style="color:#099">512</span>, <span style="color:#099">2</span>, stride<span style="font-weight:bold">=</span><span style="color:#099">2</span>)
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>fc <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Linear(<span style="color:#099">512</span><span style="font-weight:bold">*</span>ResidualBlock<span style="font-weight:bold">.</span>expansion, num_classes)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">def</span> <span style="color:#900;font-weight:bold">make_layer</span>(self, block, channels, num_blocks, stride):
+</span></span><span style="display:flex;"><span>        strides <span style="font-weight:bold">=</span> [stride] <span style="font-weight:bold">+</span> [<span style="color:#099">1</span>] <span style="font-weight:bold">*</span> (num_blocks <span style="font-weight:bold">-</span> <span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>        layers <span style="font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">for</span> stride <span style="font-weight:bold">in</span> strides:
+</span></span><span style="display:flex;"><span>            layers<span style="font-weight:bold">.</span>append(block(self<span style="font-weight:bold">.</span>inchannel, channels, stride))
+</span></span><span style="display:flex;"><span>            self<span style="font-weight:bold">.</span>inchannel <span style="font-weight:bold">=</span> channels <span style="font-weight:bold">*</span> block<span style="font-weight:bold">.</span>expansion
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> nn<span style="font-weight:bold">.</span>Sequential(<span style="font-weight:bold">*</span>layers)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">def</span> <span style="color:#900;font-weight:bold">forward</span>(self, x):
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> F<span style="font-weight:bold">.</span>relu(self<span style="font-weight:bold">.</span>conv1(x))
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>layer1(out)
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>layer2(out)
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>layer3(out)
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>layer4(out)
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> F<span style="font-weight:bold">.</span>avg_pool2d(out, out<span style="font-weight:bold">.</span>size()[<span style="color:#099">3</span>])
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>flatten(out,<span style="color:#099">1</span> )
+</span></span><span style="display:flex;"><span>        out <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>fc(out)
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> out
+</span></span></code></pre></div><p>In <code>__init__()</code> method <code>self.conv1</code> is the layer where we will take our input image of channel 3 (RGB) and will produce 64 output channel.Then we create 4 layer using <code>make_layer</code> method and each layer consists of 2 <code>ResidualBlock</code>.
+And the last layer(<code>self.fc</code>) is our <code>Linear</code> layer which will give us ouput weather it is <em>dog or cat</em>.</p>
+<p>In <code>forward</code> method before passing it to <code>self.fc</code> layer we firt <code>flatten</code> or reshape our matrics to 1D.</p>
+<p>Now let&rsquo;s define our loss function and optimizer:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold">if</span> __name__ <span style="font-weight:bold">==</span> <span style="color:#b84">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    resnet <span style="font-weight:bold">=</span> Model(ResidualBlock,num_classes <span style="font-weight:bold">=</span> <span style="color:#099">2</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span> torch<span style="font-weight:bold">.</span>cuda<span style="font-weight:bold">.</span>is_available():
+</span></span><span style="display:flex;"><span>        resnet<span style="font-weight:bold">.</span>cuda()
+</span></span><span style="display:flex;"><span>    <span style="color:#999">print</span>(resnet)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    criterion <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>CrossEntropyLoss()
+</span></span><span style="display:flex;"><span>    optimizer <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>optim<span style="font-weight:bold">.</span>SGD(resnet<span style="font-weight:bold">.</span>parameters(),lr <span style="font-weight:bold">=</span> <span style="color:#099">0.01</span>)
+</span></span></code></pre></div><p>I have used here <code>CrossEntropyLoss() and </code>SGD``` optimizer.</p>
+<h3 id="trainning">Trainning</h3>
+<p>Let&rsquo;s train our model:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    train <span style="font-weight:bold">=</span> get_dataset(train <span style="font-weight:bold">=</span> <span style="font-weight:bold">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">for</span> epoch <span style="font-weight:bold">in</span> tqdm(<span style="color:#999">range</span>(<span style="color:#099">10</span>)):
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">for</span> i,(images,target) <span style="font-weight:bold">in</span> <span style="color:#999">enumerate</span>(train):
+</span></span><span style="display:flex;"><span>            images <span style="font-weight:bold">=</span> images<span style="font-weight:bold">.</span>to(device)
+</span></span><span style="display:flex;"><span>            target <span style="font-weight:bold">=</span> target<span style="font-weight:bold">.</span>to(device)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            out <span style="font-weight:bold">=</span> resnet(images)
+</span></span><span style="display:flex;"><span>            loss <span style="font-weight:bold">=</span> criterion(out,target)
+</span></span><span style="display:flex;"><span>            <span style="color:#999">print</span>(loss)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#998;font-style:italic"># Back-propogation</span>
+</span></span><span style="display:flex;"><span>            optimizer<span style="font-weight:bold">.</span>zero_grad()
+</span></span><span style="display:flex;"><span>            loss<span style="font-weight:bold">.</span>backward()
+</span></span><span style="display:flex;"><span>            optimizer<span style="font-weight:bold">.</span>step()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            _,pred <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>max(out<span style="font-weight:bold">.</span>data,<span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>            correct <span style="font-weight:bold">=</span> (pred <span style="font-weight:bold">==</span> target)<span style="font-weight:bold">.</span>sum()<span style="font-weight:bold">.</span>item()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">if</span> i <span style="font-weight:bold">%</span> <span style="color:#099">100</span> <span style="font-weight:bold">==</span> <span style="color:#099">0</span>:
+</span></span><span style="display:flex;"><span>                torch<span style="font-weight:bold">.</span>save(resnet<span style="font-weight:bold">.</span>state_dict(),<span style="color:#b84">&#34;model&#34;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#999">print</span>(<span style="color:#b84">f</span><span style="color:#b84">&#34; epoch: </span><span style="color:#b84">{</span>epoch<span style="color:#b84">}</span><span style="color:#b84">\t</span><span style="color:#b84">loss: </span><span style="color:#b84">{</span>loss<span style="font-weight:bold">.</span>data<span style="color:#b84">}</span><span style="color:#b84">\t</span><span style="color:#b84">Accuracy: </span><span style="color:#b84">{</span>(correct<span style="font-weight:bold">/</span>target<span style="font-weight:bold">.</span>size(<span style="color:#099">0</span>)) <span style="font-weight:bold">*</span> <span style="color:#099">100</span><span style="color:#b84">}</span><span style="color:#b84">%&#34;</span>)
+</span></span></code></pre></div><p>I have used 10 epochs to train the model. <code>optimizer.zero_grad()</code> method is used to make gradient to 0. Next we call <code>backword()</code> on our loss variable to perfrom back-propogation. After the gradient has been calculated we optimize our model by using <code>optimizer.step()</code> method.</p>
+<h3 id="testing">Testing</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    test <span style="font-weight:bold">=</span> get_data(train <span style="font-weight:bold">=</span> <span style="font-weight:bold">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">with</span> torch<span style="font-weight:bold">.</span>no_grad():
+</span></span><span style="display:flex;"><span>        correct <span style="font-weight:bold">=</span> <span style="color:#099">0</span>
+</span></span><span style="display:flex;"><span>        total <span style="font-weight:bold">=</span> <span style="color:#099">0</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">for</span> i,(images,target) <span style="font-weight:bold">in</span> tqdm(<span style="color:#999">enumerate</span>(test)):
+</span></span><span style="display:flex;"><span>            images <span style="font-weight:bold">=</span> images<span style="font-weight:bold">.</span>to(device)
+</span></span><span style="display:flex;"><span>            target <span style="font-weight:bold">=</span> target<span style="font-weight:bold">.</span>to(device)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            out <span style="font-weight:bold">=</span> resnet(images)
+</span></span><span style="display:flex;"><span>            _,pred <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>max(out<span style="font-weight:bold">.</span>data,<span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>            total <span style="font-weight:bold">+=</span> target<span style="font-weight:bold">.</span>size(<span style="color:#099">0</span>)
+</span></span><span style="display:flex;"><span>            correct <span style="font-weight:bold">+=</span> (pred <span style="font-weight:bold">==</span> target)<span style="font-weight:bold">.</span>sum()<span style="font-weight:bold">.</span>item()
+</span></span><span style="display:flex;"><span>        <span style="color:#999">print</span>(<span style="color:#b84">f</span><span style="color:#b84">&#34;Accuracy: </span><span style="color:#b84">{</span>(correct<span style="font-weight:bold">/</span>total) <span style="font-weight:bold">*</span> <span style="color:#099">100</span><span style="color:#b84">}</span><span style="color:#b84">&#34;</span>)
+</span></span></code></pre></div><p>Since we don&rsquo;t need to calculate weight during back-propogation while testing our model we use <code>torch.no_grad</code> method. Rest part is same as training.</p>
+<p>After 10 epochs I got accuracy of 93.23%.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, ResNet is a powerful deep learning architecture that has become an essential tool for computer vision applications. By understanding its working, benefits, and potential applications, you can leverage ResNet to improve the accuracy and efficiency of your neural network models.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Residual_neural_network">ResNet</a></li>
+<li><a href="https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035">Overview of Resnet</a></li>
+<li><a href="https://pytorch.org/hub/pytorch_vision_resnet/">PyTorch Docs</a></li>
+<li><a href="https://amzn.to/3qe3BwT">Deep Learning</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2021/06/build-resnet-from-scratch-with-python/">ResNet Architecture</a></li>
+</ul>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/neural-network/">Neural Network</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fneural-network%2fresnet%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fneural-network%2fresnet%2f&amp;text=ResNet%20-%20%20Understanding%20the%20Revolutionary%20Neural%20Network%20Architecture%20for%20Deep%20Learning&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fneural-network%2fresnet%2f&amp;title=ResNet%20-%20%20Understanding%20the%20Revolutionary%20Neural%20Network%20Architecture%20for%20Deep%20Learning"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share ResNet -  Understanding the Revolutionary Neural Network Architecture for Deep Learning on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fneural-network%2fresnet%2f&title=ResNet%20-%20%20Understanding%20the%20Revolutionary%20Neural%20Network%20Architecture%20for%20Deep%20Learning">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fneural-network%2fresnet%2f&amp;description=ResNet%20-%20%20Understanding%20the%20Revolutionary%20Neural%20Network%20Architecture%20for%20Deep%20Learning" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/javascript/javascript-regex-cheat-sheat-2021/"
+            data-toggle="tooltip" data-placement="top" title="Javascript Regex cheatsheet 2021">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/crypto/three-mountain-top/"
+            data-toggle="tooltip" data-placement="top" title="The Three Mountain Top Candlestick Pattern(Buddha Top)">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

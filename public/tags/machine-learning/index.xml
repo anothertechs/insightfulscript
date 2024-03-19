@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on InsightfulScript</title>
+    <link>http://localhost:1313/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Fri, 11 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MLOps - Beginners Guid to MLOps,What It Is, and How to Implement It</title>
+      <link>http://localhost:1313/collections/programming/machine-learning/mlops/what-is-mlops/</link>
+      <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/machine-learning/mlops/what-is-mlops/</guid>
+      <description>MLOps: A Beginners Guid to MLOps We were all studying about the software development lifecycle (SDLC) until recently, and how it goes from requirement elicitation to designing, programming, testing, deployment, and maintenance.</description>
+    </item>
+    <item>
+      <title>Kaggle Data Science Projects for Beginners</title>
+      <link>http://localhost:1313/collections/programming/machine-learning/kaggle-data-science-projects/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/machine-learning/kaggle-data-science-projects/</guid>
+      <description>Kaggle Data Science Projects for Beginners Introduction Kaggle has established itself as one of the most essential stepping stones for students and professionals interested in Data Science these days.&#xA;Kaggle features a wealth of online resources to aid in the learning of Data Science.</description>
+    </item>
+    <item>
+      <title>Best Machine Learning Projects For Beginners with Source Code [2021]</title>
+      <link>http://localhost:1313/collections/programming/machine-learning/machine-learning-projects/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/machine-learning/machine-learning-projects/</guid>
+      <description>Best Machine Learning Projects As Artificial Intelligence (AI) continues to advance at a breakneck pace in 2021, mastering Machine Learning (ML) will become increasingly vital for all players in the field.</description>
+    </item>
+    <item>
+      <title>What is Machine Learning ?</title>
+      <link>http://localhost:1313/collections/programming/machine-learning/what-is-machine-learning/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/machine-learning/what-is-machine-learning/</guid>
+      <description>What is Machine Learning ? According to Wikipedia:&#xA;Machine learning is a scientific study of algorithm and statistical model of computer system.&#xA;That is machine learning is used to perform certain tasks without using any human interaction.</description>
+    </item>
+    <item>
+      <title>Understanding Stochastic Gradient Descent Descent (SGD) with python</title>
+      <link>http://localhost:1313/collections/programming/machine-learning/sgd/</link>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/machine-learning/sgd/</guid>
+      <description>Stochastic Gradient Descent (SGD) with Python Stochastic gradient descent or SGD is very popular and powerful algorithm used in machine learning. Stochastic Gradient Descent (SGD) is an iterative algorithm which is used to compare various solution till the optimum solution is not found.</description>
+    </item>
+  </channel>
+</rss>

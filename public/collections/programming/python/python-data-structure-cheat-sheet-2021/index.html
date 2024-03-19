@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Python Data Structure Cheat Sheet- Your Complete Guide - InsightfulScript</title>
+<meta name="description" content="Simplify your understanding of Python data structures with our comprehensive cheat sheet for 2021. Perfect for beginners and experienced programmers alike, this guide covers everything you need to know about Python data structures, including lists, tuples, sets, and more">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/python\/python-data-structure-cheat-sheet-2021\/",
+          "name": "Python data structure cheat sheet your complete guide"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim"
+  },
+  "headline": "Python Data Structure Cheat Sheet- Your Complete Guide",
+  "description" : "Simplify your understanding of Python data structures with our comprehensive cheat sheet for 2021. Perfect for beginners and experienced programmers alike, this guide covers everything you need to know about Python data structures, including lists, tuples, sets, and more",
+  "inLanguage" : "en",
+  "wordCount":  2582 ,
+  "datePublished" : "2021-07-23T00:00:00",
+  "dateModified" : "2021-07-23T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, python" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/python\/python-data-structure-cheat-sheet-2021\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Python Data Structure Cheat Sheet- Your Complete Guide" />
+<meta name="twitter:title" content="Python Data Structure Cheat Sheet- Your Complete Guide">
+<meta property="og:description" content="Simplify your understanding of Python data structures with our comprehensive cheat sheet for 2021. Perfect for beginners and experienced programmers alike, this guide covers everything you need to know about Python data structures, including lists, tuples, sets, and more">
+<meta name="twitter:card" content="Simplify your understanding of Python data structures with our comprehensive cheat sheet for 2021. Perfect for beginners and experienced programmers alike, this guide covers everything you need to know about Python data structures, including lists, tuples, sets, and more">
+<meta name="twitter:description" content="Simplify your understanding of Python data structures with our comprehensive cheat sheet for 2021. Perfect for beginners and experienced programmers alike, this guide covers everything you need to know about Python data structures, including lists, tuples, sets, and more">
+<meta property="og:image" content="http://localhost:1313/images/python-data-structure.jpg" />
+<meta name="twitter:image" content="http://localhost:1313/images/python-data-structure.jpg">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/python/python-data-structure-cheat-sheet-2021/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/python/python-data-structure-cheat-sheet-2021/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="python,data,structure,cheat,sheet,data,list,tuples,sets,data,structure,python">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                Python Data Structure Cheat Sheet- Your Complete Guide
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/images/python-data-structure.jpg" alt="/images/python-data-structure.jpg" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="python-data-structure-cheat-sheet-your-complete-guide">Python Data Structure Cheat Sheet: Your Complete Guide</h1>
+<p>Python is a popular programming language that is widely used in various fields such as data science, machine learning, web development, and more. Understanding data structures is essential for any programmer, as it helps in organizing and storing data efficiently. In this article, we will provide you with a Python data structure cheat sheet that you can use as a quick reference guide when working with data in Python.</p>
+<h2 id="what-is-data-structure">What is Data Structure?</h2>
+<p>The most important thing is organizing, managing, and storing data to allow for easy access and efficient alterations.
+Moreover, Data Structures allow us to organize data so that we can store collections of data, relate them, and conduct actions on them as needed.</p>
+<p>So, using Data Structures, we can structure our data in a way that allows it to be retrieved rapidly.
+However, one Data Structure is insufficient to accommodate all use case scenarios.
+As a result, we have a variety of data structures that can be utilized for various purposes.</p>
+<h2 id="need-of-data-structure">Need Of Data Structure</h2>
+<p>Consider the following scenario: you wish to look for a specific document in a file explorer that contains hundreds of documents.
+One method is to go through each document one by one in a sequential fashion, however this is a time-consuming process.</p>
+<p>Another option is to go directly to the location where it is kept or where the linked papers are located.</p>
+<p>Yes, your operating system (OS) performs this through the use of indexing and hashtables, which are a type of data structure.
+Even if there are many files, this decreases the amount of time required to search.
+This is why Data Structures are essential.</p>
+<p>Now that we know what are data structure let&rsquo;s dive into built-in data structure in python</p>
+<h2 id="types-of-data-structure-in-python">Types of Data Structure in Python</h2>
+<p><img src="./type-of-python-ds.webp" alt="Type of Data Structure"></p>
+<p>Python provides implicit support for Data Structures, which allow you to store and access data.
+The data structures involved in this are as follows:</p>
+<p><strong>List, Tuple, Dictionary, and Set are all types of data structures</strong>.</p>
+<p>Not only that, but Python also allows users to construct their Data Structures, giving them complete control over their functioning.
+The most well-known Data Structures are</p>
+<p><strong>Stack, Queue, Tree, Linked List, Graph, Hash Map, and so on</strong>.</p>
+<p>All of the data structures listed above are also accessible in other programming languages such as C, Rust, Javascript,C++, etc.
+We have limited our discussion in this post to Python&rsquo;s Built-In Data Structures.</p>
+<h2 id="built-in-data-structure-in-python">Built-in Data Structure in Python</h2>
+<p>As the name implies, the Data Structures in this category are built into Python, making programming more accessible and allowing programmers and data scientists to achieve faster solutions.
+Python has the following built-in data structures:</p>
+<ul>
+<li><strong>List</strong></li>
+<li><strong>Dictionaries</strong></li>
+<li><strong>Sets</strong></li>
+<li><strong>Tuples</strong></li>
+</ul>
+<h3 id="list">List</h3>
+<p><a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">Lists</a> are the most basic data structures, and they are used to store data of various types in a sequential order.
+The Interpreter allocated addresses to each element of the list called an Index during list creation.
+The index value in the list begins at 0 and continues until the last entry; this index is known as the positive index.
+We also have negative indexing in Lists, which starts at -1 and allows us to access entries from the last to the first.
+Following are the code snippet to grasp lists and their features better.</p>
+<p><strong>Pros</strong>:</p>
+<ol>
+<li>
+<p>Versatility: Python lists can store a variety of data types such as strings, integers, and even other lists.</p>
+</li>
+<li>
+<p>Mutable: Lists in Python are mutable, meaning you can modify them after creation. This makes it easy to add or remove elements from a list.</p>
+</li>
+<li>
+<p>Easy to access: Elements in a list are indexed, making it easy to access individual elements within the list.</p>
+</li>
+<li>
+<p>Many built-in methods: Python provides many built-in methods for working with lists, such as sorting, reversing, and slicing.</p>
+</li>
+<li>
+<p>Memory efficient: Lists in Python are implemented using dynamic arrays, which means they can be resized as needed. This makes them more memory efficient compared to other data structures like arrays.</p>
+</li>
+</ol>
+<p><strong>Cons</strong>:</p>
+<ol>
+<li>
+<p>Slow for large data: When dealing with very large amounts of data, Python lists can be slower than other data structures like NumPy arrays or sets.</p>
+</li>
+<li>
+<p>Not suitable for certain operations: Certain operations like searching for an element in a list can be inefficient, especially for large lists. In these cases, other data structures like dictionaries or sets may be more suitable.</p>
+</li>
+<li>
+<p>Time complexity for some operations: Some operations on a Python list, like inserting or deleting elements from the middle of the list, can have a time complexity of O(n). This means that for very large lists, these operations can be slow.</p>
+</li>
+<li>
+<p>Not ideal for ordered data: While Python lists are indexed and maintain order, they are not optimized for searching and sorting, and can be slower than other data structures like arrays or linked lists.</p>
+</li>
+</ol>
+<h4 id="creating-list">Creating List</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> [] <span style="color:#998;font-style:italic"># Empty list</span>
+</span></span><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> [<span style="color:#b84">&#34;Another Techs&#34;</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>] <span style="color:#998;font-style:italic"># creating list</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span></code></pre></div><h4 id="accessing-element-in-list">Accessing element in list</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> [<span style="color:#b84">&#34;Another Techs&#34;</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Access all elements</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Access element at certain location say 2nd index</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo[<span style="color:#099">2</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Access element from 1-3</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo[<span style="color:#099">1</span>:<span style="color:#099">3</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Access element in reverse order</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo[::<span style="font-weight:bold">-</span><span style="color:#099">1</span>])
+</span></span></code></pre></div><h4 id="adding-element">Adding Element</h4>
+<p>To add elements to the list, we can utilize the <code>append()</code> ,<code>insert</code> and <code>extend()</code> functions.</p>
+<ol>
+<li>
+<p>The <code>append()</code> function joins all of the components provided to it as a single element.</p>
+</li>
+<li>
+<p><code>insert()</code> method is use to add element at particular index.</p>
+</li>
+<li>
+<p>The <code>extend()</code> function adds the elements to the list one at a time.</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> [<span style="color:#b84">&#34;Another Techs&#34;</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Adding elment in list</span>
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>append(<span style="color:#099">72.3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Adding another list</span>
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>append([<span style="color:#b84">&#34;python&#34;</span>,<span style="color:#b84">&#34;Cpp&#34;</span>,<span style="color:#099">11</span>])
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Adding another list element one by one in</span>
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>extend([<span style="color:#b84">&#34;Data Science&#34;</span>,<span style="color:#b84">&#34;AI&#34;</span>,<span style="color:#b84">&#34;python3&#34;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Add element at particular index</span>
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>insert(<span style="color:#099">2</span>,<span style="color:#b84">&#34;Javascript&#34;</span>)
+</span></span></code></pre></div><h4 id="deleting-element">Deleting Element</h4>
+<p><code>del</code> keyword is used to delete element at specific index:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> [<span style="color:#b84">&#34;Another Techs&#34;</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">del</span> foo[<span style="color:#099">4</span>]
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span></code></pre></div><h4 id="remove-specific-element-from-the-list">Remove specific element from the list</h4>
+<p>To remove specific element by it&rsquo;s value from the list we use <code>remove()</code> method:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> [<span style="color:#b84">&#34;Another Techs&#34;</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>,<span style="color:#b84">&#39;cpp&#39;</span>]
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>remove(<span style="color:#b84">&#39;cpp&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span></code></pre></div><h4 id="remove-all-the-element-from-the-list">Remove all the element from the list</h4>
+<p><code>clear()</code> method is use to remove all the elements from the list:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> [<span style="color:#b84">&#34;Another Techs&#34;</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>clear()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo) <span style="color:#998;font-style:italic">#empty list</span>
+</span></span></code></pre></div><h4 id="sort-list">Sort List</h4>
+<p>The <code>sort()</code> function is used to sort the list.
+However, while sorting a list, you must ensure that the data types of all the components are the same because we cannot compare two distinct data types, however, you can use a combination of float and int data types:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> [<span style="color:#099">111</span>,<span style="color:#099">1</span>,<span style="color:#099">43</span>,<span style="color:#099">23</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>]
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>sort()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span></code></pre></div><h3 id="tuples">Tuples</h3>
+<p><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">Tuples</a> are similar to lists, except that once data is inserted into a tuple, it cannot be modified in any way, i.e. it is immutable.
+The lone exception is when the data inside the tuple is mutable (e.g., a list), in which case we can update the tuple data.
+Let us now use the following examples to grasp tuples and their functionalities better.</p>
+<p><strong>Pros:</strong></p>
+<ol>
+<li>
+<p>Immutable: Tuples are immutable, meaning once they are created, you cannot modify them. This makes tuples more reliable and safe than lists, as they cannot be accidentally modified.</p>
+</li>
+<li>
+<p>Faster than lists: Since tuples are immutable, they are generally faster than lists for certain operations like indexing and iteration.</p>
+</li>
+<li>
+<p>Suitable for certain data types: Tuples are suitable for storing data that should not be modified, such as constant values, coordinates, or dates.</p>
+</li>
+<li>
+<p>Memory efficient: Tuples are more memory efficient than lists, as they don&rsquo;t need to be resized or modified after creation.</p>
+</li>
+<li>
+<p>Can be used as dictionary keys: Since tuples are immutable, they can be used as keys in dictionaries, while lists cannot.</p>
+</li>
+</ol>
+<p><strong>Cons:</strong></p>
+<ol>
+<li>
+<p>Limited functionality: Tuples have limited functionality compared to lists, as they cannot be modified after creation. This makes certain operations like adding or removing elements impossible.</p>
+</li>
+<li>
+<p>Less versatile: Tuples can only store elements of the same data type, unlike lists which can store a variety of data types.</p>
+</li>
+<li>
+<p>Not ideal for large datasets: Tuples are not ideal for storing large datasets, as they cannot be modified or resized. This means that if you need to add or remove elements from a tuple, you will need to create a new tuple, which can be inefficient for large datasets.</p>
+</li>
+<li>
+<p>Less readable: Tuples can be less readable than lists, especially when the tuple contains many elements.</p>
+</li>
+</ol>
+<h4 id="creating-tuples">Creating Tuples</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> () <span style="color:#998;font-style:italic"># Empty tuple</span>
+</span></span><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> (<span style="color:#b84">&#34;Another Techs&#34;</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>) <span style="color:#998;font-style:italic"># creating tuple</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(<span style="color:#999">type</span>(foo))
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span></code></pre></div><h4 id="accessing-element-in-tuple">Accessing element in tuple</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> (<span style="color:#b84">&#34;Another Techs&#34;</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Access all elements</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Access element at certain location say 2nd index</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo[<span style="color:#099">2</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Access element from 1-3</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo[<span style="color:#099">1</span>:<span style="color:#099">3</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Access element in reverse order</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo[::<span style="font-weight:bold">-</span><span style="color:#099">1</span>])
+</span></span></code></pre></div><h4 id="return-the-index-of-element-in-tuple">Return the index of element in Tuple</h4>
+<p>To discover the index of a particular element in a tuple, we can use the <code>index()</code> function, which accepts the element&rsquo;s value as an input and returns the index.
+If we pass an element that does not exist in the tuple to the <code>index()</code> function, we get a <code>ValueError</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> (<span style="color:#b84">&#34;Another Techs&#34;</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo<span style="font-weight:bold">.</span>index(<span style="color:#099">53</span>))
+</span></span></code></pre></div><h4 id="adding-new-elements-to-the-tuple">Adding new elements to the Tuple</h4>
+<p>We can use the ‘+&rsquo; operator to append the values in an existing tuple by passing it another tuple to be appended to:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> (<span style="color:#b84">&#34;Another Techs&#34;</span>,<span style="color:#099">52</span>,<span style="color:#099">53</span>,<span style="color:#099">786</span>,<span style="color:#099">110</span>)
+</span></span><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> foo <span style="font-weight:bold">+</span> (<span style="color:#b84">&#34;Python&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Adding more than one element</span>
+</span></span><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> foo <span style="font-weight:bold">+</span> (<span style="color:#b84">&#34;Cpp&#34;</span>,<span style="color:#b84">&#34;AI&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span></code></pre></div><h3 id="dictionaries">Dictionaries</h3>
+<p><strong>Data is stored in the form of key-value pairs in <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">dictionaries</a>.</strong></p>
+<p>Imagine a phone directory with hundreds of thousands of names of different people and their accompanying phone numbers to comprehend dictionary data structure.
+Here are the constant values (such as Name) and Phone Numbers, which we referred to as the keys.</p>
+<p>Furthermore, the numerous names and phone numbers are the keys&rsquo; values.
+If we want to get the values of the keys, we will need all of the names and phone numbers.</p>
+<p>So a key-value pair is precisely that.
+Moreover, Dictionaries are used to hold this structure in Python.</p>
+<p><strong>Pros:</strong></p>
+<ol>
+<li>
+<p>Fast lookup: Dictionaries provide fast lookup times for accessing data, as data is accessed using keys rather than index positions.</p>
+</li>
+<li>
+<p>Easy to update: Dictionaries are mutable, meaning you can add, modify, or delete key-value pairs as needed.</p>
+</li>
+<li>
+<p>Versatile data types: Dictionaries can store a variety of data types as keys and values, such as strings, integers, lists, or even other dictionaries.</p>
+</li>
+<li>
+<p>No duplicate keys: Dictionaries do not allow duplicate keys, ensuring that each key is unique and allowing for easy retrieval of values.</p>
+</li>
+<li>
+<p>Built-in methods: Python provides many built-in methods for working with dictionaries, such as sorting, merging, or iterating over key-value pairs.</p>
+</li>
+</ol>
+<p><strong>Cons:</strong></p>
+<ol>
+<li>
+<p>Not ordered: Dictionaries are not ordered, meaning that key-value pairs are not stored in any particular order. If you need to maintain order, you will need to use other data structures like lists.</p>
+</li>
+<li>
+<p>Time complexity for some operations: Some operations on a Python dictionary, such as searching for a key, can have a time complexity of O(n). This means that for very large dictionaries, these operations can be slow.</p>
+</li>
+<li>
+<p>Memory usage: Dictionaries can use a significant amount of memory, especially if they contain a large number of key-value pairs.</p>
+</li>
+<li>
+<p>Not suitable for certain operations: Dictionaries are not suitable for certain types of operations, such as iterating over values in a specific order, or performing mathematical operations on values.</p>
+</li>
+</ol>
+<h4 id="creating-a-dictionary">Creating a Dictionary</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {} <span style="color:#998;font-style:italic"># Empty dict</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#099">11</span>:<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#099">12</span>:<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#099">13</span>:<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span></code></pre></div><h4 id="returning-the-value-of-particular-key-in-python-dictinory">Returning the value of particular key in python dictinory</h4>
+<p>We can only use the keys to access the components of a dictionary. We can use the get() function or just give the key values to retrieve the information.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#099">11</span>:<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#099">12</span>:<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#099">13</span>:<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo<span style="font-weight:bold">.</span>get(<span style="color:#099">12</span>)) <span style="color:#998;font-style:italic"># Output: Python</span>
+</span></span></code></pre></div><h4 id="changing-or-adding-key-value-pairs">Changing or Adding Key Value Pairs</h4>
+<p>The <strong>keys</strong> can be used to change the values of the dictionary. As a result, we must first access the key and then alter the value. We just add another key-value pair to add values.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#099">11</span>:<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#099">12</span>:<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#099">13</span>:<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Changing Value</span>
+</span></span><span style="display:flex;"><span>foo[<span style="color:#099">12</span>] <span style="font-weight:bold">=</span> <span style="color:#b84">&#39;Cpp&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Adding Key Value Pair</span>
+</span></span><span style="display:flex;"><span>foo[<span style="color:#099">14</span>] <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;Python&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span></code></pre></div><h4 id="returning-sets-of-the-elements-in-a-dictionary">Returning sets of the elements in a dictionary</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#099">11</span>:<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#099">12</span>:<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#099">13</span>:<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo<span style="font-weight:bold">.</span>items())
+</span></span></code></pre></div><h4 id="getting-all-the-keys-present-in-dictionary">Getting All the keys present in dictionary</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#099">11</span>:<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#099">12</span>:<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#099">13</span>:<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo<span style="font-weight:bold">.</span>keys())
+</span></span></code></pre></div><h4 id="getting-all-the-values-of-keys-present-in-dictionary">Getting All the values of keys present in dictionary</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#099">11</span>:<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#099">12</span>:<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#099">13</span>:<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo<span style="font-weight:bold">.</span>values())
+</span></span></code></pre></div><h4 id="deleting-key-value-pair">Deleting Key-Value Pair</h4>
+<p><strong>Delete Values</strong>: We can use the <code>pop()</code> function to delete values, which returns the deleted value.</p>
+<p><strong>Deleting a Key-Value Pair</strong>: To recover the key-value pair, use the <code>popitem()</code> method, which provides a key and value tuple.</p>
+<p><strong>Clearing the Entire Dictionary</strong>: The <code>clear()</code> function can be used to clean the entire dictionary.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#099">11</span>:<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#099">12</span>:<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#099">13</span>:<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Pop the specified element</span>
+</span></span><span style="display:flex;"><span>bar <span style="font-weight:bold">=</span> foo<span style="font-weight:bold">.</span>pop(<span style="color:#b84">&#39;12&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(<span style="color:#b84">&#39;Value:&#39;</span>, bar)
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(<span style="color:#b84">&#39;Dictionary:&#39;</span>, foo)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Pop the complete key-value pair</span>
+</span></span><span style="display:flex;"><span>bar <span style="font-weight:bold">=</span> foo<span style="font-weight:bold">.</span>popitem()
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(<span style="color:#b84">&#39;Key, value pair:&#39;</span>, bar)
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(<span style="color:#b84">&#39;Dictionary&#39;</span>, foo)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Make the dictionary Empty</span>
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>clear()
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(<span style="color:#b84">&#39;Empty Dictionary&#39;</span>, foo)
+</span></span></code></pre></div><h3 id="sets">Sets</h3>
+<p>A <a href="https://docs.python.org/3/tutorial/datastructures.html#sets">set</a> is a data type consisting of a collection of unordered elements and is a mutable (changeable) collection of unique components, i.e. there are no duplicate copies of elements.
+Unlike arrays, which are type-specific, elements in sets can be of any data type.
+Because the values of a set are unindexed, indexing operations cannot be performed on them.</p>
+<p><strong>Pros:</strong></p>
+<ol>
+<li>
+<p>Unique elements: Sets only store unique elements, meaning there are no duplicates. This makes them ideal for removing duplicates from lists or other collections.</p>
+</li>
+<li>
+<p>Fast operations: Sets provide fast operations for checking membership, intersection, union, and difference between sets. This is because sets are implemented using hash tables.</p>
+</li>
+<li>
+<p>Math operations: Sets can be used to perform math operations like union, intersection, and difference between sets. This can be useful in many applications, such as data analysis or graph theory.</p>
+</li>
+<li>
+<p>Flexible data types: Sets can store a variety of data types, including numbers, strings, and tuples.</p>
+</li>
+<li>
+<p>Mutable: Sets are mutable, meaning you can add or remove elements as needed.</p>
+</li>
+</ol>
+<p><strong>Cons:</strong></p>
+<ol>
+<li>
+<p>Unordered: Like dictionaries, sets are unordered. This means that elements are not stored in any particular order, and you cannot access elements using an index.</p>
+</li>
+<li>
+<p>Cannot store mutable data types: Sets cannot store mutable data types like lists or other sets. This is because the hash value of a mutable object can change, making it difficult to implement the hash table.</p>
+</li>
+<li>
+<p>Memory usage: Like dictionaries, sets can use a significant amount of memory, especially if they contain a large number of elements.</p>
+</li>
+<li>
+<p>Type casting: Type casting can be slow, especially when converting from lists to sets or vice versa.</p>
+</li>
+</ol>
+<h4 id="creating-sets">Creating Sets</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(<span style="color:#999">type</span>(foo))
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span></code></pre></div><h4 id="accessing-element-of-sets">Accessing Element of sets</h4>
+<p><strong>Note</strong>:<em>We cannot access the set elements using the index numbers because, as previously stated, set elements are not indexed.
+As a result, if we wish to access the items of a set, we can use a for loop to do so.</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">for</span> elem <span style="font-weight:bold">in</span> foo:
+</span></span><span style="display:flex;"><span>    <span style="color:#999">print</span>(elem)
+</span></span></code></pre></div><h4 id="adding-element-1">Adding Element</h4>
+<p>Using one of the two functions, we may add the new elements to a set.</p>
+<ul>
+<li>
+<p>The <code>add()</code> function is used to add a single element.</p>
+</li>
+<li>
+<p>To adding multiple element use the <code>update()</code> function.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Adding Elements</span>
+</span></span><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>add(<span style="color:#b84">&#39;Javascript&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Adding more than one element</span>
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>update(<span style="color:#b84">&#39;Cpp&#39;</span>,<span style="color:#b84">&#34;AI&#34;</span>,<span style="color:#b84">&#34;pandas&#34;</span>,<span style="color:#b84">&#34;numpy&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#999">print</span>(foo)
+</span></span></code></pre></div><h4 id="remove-element-from-a-set">Remove element from a set:</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>re<span style="color:#a61717;background-color:#e3d2d2">­</span>mov<span style="color:#a61717;background-color:#e3d2d2">­</span>e(<span style="color:#b84">&#34;Python­&#34;</span>) <span style="color:#998;font-style:italic"># If &#34;Python&#34; is not present, raises a KeyErorr</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># using Discard method</span>
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>di<span style="color:#a61717;background-color:#e3d2d2">­</span>sca<span style="color:#a61717;background-color:#e3d2d2">­</span>rd(<span style="color:#a61717;background-color:#e3d2d2">­</span><span style="color:#b84">&#34;­Python&#34;</span>) <span style="color:#998;font-style:italic"># Removes the element, if present</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#Remove every element from the set</span>
+</span></span><span style="display:flex;"><span>foo<span style="font-weight:bold">.</span>cl<span style="color:#a61717;background-color:#e3d2d2">­</span>ear()
+</span></span></code></pre></div><h4 id="operation-on-sets">Operation on sets</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>foo <span style="font-weight:bold">=</span> {<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span>bar <span style="font-weight:bold">=</span> {<span style="color:#b84">&#39;Another Techs&#39;</span>,<span style="color:#b84">&#39;Python&#39;</span>,<span style="color:#b84">&#39;cpp&#39;</span>,<span style="color:#b84">&#39;javascript&#39;</span>,<span style="color:#b84">&#39;Data Science&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">## Union of sets</span>
+</span></span><span style="display:flex;"><span>foo <span style="font-weight:bold">|</span> mySet2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Inters­ection of two sets</span>
+</span></span><span style="display:flex;"><span>foo <span style="font-weight:bold">&amp;</span> bar
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Difference of two sets</span>
+</span></span><span style="display:flex;"><span>foo <span style="font-weight:bold">-</span> bar
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Symmetric difference of two sets</span>
+</span></span><span style="display:flex;"><span>foo <span style="font-weight:bold">^</span> bar
+</span></span></code></pre></div><h2 id="references">References</h2>
+<ul>
+<li><a href="https://docs.python.org/3/tutorial/datastructures.html">https://docs.python.org/3/tutorial/datastructures.html</a></li>
+<li><a href="https://www.tutorialspoint.com/python/python_data_structure.html">https://www.tutorialspoint.com/python/python_data_structure.html</a></li>
+<li><a href="https://whataftercollege.com/python-programming/built-in-data-structures-in-python/">https://whataftercollege.com/python-programming/built-in-data-structures-in-python/</a></li>
+<li><a href="https://www.slideshare.net/EdurekaIN/what-are-data-structures-in-python-list-dictionary-tuple-explained-edureka">https://www.slideshare.net/EdurekaIN/what-are-data-structures-in-python-list-dictionary-tuple-explained-edureka</a></li>
+</ul>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/python/">python</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fpython%2fpython-data-structure-cheat-sheet-2021%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fpython%2fpython-data-structure-cheat-sheet-2021%2f&amp;text=Python%20Data%20Structure%20Cheat%20Sheet-%20Your%20Complete%20Guide&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fpython%2fpython-data-structure-cheat-sheet-2021%2f&amp;title=Python%20Data%20Structure%20Cheat%20Sheet-%20Your%20Complete%20Guide"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share Python Data Structure Cheat Sheet- Your Complete Guide on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fpython%2fpython-data-structure-cheat-sheet-2021%2f&title=Python%20Data%20Structure%20Cheat%20Sheet-%20Your%20Complete%20Guide">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fpython%2fpython-data-structure-cheat-sheet-2021%2f&amp;description=Python%20Data%20Structure%20Cheat%20Sheet-%20Your%20Complete%20Guide" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/cpp/parallel-programming-stl/"
+            data-toggle="tooltip" data-placement="top" title="Parallel Programming with C&#43;&#43;">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/cpp/opencv-corner-harris-cpp/"
+            data-toggle="tooltip" data-placement="top" title="Opencv - Harris Corner Detector using C&#43;&#43;">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

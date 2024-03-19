@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>A Beginner&#39;s Guide to React API Calls- Learn How to Make GET Requests with React - InsightfulScript</title>
+<meta name="description" content="Learn how to make API calls in React using fetch, axios and other HTTP request methods. Our comprehensive guide will help you master the art of making API calls in React, from basic to advanced techniques.">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/react\/react-api-call\/",
+          "name": "A beginner\u0027s guide to react API calls learn how to make get requests with react"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim"
+  },
+  "headline": "A Beginner\u0027s Guide to React API Calls- Learn How to Make GET Requests with React",
+  "description" : "Learn how to make API calls in React using fetch, axios and other HTTP request methods. Our comprehensive guide will help you master the art of making API calls in React, from basic to advanced techniques.",
+  "inLanguage" : "en",
+  "wordCount":  1341 ,
+  "datePublished" : "2022-07-23T00:00:00",
+  "dateModified" : "2022-07-23T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, react" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/react\/react-api-call\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="A Beginner&#39;s Guide to React API Calls- Learn How to Make GET Requests with React" />
+<meta name="twitter:title" content="A Beginner&#39;s Guide to React API Calls- Learn How to Make GET Requests with React">
+<meta property="og:description" content="Learn how to make API calls in React using fetch, axios and other HTTP request methods. Our comprehensive guide will help you master the art of making API calls in React, from basic to advanced techniques.">
+<meta name="twitter:card" content="Learn how to make API calls in React using fetch, axios and other HTTP request methods. Our comprehensive guide will help you master the art of making API calls in React, from basic to advanced techniques.">
+<meta name="twitter:description" content="Learn how to make API calls in React using fetch, axios and other HTTP request methods. Our comprehensive guide will help you master the art of making API calls in React, from basic to advanced techniques.">
+<meta property="og:image" content="http://localhost:1313/images/daduk_visa.jpg" />
+<meta name="twitter:image" content="http://localhost:1313/images/daduk_visa.jpg">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/react/react-api-call/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/react/react-api-call/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                A Beginner&#39;s Guide to React API Calls- Learn How to Make GET Requests with React
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/images/daduk_visa.jpg" alt="/images/daduk_visa.jpg" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="a-beginners-guide-to-react-api-calls-learn-how-to-make-get-requests-with-react">A Beginner&rsquo;s Guide to React API Calls: Learn How to Make GET Requests with React</h1>
+<p>If you&rsquo;re a developer working with React, you know how challenging it can be to keep up with all the APIs available. React APIs provide developers with all the tools they need to create user interfaces, and there are countless options to choose from.</p>
+<p>To help you get started, we&rsquo;ve put together this comprehensive React API cheat sheet. In this article, we&rsquo;ll cover the most important APIs in React.We&rsquo;ll also explain how to use them and provide some examples.</p>
+<h2 id="react-apis">React APIs</h2>
+<p><strong>API</strong> or <strong>Application Programming Interface</strong> is a way a programmer talk between two piece software. An API is used by the programmer to make the software simpler and easy. It also facilitates the programmer with an efficient and organise way to build their software.</p>
+<p>In React API, are mostly used in getting data from the server. Here the data can be of any type text,image,video or xml or json file which a programmer uses in different way to build a web app.</p>
+<p>The most frequent action in any modern online application is calling APIs. The majority of the time, collecting data from an API call, managing success or error cases, and other repeated tasks are required while communicating with an API.</p>
+<p>We constantly have to perform those time-consuming processes when making tens of hundreds of API calls. In contrast to certain small apps, where we occasionally don&rsquo;t even care, we can handle those situations effectively by adding a higher degree of abstraction over those basic API calls.</p>
+<p><em>The issue arises when we start layering additional features on top of the already-existing ones without properly and repeatedly managing API calls. In that instance, we end up having a lot of repeating code throughout the entire application for all of those API call-related repetitions.</em></p>
+<p>Consuming <a href="https://www.ibm.com/topics/rest-apis">REST APIs</a> in a React Application can be done in various ways.The most prefered ways now a days is using <strong><a href="https://www.w3schools.com/react/react_hooks.asp">React Hooks</a></strong>. In this tutorial we will discuss various ways to call an API using react.</p>
+<h3 id="1-react-api-call-using-fetch-api">1. React API call using Fetch API</h3>
+<p>This is the most common way to call an API. <strong>Fetch API</strong> is built into most the browser and it enable use to make HTTP GET request easily.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { useEffect } from <span style="color:#b84">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> App() {
+</span></span><span style="display:flex;"><span>  useEffect(() =&gt; {
+</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic">//Calling API
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    fetch(<span style="color:#b84">&#34;https://jsonplaceholder.typicode.com/posts&#34;</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#998;font-style:italic">//Getting API response and converting it into json format
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>      .then((data) =&gt; data.json())
+</span></span><span style="display:flex;"><span>      .then((data) =&gt;  console.log(data) )
+</span></span><span style="display:flex;"><span>      .<span style="font-weight:bold">catch</span>((errro) =&gt; console.log(<span style="color:#b84">&#34;Error&#34;</span>));
+</span></span><span style="display:flex;"><span>  }, []);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>	....
+</span></span><span style="display:flex;"><span>	)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In the above code the <strong>fetch</strong> return a promise. We are making asynchronous request to the particular url. When the server reponse this response is passed to callback function using <strong>then(callback)</strong>. By chaining this <strong>then</strong> method we can transform the data as per we need. The return data of the <strong>then(callback)</strong> is passed as an argument to next <strong>then</strong> method. If anything goes wrong in the chainning process we catch that error using <strong>catch(callback)</strong></p>
+<h3 id="2-react-api-call-using-asyncawait">2. React API call using Async/Await</h3>
+<p>Another way of working with promise is to use <strong>async/await</strong></p>
+<p>Before a function, the <strong>async</strong> keyword has two effects:</p>
+<ul>
+<li>Make a promise that is always kept.</li>
+<li>permits the usage of await in it.</li>
+</ul>
+<p>JavaScript waits until a promise settles when the <strong>await</strong> keyword is used before:</p>
+<ul>
+<li>If there is a problem, an exception is raised.</li>
+<li>If not, it returns the outcome.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { useEffect } from <span style="color:#b84">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> App() {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">async</span> <span style="font-weight:bold">function</span> fetchData(url) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">const</span> response <span style="font-weight:bold">=</span> <span style="font-weight:bold">await</span> fetch(url);
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">const</span> response_json <span style="font-weight:bold">=</span> <span style="font-weight:bold">await</span> response.json();
+</span></span><span style="display:flex;"><span>      console.log(response_json);
+</span></span><span style="display:flex;"><span>    } <span style="font-weight:bold">catch</span> (error) {
+</span></span><span style="display:flex;"><span>      console.error(error);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  useEffect(() =&gt; {
+</span></span><span style="display:flex;"><span>    fetchData(<span style="color:#b84">&#34;https://jsonplaceholder.typicode.com/posts&#34;</span>);
+</span></span><span style="display:flex;"><span>  }, []);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>	....
+</span></span><span style="display:flex;"><span>	)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="3-react-api-call-using-axios">3. React API call using Axios</h3>
+<p>Your front-end application and Node.js backend can both use <a href="https://axios-http.com/">Axios</a>, a Promise-based HTTP client for JavaScript.
+Sending asynchronous HTTP queries to REST endpoints and carrying out CRUD processes are simple when using Axios.</p>
+<p>In this case, you must first use npm or yarn to install Axios before adding it as an import to your parent component.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>npm install axios
+</span></span></code></pre></div><p>An example of utilising Axios is shown in the code snippets below:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { useEffect } from <span style="color:#b84">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> App() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	useEffect(() =&gt; {
+</span></span><span style="display:flex;"><span>		axios
+</span></span><span style="display:flex;"><span>			.get(<span style="color:#b84">&#34;https://jsonplaceholder.typicode.com/posts&#34;</span>)
+</span></span><span style="display:flex;"><span>			.then((res) =&gt; res.data)
+</span></span><span style="display:flex;"><span>			.then((res) =&gt; {
+</span></span><span style="display:flex;"><span>				console.log(res);
+</span></span><span style="display:flex;"><span>				setData(res);
+</span></span><span style="display:flex;"><span>				setLoading(<span style="font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>			})
+</span></span><span style="display:flex;"><span>			.<span style="font-weight:bold">catch</span>((error) =&gt; console.log(error));
+</span></span><span style="display:flex;"><span>	}, []);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>	....
+</span></span><span style="display:flex;"><span>	)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="4-waterfall-requests">4. Waterfall Requests</h3>
+<p>Once you start writting react app there will be time were you will need to call different api request one after other That is if one api request is successful call next api and then next. This request which happen one at a time and one after another is called <strong>Waterfall Requests</strong>.</p>
+<h4 id="using-fetch">Using fetch()</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> App() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  useEffect(() =&gt; {
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//	Fetch Here Multiple Requests
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    <span style="color:#999">Promise</span>.all([
+</span></span><span style="display:flex;"><span>      fetch(<span style="color:#b84">&#34;https://jsonplaceholder.typicode.com/posts&#34;</span>).then((res) =&gt;
+</span></span><span style="display:flex;"><span>        res.json()
+</span></span><span style="display:flex;"><span>      ),
+</span></span><span style="display:flex;"><span>      fetch(<span style="color:#b84">&#34;https://jsonplaceholder.typicode.com/users&#34;</span>).then((res) =&gt;
+</span></span><span style="display:flex;"><span>        res.json()
+</span></span><span style="display:flex;"><span>      ),
+</span></span><span style="display:flex;"><span>    ])
+</span></span><span style="display:flex;"><span>      .then(([res1, res2]) =&gt; {
+</span></span><span style="display:flex;"><span>			<span style="color:#998;font-style:italic">//response of each request in an array
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>        console.log(res1);
+</span></span><span style="display:flex;"><span>        console.log(res2);
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>      .<span style="font-weight:bold">catch</span>((error) =&gt; console.log(error));
+</span></span><span style="display:flex;"><span>  }, []);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>	....
+</span></span><span style="display:flex;"><span>	)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="using-awaitasync">Using Await/Async</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> App() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">async</span> <span style="font-weight:bold">function</span> fetchData() {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">const</span> [res1, res2] <span style="font-weight:bold">=</span> <span style="font-weight:bold">await</span> <span style="color:#999">Promise</span>.all([
+</span></span><span style="display:flex;"><span>        fetch(<span style="color:#b84">&#34;https://jsonplaceholder.typicode.com/posts&#34;</span>).then((res) =&gt;
+</span></span><span style="display:flex;"><span>          res.json()
+</span></span><span style="display:flex;"><span>        ),
+</span></span><span style="display:flex;"><span>        fetch(<span style="color:#b84">&#34;https://jsonplaceholder.typicode.com/users&#34;</span>).then((res) =&gt;
+</span></span><span style="display:flex;"><span>          res.json()
+</span></span><span style="display:flex;"><span>        ),
+</span></span><span style="display:flex;"><span>      ]);
+</span></span><span style="display:flex;"><span>      console.log(res1);
+</span></span><span style="display:flex;"><span>      console.log(res2);
+</span></span><span style="display:flex;"><span>    } <span style="font-weight:bold">catch</span> (error) {
+</span></span><span style="display:flex;"><span>      console.error(error);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  useEffect(() =&gt; {
+</span></span><span style="display:flex;"><span>    fetchData();
+</span></span><span style="display:flex;"><span>  }, []);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>	....
+</span></span><span style="display:flex;"><span>	)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="5-creating-custom-hook-for-fetching-api-call-in-react">5. Creating Custom Hook for fetching API call in React</h3>
+<p>We have seen that API call are either successful,pending or failed. We can use this logic to create a our own custom hook for fetching api call or request in our react application. We will call this hook <code>useFetch</code> and use this hook to in different component in our react application.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// fetch.js
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="font-weight:bold">import</span> React, { useState, useEffect } from <span style="color:#b84">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">const</span> useFetch <span style="font-weight:bold">=</span> (url) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [data, setData] <span style="font-weight:bold">=</span> useState();
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [error, setError] <span style="font-weight:bold">=</span> useState();
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [loading, setLoading] <span style="font-weight:bold">=</span> useState(<span style="font-weight:bold">true</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  useEffect(() =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span> (<span style="font-weight:bold">!</span>url) <span style="font-weight:bold">return</span>;
+</span></span><span style="display:flex;"><span>    fetch(url)
+</span></span><span style="display:flex;"><span>      .then((data) =&gt; data.json())
+</span></span><span style="display:flex;"><span>      .then((data) =&gt; {
+</span></span><span style="display:flex;"><span>        setData(data);
+</span></span><span style="display:flex;"><span>        console.log(data);
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>      .then(() =&gt; setLoading(<span style="font-weight:bold">false</span>))
+</span></span><span style="display:flex;"><span>      .<span style="font-weight:bold">catch</span>(setError);
+</span></span><span style="display:flex;"><span>  }, [url]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> {
+</span></span><span style="display:flex;"><span>    loading,
+</span></span><span style="display:flex;"><span>    data,
+</span></span><span style="display:flex;"><span>    error,
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>As you can see we have created custom hook which will fetch our data based on the <code>url</code> passed to it. Based on this it will return three things:</p>
+<ol>
+<li><code>loading</code>: if the request its getting fetched this will be true or false.</li>
+<li><code>data</code>: if the request is successful this variable will hold our data.</li>
+<li><code>error</code>: if any error occured during api call this vairbale will hold error.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// App.js
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> React from <span style="color:#b84">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { useFetch } from <span style="color:#b84">&#34;./fetchHook&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> App() {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> { loading, data, error } <span style="font-weight:bold">=</span> useFetch(
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#34;https://jsonplaceholder.typicode.com/posts&#34;</span>
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">if</span> (loading) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> &lt;<span style="color:#000080">h1</span>&gt;Loading&lt;/<span style="color:#000080">h1</span>&gt;;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">if</span> (error) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> &lt;<span style="color:#000080">pre</span>&gt;{JSON.stringify(error, <span style="font-weight:bold">null</span>, <span style="color:#099">2</span>)}&lt;/<span style="color:#000080">pre</span>&gt;;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> &lt;<span style="color:#000080">div</span>&gt;{data}&lt;/<span style="color:#000080">div</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">default</span> App;
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>In this article, we provided a beginner&rsquo;s guide to React API calls, specifically focusing on how to make GET requests with React. We explained what API calls are, why they are important, and how to make a GET request using the fetch() function. We also discussed best practices for making API calls with React and how to handle errors that may occur during the request. By following these guidelines, you can build dynamic and responsive applications that retrieve and display data in real-time.</p>
+<h2 id="faqs">FAQs</h2>
+<ol>
+<li>What is the difference between GET and POST requests?
+GET requests are used to retrieve data from a server, while POST requests are used to send data to a server.</li>
+<li>Can I use other HTTP methods with React, such as PUT or DELETE?
+Yes, React supports a variety of HTTP methods, including PUT, POST, DELETE, and more.</li>
+<li>Do I need to use a third-party library to make API calls with React?
+No, React has a built-in fetch() function that can be used to make API calls. However, there are third-party libraries available, such as Axios or jQuery, that can provide additional functionality.</li>
+<li>What is an API endpoint?
+An API endpoint is a URL that is used to access a specific resource or data from an API.</li>
+<li>How can I test my API calls in React?
+There are a variety of tools available for testing API calls in React, such as Postman or the Chrome DevTools network tab.</li>
+</ol>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/react/">react</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact%2freact-api-call%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact%2freact-api-call%2f&amp;text=A%20Beginner%27s%20Guide%20to%20React%20API%20Calls-%20Learn%20How%20to%20Make%20GET%20Requests%20with%20React&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact%2freact-api-call%2f&amp;title=A%20Beginner%27s%20Guide%20to%20React%20API%20Calls-%20Learn%20How%20to%20Make%20GET%20Requests%20with%20React"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share A Beginner&#39;s Guide to React API Calls- Learn How to Make GET Requests with React on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact%2freact-api-call%2f&title=A%20Beginner%27s%20Guide%20to%20React%20API%20Calls-%20Learn%20How%20to%20Make%20GET%20Requests%20with%20React">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact%2freact-api-call%2f&amp;description=A%20Beginner%27s%20Guide%20to%20React%20API%20Calls-%20Learn%20How%20to%20Make%20GET%20Requests%20with%20React" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/react/react-usereducer-hook/"
+            data-toggle="tooltip" data-placement="top" title="React JS - useReducer hook in react">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/react/react-usememo-hook/"
+            data-toggle="tooltip" data-placement="top" title="React JS - useMemo hook in React">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

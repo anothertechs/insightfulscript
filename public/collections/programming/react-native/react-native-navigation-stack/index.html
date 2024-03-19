@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>A Comprehensive Guide to React Native Navigation Stack- Best Practices and Tips - InsightfulScript</title>
+<meta name="description" content="Learn the best practices and tips for implementing React Native Navigation Stack in your projects. Our comprehensive guide covers everything you need to know about this powerful navigation solution.">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/react-native\/react-native-navigation-stack\/",
+          "name": "A comprehensive guide to react native navigation stack best practices and tips"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim Master"
+  },
+  "headline": "A Comprehensive Guide to React Native Navigation Stack- Best Practices and Tips",
+  "description" : "Learn the best practices and tips for implementing React Native Navigation Stack in your projects. Our comprehensive guide covers everything you need to know about this powerful navigation solution.",
+  "inLanguage" : "en",
+  "wordCount":  1049 ,
+  "datePublished" : "2021-10-13T00:00:00",
+  "dateModified" : "2021-10-13T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, react native" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/react-native\/react-native-navigation-stack\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="A Comprehensive Guide to React Native Navigation Stack- Best Practices and Tips" />
+<meta name="twitter:title" content="A Comprehensive Guide to React Native Navigation Stack- Best Practices and Tips">
+<meta property="og:description" content="Learn the best practices and tips for implementing React Native Navigation Stack in your projects. Our comprehensive guide covers everything you need to know about this powerful navigation solution.">
+<meta name="twitter:card" content="Learn the best practices and tips for implementing React Native Navigation Stack in your projects. Our comprehensive guide covers everything you need to know about this powerful navigation solution.">
+<meta name="twitter:description" content="Learn the best practices and tips for implementing React Native Navigation Stack in your projects. Our comprehensive guide covers everything you need to know about this powerful navigation solution.">
+<meta property="og:image" content="http://localhost:1313/images/output.jpg" />
+<meta name="twitter:image" content="http://localhost:1313/images/output.jpg">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/react-native/react-native-navigation-stack/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/react-native/react-native-navigation-stack/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="react,native,react,app,android,ios,navigate,navigation,stack,example,code,screen">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                A Comprehensive Guide to React Native Navigation Stack- Best Practices and Tips
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/images/output.jpg" alt="/images/output.jpg" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="a-comprehensive-guide-to-react-native-navigation-stack-best-practices-and-tips">A Comprehensive Guide to React Native Navigation Stack: Best Practices and Tips</h1>
+<p>React Native Navigation Stack is an essential component for building mobile applications using React Native. It provides a flexible and powerful navigation solution that can help you create intuitive and easy-to-use interfaces for your users.</p>
+<p>In this comprehensive guide, we will cover everything you need to know about React Native Navigation Stack, including its best practices and tips. By the end of this article, you will have a solid understanding of how to use this navigation solution in your projects.</p>
+<h2 id="react-native-navigation">React Native Navigation</h2>
+<p>React Native Navigation is a popular alternative to <a href="https://reactnavigation.org/">React Navigation</a>. It’s a module that is dependent on and designed to be used with React Native. React Native Navigation differs slightly in that it directly uses native navigation APIs on iOS and Android, which allows for a more native look and feel.</p>
+<p>One of the key benefits of React Native Navigation Stack is that it provides a consistent and predictable user experience. Users can easily navigate between screens, and the navigation is smooth and seamless. Additionally, it allows you to customize the navigation bar and add animations to make your app look and feel more polished.</p>
+<h2 id="react-native-stack-navigation">React Native Stack Navigation</h2>
+<p>Your best friend is Stack Navigation. This is how you may make stacks of pages that allow you to automatically return to the previous one. You&rsquo;ll wind up with numerous layers throughout your project, and the &lsquo;Back&rsquo; option is a lifesaver in terms of not having to programme it manually each time.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>Before we begain let&rsquo;s install the required dependencies for working with react native navigation</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install @react-navigation/native @react-navigation/native-stack
+</span></span></code></pre></div><p>After install dependencies we will install <code>react-native-screens</code> and <code>react-native-safe-area-context</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>expo install react-native-screens react-native-safe-area-context <span style="color:#998;font-style:italic"># if you  are using expo client</span>
+</span></span><span style="display:flex;"><span>npm install react-native-screens react-native-safe-area-context <span style="color:#998;font-style:italic"># if you are using react-native directly</span>
+</span></span></code></pre></div><p>After install above packages we will start building our app.</p>
+<p>We will create two screen <strong>Home Screen</strong> which the use will see whenever he/she opens the app and another <strong>Detail Screen</strong> which display information about the user.</p>
+<p>First let&rsquo;s import our necessary libraries:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React from <span style="color:#b84">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { TouchableOpacity, StyleSheet, Text, View } from <span style="color:#b84">&#34;react-native&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { NavigationContainer } from <span style="color:#b84">&#34;@react-navigation/native&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { createNativeStackNavigator } from <span style="color:#b84">&#34;@react-navigation/native-stack&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { Image } from <span style="color:#b84">&#34;react-native&#34;</span>;
+</span></span></code></pre></div><h3 id="creating-native-stack-navigator">Creating Native Stack Navigator</h3>
+<p><code>createNativeStackNavigator</code> is a function that returns an object with two properties: Screen and Navigator. Both are React components that are used to configure the navigation. To describe route configuration, the Navigator should have Screen components as its children.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">function</span> Home() {
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// TODO
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> Detail() {
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// TODO
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> Stack <span style="font-weight:bold">=</span> createNativeStackNavigator();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> App() {
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">//TODO
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
+</span></span></code></pre></div><p>After creating stack navigator object, let&rsquo;s add different screen on top of our <code>Stack</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">function</span> Home() {
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// TODO
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> Detail() {
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// TODO
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> Stack <span style="font-weight:bold">=</span> createNativeStackNavigator();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> App() {
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080">NavigationContainer</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">Stack.Navigator</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Stack.Screen</span> <span style="color:#008080">name</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Home Screen&#34;</span> <span style="color:#008080">component</span><span style="font-weight:bold">=</span>{Home} /&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Stack.Screen</span> <span style="color:#008080">name</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Detail Screen&#34;</span> <span style="color:#008080">component</span><span style="font-weight:bold">=</span>{Details} /&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">Stack.Navigator</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#000080">NavigationContainer</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The <code>NavigationContainer</code> component handles and stores our navigation tree and navigation state. This component must encompass the structure of all navigators. This component is normally rendered at the root of our project, which is often the component exported from <code>App.js</code>.</p>
+<p>Now let&rsquo;s create our <strong>Home Screen</strong> and <strong>Detail Screen</strong>:</p>
+<h3 id="home-screen">Home Screen</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">function</span> Home({ navigation }) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.container}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Image</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">source</span><span style="font-weight:bold">=</span>{require(<span style="color:#b84">&#34;./assets/images/cover1.png&#34;</span>)}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{{
+</span></span><span style="display:flex;"><span>          paddingTop<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>          width<span style="font-weight:bold">:</span> <span style="color:#099">300</span>,
+</span></span><span style="display:flex;"><span>          height<span style="font-weight:bold">:</span> <span style="color:#099">300</span>,
+</span></span><span style="display:flex;"><span>          borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">300</span> <span style="font-weight:bold">/</span> <span style="color:#099">2</span>,
+</span></span><span style="display:flex;"><span>        }}
+</span></span><span style="display:flex;"><span>      /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{{ fontSize<span style="font-weight:bold">:</span> <span style="color:#099">25</span>, paddingTop<span style="font-weight:bold">:</span> <span style="color:#099">50</span> }}&gt;AnotherTechs&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{{ paddingTop<span style="font-weight:bold">:</span> <span style="color:#099">50</span> }}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">TouchableOpacity</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.Button}
+</span></span><span style="display:flex;"><span>          <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{() =&gt; navigation.navigate(<span style="color:#b84">&#34;Detail Screen&#34;</span>)}
+</span></span><span style="display:flex;"><span>        &gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{{ fontSize<span style="font-weight:bold">:</span> <span style="color:#099">20</span>, textAlign<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;center&#34;</span> }}&gt;
+</span></span><span style="display:flex;"><span>            {<span style="color:#b84">&#34; &#34;</span>}
+</span></span><span style="display:flex;"><span>            Go to Detail {<span style="color:#b84">&#34;&#34;</span>}
+</span></span><span style="display:flex;"><span>          &lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#000080">TouchableOpacity</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  container<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;#fff&#34;</span>,
+</span></span><span style="display:flex;"><span>    paddingTop<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;center&#34;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  Button<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    marginTop<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>    paddingTop<span style="font-weight:bold">:</span> <span style="color:#099">15</span>,
+</span></span><span style="display:flex;"><span>    paddingBottom<span style="font-weight:bold">:</span> <span style="color:#099">15</span>,
+</span></span><span style="display:flex;"><span>    paddingLeft<span style="font-weight:bold">:</span> <span style="color:#099">15</span>,
+</span></span><span style="display:flex;"><span>    paddingRight<span style="font-weight:bold">:</span> <span style="color:#099">15</span>,
+</span></span><span style="display:flex;"><span>    marginLeft<span style="font-weight:bold">:</span> <span style="color:#099">30</span>,
+</span></span><span style="display:flex;"><span>    marginRight<span style="font-weight:bold">:</span> <span style="color:#099">30</span>,
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;#d4a56e&#34;</span>,
+</span></span><span style="display:flex;"><span>    borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>    borderWidth<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    borderColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;#fff&#34;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><ul>
+<li><strong>navigation props</strong>: Every screen component in the native stack navigator receives the <code>navigation</code> prop.</li>
+<li><strong>navigate(&lsquo;Details&rsquo;)</strong>: we then call <code>navigate</code> function with the name of the route we will like to move to.</li>
+</ul>
+<p><strong>OUTPUT</strong>:</p>
+<p><img src="./home-screen.webp" alt="Home Screen"></p>
+<h3 id="detail-screen">Detail Screen</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">function</span> Details({ navigation }) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{{ flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>, alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;center&#34;</span>, paddingTop<span style="font-weight:bold">:</span> <span style="color:#099">50</span> }}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Image</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">source</span><span style="font-weight:bold">=</span>{require(<span style="color:#b84">&#34;./assets/images/pexels-mustafa-ezz-925043.jpg&#34;</span>)}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{{ width<span style="font-weight:bold">:</span> <span style="color:#099">300</span>, height<span style="font-weight:bold">:</span> <span style="color:#099">300</span>, borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">300</span> <span style="font-weight:bold">/</span> <span style="color:#099">2</span> }}
+</span></span><span style="display:flex;"><span>      /&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{{ flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>, justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;center&#34;</span> }}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{{ textAlign<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;center&#34;</span>, padding<span style="font-weight:bold">:</span> <span style="color:#099">3</span>, margin<span style="font-weight:bold">:</span> <span style="color:#099">4</span> }}&gt;
+</span></span><span style="display:flex;"><span>          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+</span></span><span style="display:flex;"><span>          laoreet metus faucibus orci vestibulum suscipit. Curabitur non
+</span></span><span style="display:flex;"><span>          bibendum ipsum, quis tristique sapien. Proin tempor tortor lectus, id
+</span></span><span style="display:flex;"><span>          dapibus nisi commodo vitae. Vestibulum lorem tortor, vulputate sit
+</span></span><span style="display:flex;"><span>          amet fermentum vehicula, porttitor vel libero. Praesent ipsum turpis,
+</span></span><span style="display:flex;"><span>          consequat non malesuada <span style="font-weight:bold">in</span>, pretium a quam. Nunc fermentum a dolor <span style="font-weight:bold">in</span>
+</span></span><span style="display:flex;"><span>          semper. Suspendisse venenatis nulla sed diam egestas rutrum.
+</span></span><span style="display:flex;"><span>          Suspendisse ut eleifend sapien. Suspendisse bibendum, quam <span style="font-weight:bold">in</span>
+</span></span><span style="display:flex;"><span>          efficitur dapibus, dolor lectus consectetur arcu, vel efficitur sapien
+</span></span><span style="display:flex;"><span>          ipsum et augue. Vestibulum <span style="font-weight:bold">in</span> tincidunt orci, a sagittis odio.
+</span></span><span style="display:flex;"><span>          Curabitur consectetur mi mauris, vel ornare arcu pellentesque vel.
+</span></span><span style="display:flex;"><span>          Quisque sagittis, erat nec vehicula facilisis, sem est aliquet dolor,
+</span></span><span style="display:flex;"><span>          sit amet iaculis nunc quam eu purus. Curabitur sit amet massa
+</span></span><span style="display:flex;"><span>          ultrices, ullamcorper risus vitae, accumsan enim. Sed et nisi eget
+</span></span><span style="display:flex;"><span>          nibh mattis auctor.
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>When it is feasible to return from the active screen, the native stack navigator&rsquo;s header will automatically include a back button (if there is only one screen in the navigation stack, there is nothing that you can go back to, and so there is no back button).</p>
+<p><strong>OUTPUT</strong>:</p>
+<p><img src="./detail-screen.webp" alt="Detail Screen"></p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>In conclusion, React Native Navigation Stack is a powerful and flexible navigation solution that can help you create intuitive and easy-to-use interfaces for your users. By following the best practices and tips outlined in this article, you can ensure that your app&rsquo;s navigation is smooth, predictable, and visually appealing. So, what are you waiting for? Start implementing React Native Navigation Stack in your projects today!</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://reactnative.dev/">React Native</a>: The official website of React Native, a JavaScript framework used for building native mobile applications.</li>
+<li><a href="https://reactnavigation.org/">React Navigation</a>: A popular routing and navigation library for React Native apps.</li>
+<li><a href="https://reactnative.dev/docs/animated">React Native Animations</a>: A guide to using animations in React Native apps.</li>
+<li><a href="https://reactnativeelements.com/">React Native UI Components</a>: A collection of customizable UI components for React Native.</li>
+<li><a href="https://expo.dev/">Expo</a>: A free and open-source platform for building and deploying React Native apps.</li>
+</ul>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/react-native/">react native</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-navigation-stack%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-navigation-stack%2f&amp;text=A%20Comprehensive%20Guide%20to%20React%20Native%20Navigation%20Stack-%20Best%20Practices%20and%20Tips&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-navigation-stack%2f&amp;title=A%20Comprehensive%20Guide%20to%20React%20Native%20Navigation%20Stack-%20Best%20Practices%20and%20Tips"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share A Comprehensive Guide to React Native Navigation Stack- Best Practices and Tips on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-navigation-stack%2f&title=A%20Comprehensive%20Guide%20to%20React%20Native%20Navigation%20Stack-%20Best%20Practices%20and%20Tips">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-navigation-stack%2f&amp;description=A%20Comprehensive%20Guide%20to%20React%20Native%20Navigation%20Stack-%20Best%20Practices%20and%20Tips" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim Master
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/machine-learning/kaggle-data-science-projects/"
+            data-toggle="tooltip" data-placement="top" title="Kaggle Data Science Projects for Beginners">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/reviews/best-html-online-course/"
+            data-toggle="tooltip" data-placement="top" title="Top HTML &amp; CSS Courses - Learn HTML &amp; CSS Online">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

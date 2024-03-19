@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Techs on InsightfulScript</title>
+    <link>http://localhost:1313/tags/techs/</link>
+    <description>Recent content in Techs on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/techs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>12 Tips to Optimize Landing Page Image Size</title>
+      <link>http://localhost:1313/collections/techs/tips-to-optimize-landing-page/</link>
+      <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/techs/tips-to-optimize-landing-page/</guid>
+      <description>12 Tips to Optimize Landing Page Image Size Image size optimization is essential for optimizing your landing page.&#xA;When images are too large, they can take longer to load and affect the overall performance of your page.</description>
+    </item>
+    <item>
+      <title>12 Tips to Optimize Landing Page Image Size</title>
+      <link>http://localhost:1313/post/tips-to-optimize-landing-page/</link>
+      <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/tips-to-optimize-landing-page/</guid>
+      <description>12 Tips to Optimize Landing Page Image Size Image size optimization is essential for optimizing your landing page.&#xA;When images are too large, they can take longer to load and affect the overall performance of your page.</description>
+    </item>
+    <item>
+      <title>Top 10 Chrome Flags to enable in 2021</title>
+      <link>http://localhost:1313/collections/techs/top-10-chrome-flags-2021/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/techs/top-10-chrome-flags-2021/</guid>
+      <description>Top 10 Chrome Flags to enable in 2021 Google Chrome is the most used browser. It&amp;rsquo;s Excellent choice, whether you are using an Android phone, Mac or Windows PC. The Chrome stable is terrific on its own, but it&amp;rsquo;s not for power users.</description>
+    </item>
+    <item>
+      <title>Apple App Tracking Transparency Features - Complete Guide</title>
+      <link>http://localhost:1313/collections/techs/apple-app-tracking-transparency-feature/</link>
+      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/techs/apple-app-tracking-transparency-feature/</guid>
+      <description>Apple App Tracking Transparency Features - Complete Guide Apple&amp;rsquo;s latest iOS 14.5, and iPadOS 14.5, introduced App Tracking Transparency. Apple states that App Tracking Transparency allows you to control which apps can track your activity across different companies&amp;rsquo; apps or websites.</description>
+    </item>
+    <item>
+      <title>Best Android VPN browsers for privacy</title>
+      <link>http://localhost:1313/collections/techs/best-android-browser-for-privacy/</link>
+      <pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/techs/best-android-browser-for-privacy/</guid>
+      <description>Best Android VPN browsers for privacy Use these Android web browsers that come with a free built-in VPN to enhance your privacy and security.&#xA;A virtual private network (VPN for short) encrypts your internet activity and hides your location.</description>
+    </item>
+  </channel>
+</rss>

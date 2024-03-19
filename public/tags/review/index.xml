@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Review on InsightfulScript</title>
+    <link>http://localhost:1313/tags/review/</link>
+    <description>Recent content in Review on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Tue, 19 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Top HTML &amp; CSS Courses - Learn HTML &amp; CSS Online</title>
+      <link>http://localhost:1313/collections/reviews/best-html-online-course/</link>
+      <pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/reviews/best-html-online-course/</guid>
+      <description>Top HTML,CSS online courses for Beginner From beginner to advanced, the top online courses for learning HTML and CSS will help you enhance your website design and development skills.&#xA;The essential coding languages for web design and development are HTML and CSS.</description>
+    </item>
+    <item>
+      <title>Best SQL online Courses To Enroll in 2022</title>
+      <link>http://localhost:1313/collections/reviews/best-sql-online-courses/</link>
+      <pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/reviews/best-sql-online-courses/</guid>
+      <description>Best SQL online courses To enroll Whether you&amp;rsquo;re a beginner or an established user, the top online SQL courses make it straightforward and uncomplicated to increase your understanding in Structured Query Language (SQL).</description>
+    </item>
+    <item>
+      <title>Best Coding Apps for iOS and ipad0S</title>
+      <link>http://localhost:1313/collections/reviews/best-coding-app-ios-ipados/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/reviews/best-coding-app-ios-ipados/</guid>
+      <description>Best Coding Apps for iOS and ipadOS The code has led to some of the world&amp;rsquo;s most innovative technologies. While all coders strive to enhance their skills, those who can code on the go will have an advantage over their competitors in this competitive field.</description>
+    </item>
+    <item>
+      <title>What is GitHub Copilot- Everything you need to know</title>
+      <link>http://localhost:1313/collections/reviews/github-copilot/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/reviews/github-copilot/</guid>
+      <description>What is GitHub Copilot- Everything you need to know OpenAI and GitHub launched a technical preview for a new AI tool called Copilot. It lives within Visual Studio Code and autocompletes code snippets.</description>
+    </item>
+    <item>
+      <title>Window 11 - All new Feature you need to know about</title>
+      <link>http://localhost:1313/collections/reviews/windows-11-is-here/</link>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/reviews/windows-11-is-here/</guid>
+      <description>Windows 11 - All new features Windows has always been the scene of global innovation. It has always been the backbone of global companies and a place where aggressive startups have become household names.</description>
+    </item>
+    <item>
+      <title>Best Linux distros of 2021 for beginners, mainstream and advanced users</title>
+      <link>http://localhost:1313/collections/reviews/top-linux-distros-for-beginners/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/reviews/top-linux-distros-for-beginners/</guid>
+      <description>Best Linux distros of 2021 for beginners, mainstream and advanced users Looking for a new Linux experience? Get to know the best Linux distribution for all user levels, from beginners to experts.</description>
+    </item>
+  </channel>
+</rss>

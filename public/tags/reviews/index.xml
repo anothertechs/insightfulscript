@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reviews on InsightfulScript</title>
+    <link>http://localhost:1313/tags/reviews/</link>
+    <description>Recent content in Reviews on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Mon, 09 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/reviews/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>7 Best Machine Learning Libraries You Should Know in 2021</title>
+      <link>http://localhost:1313/collections/reviews/machine-learning-libraries-2021/</link>
+      <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/reviews/machine-learning-libraries-2021/</guid>
+      <description>7 Best Machine Learning Libraries You Should Know in 2021 Machine learning is currently the most talked-about topic in artificial intelligence.&#xA;Engineering, medicine, business, social science, and other professions are all affected.</description>
+    </item>
+  </channel>
+</rss>

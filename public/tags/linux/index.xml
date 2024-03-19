@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on InsightfulScript</title>
+    <link>http://localhost:1313/tags/linux/</link>
+    <description>Recent content in Linux on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Customize Your GNOME Desktop</title>
+      <link>http://localhost:1313/collections/linux/gnome-customize/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/linux/gnome-customize/</guid>
+      <description>Customize Your GNOME Desktop A lot of people prefer GNOME&amp;rsquo;s minimalist design, which is quite straightforward and streamlined for a Linux GUI. In spite of its simplicity, GNOME may be customised to suit your needs.</description>
+    </item>
+    <item>
+      <title>Beginner Guid to Snap and Snap Store</title>
+      <link>http://localhost:1313/collections/linux/beginners-guid-to-snap/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/linux/beginners-guid-to-snap/</guid>
+      <description>Beginner guide to Snapcraft,Snap,Snapd and Snap Store Package Manager is a set of integrated services that make it easy to install, update, remove, and configure packages/programs on computers.&#xA;Especially with regard to the linux operating system, you can choose from a wide range of package managers, such as Pacman(Arch/Manjaro), apt(Ubuntu/Debian), yum(Red Hat/Cent Os),dnf(Fedora).</description>
+    </item>
+  </channel>
+</rss>

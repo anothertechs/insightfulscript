@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Softwares on InsightfulScript</title>
+    <link>http://localhost:1313/tags/softwares/</link>
+    <description>Recent content in Softwares on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/softwares/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>winget: Package manager for windows</title>
+      <link>http://localhost:1313/collections/softwares/windows/windows-package-mangaer-winget/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/softwares/windows/windows-package-mangaer-winget/</guid>
+      <description>Winget Package Manger for Windows If you have ever used any time today, then you will be familiar with the idea of the package manager. When I use it to switch to , I might miss that package manager very much.</description>
+    </item>
+  </channel>
+</rss>

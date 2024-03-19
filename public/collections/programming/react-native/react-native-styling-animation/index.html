@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Mastering React Native Styling Animation- Techniques, Tips, and Tricks - InsightfulScript</title>
+<meta name="description" content="Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/react-native\/react-native-styling-animation\/",
+          "name": "Mastering react native styling animation techniques, tips, and tricks"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim"
+  },
+  "headline": "Mastering React Native Styling Animation- Techniques, Tips, and Tricks",
+  "description" : "Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.",
+  "inLanguage" : "en",
+  "wordCount":  3003 ,
+  "datePublished" : "2023-03-29T00:00:00",
+  "dateModified" : "2023-03-29T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, react native" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/react-native\/react-native-styling-animation\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Mastering React Native Styling Animation- Techniques, Tips, and Tricks" />
+<meta name="twitter:title" content="Mastering React Native Styling Animation- Techniques, Tips, and Tricks">
+<meta property="og:description" content="Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.">
+<meta name="twitter:card" content="Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.">
+<meta name="twitter:description" content="Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.">
+<meta property="og:image" content="http://localhost:1313/images/react-native-animation.jpg" />
+<meta name="twitter:image" content="http://localhost:1313/images/react-native-animation.jpg">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="React,Native,styling,React,Native,animation,React,Native,animated,API,React,Native,animation,examples,React,Native,styling,examples,React,Native,animation,tutorial,React,Native,styling,issues">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                Mastering React Native Styling Animation- Techniques, Tips, and Tricks
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/images/react-native-animation.jpg" alt="/images/react-native-animation.jpg" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <p>Animations have the power to enhance the user experience in a mobile application. With React Native Styling Animation, you can add beautiful and interactive animations to your app. This powerful feature provides developers with an easy and effective way to create dynamic animations that can captivate users. In this article, we will explore the techniques, tips, and tricks to master React Native Styling Animation.</p>
+<h1 id="react-native-styling-animation-a-beginners-guide">React Native Styling Animation: A Beginner&rsquo;s Guide</h1>
+<h2 id="what-is-react-native-styling-animation">What is React Native Styling Animation?</h2>
+<p>React Native Styling Animation is a powerful feature that allows developers to create animated styles for their components. It works by animating the values of style properties over time, creating stunning effects that can enhance the user experience. This feature is built on top of the Animated API, which is a module in React Native that enables us to create animations that can be controlled and manipulated.</p>
+<h2 id="why-use-react-native-styling-animation">Why use React Native Styling Animation?</h2>
+<p>React Native Styling Animation offers several benefits for developers, including:</p>
+<ul>
+<li><strong>Easy to use</strong>: React Native Styling Animation provides a simple and intuitive way to create animations.</li>
+<li><strong>High performance</strong>: This feature is optimized for performance, ensuring that animations run smoothly on mobile devices.</li>
+<li><strong>Customizable</strong>: Developers can customize the animations by adjusting the duration, easing function, and more.</li>
+<li><strong>Cross-platform</strong>: React Native Styling Animation works on both iOS and Android platforms, making it easy to create animations that work across devices.</li>
+</ul>
+<h2 id="how-to-use-react-native-styling-animation">How to Use React Native Styling Animation</h2>
+<p>Using React Native Styling Animation is relatively easy. Here are the steps to follow:</p>
+<ol>
+<li>Import the Animated module from React Native.</li>
+<li>Create a new instance of the Animated.Value class.</li>
+<li>Create a new Animated style by passing the Animated.Value instance as the value for the style property.</li>
+<li>Define an animation by calling the <code>Animated.timing()</code> method, passing the <code>Animated.Value</code> instance, the duration of the animation, and the easing function.</li>
+<li>Call the <code>start()</code> method to start the animation.</li>
+</ol>
+<p>Here&rsquo;s an example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React, { Component } from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { View, Text,Animated } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">default</span> <span style="font-weight:bold">class</span> App <span style="font-weight:bold">extends</span> Component {
+</span></span><span style="display:flex;"><span>    constructor(props) {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">super</span>(props);
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">this</span>.animatedValue <span style="font-weight:bold">=</span> <span style="font-weight:bold">new</span> Animated.Value(<span style="color:#099">0</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    componentDidMount() {
+</span></span><span style="display:flex;"><span>        Animated.timing(<span style="font-weight:bold">this</span>.animatedValue, {
+</span></span><span style="display:flex;"><span>            toValue<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>            duration<span style="font-weight:bold">:</span> <span style="color:#099">1000</span>,
+</span></span><span style="display:flex;"><span>            useNativeDriver<span style="font-weight:bold">:</span> <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>        }).start();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    render() {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">const</span> opacity <span style="font-weight:bold">=</span> <span style="font-weight:bold">this</span>.animatedValue.interpolate({
+</span></span><span style="display:flex;"><span>        inputRange<span style="font-weight:bold">:</span> [<span style="color:#099">0</span>, <span style="color:#099">1</span>],
+</span></span><span style="display:flex;"><span>        outputRange<span style="font-weight:bold">:</span> [<span style="color:#099">0</span>, <span style="color:#099">1</span>],
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{{ flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>, alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>, justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span> }}&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#000080">Animated.View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{{ opacity }}&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#000080">Text</span>&gt;React Native Styling Animation&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#000080">Animated.View</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="tips-and-tricks-for-using-react-native-styling-animation">Tips and Tricks for Using React Native Styling Animation</h2>
+<p>Here are some tips and tricks to help you make the most of React Native Styling Animation:</p>
+<h3 id="1--use-easing-functions">1.  Use easing functions</h3>
+<p>Easing functions allow you to control the speed and acceleration of the animation. React Native Styling Animation supports several easing functions, such as ease-in, ease-out, and linear.</p>
+<p>Here&rsquo;s an example of using the easing function in React Native:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React, { useRef } from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { View, Animated, StyleSheet, Easing,TouchableOpacity,Text } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> Example <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> fadeAnim <span style="font-weight:bold">=</span> useRef(<span style="font-weight:bold">new</span> Animated.Value(<span style="color:#099">0</span>)).current;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> startAnimation <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    Animated.timing(
+</span></span><span style="display:flex;"><span>      fadeAnim,
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        toValue<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>        duration<span style="font-weight:bold">:</span> <span style="color:#099">1000</span>,
+</span></span><span style="display:flex;"><span>        easing<span style="font-weight:bold">:</span> Easing.ease, <span style="color:#998;font-style:italic">// Use the ease easing function
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>        useNativeDriver<span style="font-weight:bold">:</span> <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ).start();
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.container}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Animated.View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{[styles.box, { opacity<span style="font-weight:bold">:</span> fadeAnim }]} /&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">TouchableOpacity</span> <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{startAnimation}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">Text</span>&gt;Start Animation&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">TouchableOpacity</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  container<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  box<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    width<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    height<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;red&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">default</span> Example;
+</span></span></code></pre></div><p>In this example, we create an Animated.Value called <code>fadeAnim</code> with an initial value of 0. We then create a function called <code>startAnimation</code> that uses the <code>Animated.timing</code> method to animate the fadeAnim value from 0 to 1 over a duration of 1000 milliseconds. We also specify the ease easing function to control the timing of the animation.</p>
+<p>The <code>useNativeDriver</code> flag is set to true, which means that the animation will be performed natively by the device&rsquo;s GPU, resulting in smoother and more performant animations.</p>
+<p>We then render a View component with a style that uses the <code>fadeAnim</code> value to control the opacity of the box. Finally, we render a <code>TouchableOpacity</code> component that triggers the <code>startAnimation</code> function when pressed.</p>
+<h3 id="2-keep-it-simple">2. Keep it simple</h3>
+<p>Animations can be distracting if they are too complex or excessive. Keep your animations simple and subtle to enhance the user experience without overwhelming them.</p>
+<h3 id="3-use-the-usenativedriver-option">3. Use the useNativeDriver option</h3>
+<p>In React Native, animations can be performed either on the JavaScript thread or on the native UI thread. Animations performed on the JavaScript thread can cause jank and lag, especially on older devices. To solve this problem, React Native provides the useNativeDriver option that allows animations to be performed on the native UI thread, resulting in smoother and more performant animations.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React, { useRef } from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { TouchableOpacity,Text, View, Animated, StyleSheet } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> Example <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> position <span style="font-weight:bold">=</span> useRef(<span style="font-weight:bold">new</span> Animated.ValueXY({ x<span style="font-weight:bold">:</span> <span style="color:#099">0</span>, y<span style="font-weight:bold">:</span> <span style="color:#099">0</span> })).current;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> startAnimation <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    Animated.timing(
+</span></span><span style="display:flex;"><span>      position,
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        toValue<span style="font-weight:bold">:</span> { x<span style="font-weight:bold">:</span> <span style="color:#099">200</span>, y<span style="font-weight:bold">:</span> <span style="color:#099">200</span> },
+</span></span><span style="display:flex;"><span>        duration<span style="font-weight:bold">:</span> <span style="color:#099">1000</span>,
+</span></span><span style="display:flex;"><span>        useNativeDriver<span style="font-weight:bold">:</span> <span style="font-weight:bold">true</span>, <span style="color:#998;font-style:italic">// Use the native driver
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>      }
+</span></span><span style="display:flex;"><span>    ).start();
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.container}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Animated.View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{[styles.box, { transform<span style="font-weight:bold">:</span> position.getTranslateTransform() }]} /&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">TouchableOpacity</span> <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{startAnimation}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">Text</span>&gt;Start Animation&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">TouchableOpacity</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  container<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  box<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    width<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    height<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;red&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">default</span> Example;
+</span></span></code></pre></div><p>In this example, we create an <code>Animated.ValueXY</code> called position with an initial value of <code>{ x: 0, y: 0 }</code>. We then create a function called <code>startAnimation</code> that uses the <code>Animated.timing</code> method to animate the position value from <code>{ x: 0, y: 0 }</code> to <code>{ x: 200, y: 200 }</code> over a duration of 1000 milliseconds. We also specify the <code>useNativeDriver</code> option to perform the animation on the native UI thread.</p>
+<p>We then render a View component with a style that uses the position value to control the transform of the box. The <code>getTranslateTransform()</code> method is used to get a transform matrix that moves the box to the position value. Finally, we render a <code>TouchableOpacity</code> component that triggers the <code>startAnimation</code> function when pressed.</p>
+<p>By using the <code>useNativeDriver</code> option, the animation will be performed on the native UI thread, resulting in a smoother and more performant animation.</p>
+<h3 id="4-use-the-animatedevent-method">4. Use the Animated.event() method</h3>
+<p>The <code>Animated.event()</code> method allows you to map the value of an animation to a state or prop of a component. This can be useful for creating interactive animations that respond to user input.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React, { useRef } from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { View, Animated, StyleSheet, PanResponder } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> Example <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> position <span style="font-weight:bold">=</span> useRef(<span style="font-weight:bold">new</span> Animated.ValueXY({ x<span style="font-weight:bold">:</span> <span style="color:#099">0</span>, y<span style="font-weight:bold">:</span> <span style="color:#099">0</span> })).current;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> panResponder <span style="font-weight:bold">=</span> useRef(
+</span></span><span style="display:flex;"><span>    PanResponder.create({
+</span></span><span style="display:flex;"><span>      onMoveShouldSetPanResponder<span style="font-weight:bold">:</span> () =&gt; <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>      onPanResponderMove<span style="font-weight:bold">:</span> Animated.event(
+</span></span><span style="display:flex;"><span>        [
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">null</span>,
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            dx<span style="font-weight:bold">:</span> position.x, <span style="color:#998;font-style:italic">// Map dx to position.x
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>            dy<span style="font-weight:bold">:</span> position.y, <span style="color:#998;font-style:italic">// Map dy to position.y
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>          },
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        { useNativeDriver<span style="font-weight:bold">:</span> <span style="font-weight:bold">false</span> } <span style="color:#998;font-style:italic">// Don&#39;t use the native driver
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>      ),
+</span></span><span style="display:flex;"><span>      onPanResponderRelease<span style="font-weight:bold">:</span> () =&gt; {
+</span></span><span style="display:flex;"><span>        Animated.spring(position, {
+</span></span><span style="display:flex;"><span>          toValue<span style="font-weight:bold">:</span> { x<span style="font-weight:bold">:</span> <span style="color:#099">0</span>, y<span style="font-weight:bold">:</span> <span style="color:#099">0</span> },
+</span></span><span style="display:flex;"><span>          useNativeDriver<span style="font-weight:bold">:</span> <span style="font-weight:bold">true</span>, <span style="color:#998;font-style:italic">// Use the native driver
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>        }).start();
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>  ).current;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.container}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Animated.View</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{[styles.box, { transform<span style="font-weight:bold">:</span> position.getTranslateTransform() }]}
+</span></span><span style="display:flex;"><span>        {<span style="color:#008080">...panResponder.panHandlers</span>}
+</span></span><span style="display:flex;"><span>      /&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  container<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  box<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    width<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    height<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;red&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">default</span> Example;
+</span></span></code></pre></div><p>In this example, we create an <code>Animated.ValueXY</code> called position with an initial value of <code>{ x: 0, y: 0 }</code>. We then create a PanResponder called <code>panResponder</code> that listens for touch events and maps the <code>dx</code> and <code>dy</code> values to the <code>position.x</code> and <code>position.y</code> values, respectively. We also specify the <code>useNativeDriver</code> option as false to avoid using the native driver, since mapping events to an Animated value cannot be done on the native UI thread.</p>
+<p>We then render a View component with a style that uses the position value to control the transform of the box. We also spread the <code>panHandlers from the </code>panResponder` onto the box, allowing it to respond to touch events.</p>
+<p>Finally, we specify an <code>onPanResponderRelease</code> function that uses the <code>Animated.spring()</code> method to animate the position value back to its initial value when the user releases the touch. We also specify the useNativeDriver option as true to perform the animation on the native UI thread.</p>
+<h3 id="5-use-the-animatedsequence-method">5. Use the Animated.sequence() method</h3>
+<p>The Animated.sequence() method allows you to create a sequence of animations that run one after the other. This can be useful for creating more complex animations that involve multiple elements.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React, { useRef } from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { View, Text, Animated, StyleSheet,Button } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> Example <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> fadeAnim <span style="font-weight:bold">=</span> useRef(<span style="font-weight:bold">new</span> Animated.Value(<span style="color:#099">0</span>)).current;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> animateText <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    Animated.sequence([
+</span></span><span style="display:flex;"><span>      Animated.timing(fadeAnim, {
+</span></span><span style="display:flex;"><span>        toValue<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>        duration<span style="font-weight:bold">:</span> <span style="color:#099">1000</span>,
+</span></span><span style="display:flex;"><span>        useNativeDriver<span style="font-weight:bold">:</span> <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>      }),
+</span></span><span style="display:flex;"><span>      Animated.timing(fadeAnim, {
+</span></span><span style="display:flex;"><span>        toValue<span style="font-weight:bold">:</span> <span style="color:#099">0</span>,
+</span></span><span style="display:flex;"><span>        duration<span style="font-weight:bold">:</span> <span style="color:#099">1000</span>,
+</span></span><span style="display:flex;"><span>        useNativeDriver<span style="font-weight:bold">:</span> <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>      }),
+</span></span><span style="display:flex;"><span>    ]).start(() =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#998;font-style:italic">// The animation sequence has finished
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    });
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.container}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.text}&gt;Hello, world<span style="font-weight:bold">!</span>&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Animated.View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{[styles.box, { opacity<span style="font-weight:bold">:</span> fadeAnim }]} /&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Button</span> <span style="color:#008080">title</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Animate Text&#34;</span> <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{animateText} /&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  container<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  text<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  box<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    width<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    height<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;red&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">default</span> Example;
+</span></span></code></pre></div><p>In this example, we define an <code>Animated.Value</code> called <code>fadeAnim</code> with an initial value of 0. We then define a function called <code>animateText</code> that uses <code>Animated.sequence()</code> to animate the <code>fadeAnim</code> value in sequence. The sequence consists of two animations: the first animation fades in the box over a duration of 1000 milliseconds, and the second animation fades out the box over the same duration.</p>
+<p>We then render a Text component and an <code>Animated.View</code> component that uses the <code>fadeAnim</code> value to control its opacity. Finally, we render a Button component that triggers the <code>animateText</code> function when pressed.</p>
+<p>When the user presses the button, the <code>animateText</code> function is called, which triggers the animation sequence. The box fades in and out over a period of two seconds, and then the start method&rsquo;s callback function is called to indicate that the animation sequence has finished.</p>
+<p>By using <code>Animated.sequence()</code>, we can create a sequence of animations that run one after the other. This is useful for creating complex animations that consist of multiple steps.</p>
+<h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
+<p>Here are some common mistakes to avoid when using React Native Styling Animation:</p>
+<h3 id="1-overusing-animations">1. Overusing animations</h3>
+<p>Animations can be distracting if they are overused or too complex. Use them sparingly and only when necessary to enhance the user experience.</p>
+<p>Let&rsquo;s say you have a screen that displays a list of items, and each item has an image and some text. You decide to add an animation that fades in the images when the user scrolls the screen. Here&rsquo;s what your code might look like:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React, { useState } from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { View, Text, Image, FlatList, StyleSheet } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> DATA <span style="font-weight:bold">=</span> [
+</span></span><span style="display:flex;"><span>  { id<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;1&#39;</span>, title<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;Item 1&#39;</span>, image<span style="font-weight:bold">:</span> require(<span style="color:#b84">&#39;./images/item1.jpg&#39;</span>) },
+</span></span><span style="display:flex;"><span>  { id<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;2&#39;</span>, title<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;Item 2&#39;</span>, image<span style="font-weight:bold">:</span> require(<span style="color:#b84">&#39;./images/item2.jpg&#39;</span>) },
+</span></span><span style="display:flex;"><span>  { id<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;3&#39;</span>, title<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;Item 3&#39;</span>, image<span style="font-weight:bold">:</span> require(<span style="color:#b84">&#39;./images/item3.jpg&#39;</span>) },
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> AnimatedImage <span style="font-weight:bold">=</span> ({ source, index }) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [fadeAnim] <span style="font-weight:bold">=</span> useState(<span style="font-weight:bold">new</span> Animated.Value(<span style="color:#099">0</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  useEffect(() =&gt; {
+</span></span><span style="display:flex;"><span>    Animated.timing(fadeAnim, {
+</span></span><span style="display:flex;"><span>      toValue<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>      duration<span style="font-weight:bold">:</span> <span style="color:#099">1000</span>,
+</span></span><span style="display:flex;"><span>      delay<span style="font-weight:bold">:</span> index <span style="font-weight:bold">*</span> <span style="color:#099">100</span>, <span style="color:#998;font-style:italic">// Delay each animation by 100ms
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>      useNativeDriver<span style="font-weight:bold">:</span> <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>    }).start();
+</span></span><span style="display:flex;"><span>  }, []);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">Animated.Image</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#008080">source</span><span style="font-weight:bold">=</span>{source}
+</span></span><span style="display:flex;"><span>      <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{[styles.image, { opacity<span style="font-weight:bold">:</span> fadeAnim }]}
+</span></span><span style="display:flex;"><span>    /&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> renderItem <span style="font-weight:bold">=</span> ({ item, index }) =&gt; (
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.item}&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">AnimatedImage</span> <span style="color:#008080">source</span><span style="font-weight:bold">=</span>{item.image} <span style="color:#008080">index</span><span style="font-weight:bold">=</span>{index} /&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.title}&gt;{item.title}&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> Example <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.container}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">FlatList</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">data</span><span style="font-weight:bold">=</span>{DATA}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">renderItem</span><span style="font-weight:bold">=</span>{renderItem}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">keyExtractor</span><span style="font-weight:bold">=</span>{(item) =&gt; item.id}
+</span></span><span style="display:flex;"><span>      /&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  container<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  item<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flexDirection<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;row&#39;</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    marginVertical<span style="font-weight:bold">:</span> <span style="color:#099">8</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  image<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    width<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    height<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">50</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  title<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    marginLeft<span style="font-weight:bold">:</span> <span style="color:#099">16</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>In this example, we use <code>useState</code> to create an <code>Animated.Value</code> for each image, and we use useEffect to trigger the animation when the component mounts. We also add a delay to each animation based on the item&rsquo;s index in the list.</p>
+<p>While this animation might look nice, it can be overused and negatively impact the performance of your app. Imagine having a long list of items with images - each of which is animated when the user scrolls the screen. This can cause the app to become slow and unresponsive, leading to a poor user experience.</p>
+<p>To avoid overusing animation, you should limit the number of animations on a screen and only use them when necessary. In this example, you could consider using a simpler animation, like a scale or opacity animation, or only animating the images when they first appear on the screen instead of animating them on every scroll. By using animations sparingly and thoughtfully, you can improve the performance and user experience of your React Native app.</p>
+<h3 id="2-not-optimizing-for-performance">2. Not optimizing for performance</h3>
+<p>Animations can impact the performance of your app, especially on older or lower-end devices. Make sure to optimize your animations for performance by using the useNativeDriver option and keeping them simple.</p>
+<p>Here&rsquo;s an example of React Native code that is not optimized for performance:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { View, Text, StyleSheet, Image } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> Example <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> data <span style="font-weight:bold">=</span> [
+</span></span><span style="display:flex;"><span>    { id<span style="font-weight:bold">:</span> <span style="color:#099">1</span>, title<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;Item 1&#39;</span>, image<span style="font-weight:bold">:</span> require(<span style="color:#b84">&#39;./images/item1.jpg&#39;</span>) },
+</span></span><span style="display:flex;"><span>    { id<span style="font-weight:bold">:</span> <span style="color:#099">2</span>, title<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;Item 2&#39;</span>, image<span style="font-weight:bold">:</span> require(<span style="color:#b84">&#39;./images/item2.jpg&#39;</span>) },
+</span></span><span style="display:flex;"><span>    { id<span style="font-weight:bold">:</span> <span style="color:#099">3</span>, title<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;Item 3&#39;</span>, image<span style="font-weight:bold">:</span> require(<span style="color:#b84">&#39;./images/item3.jpg&#39;</span>) },
+</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  ];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> renderItem <span style="font-weight:bold">=</span> (item) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.item}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">Image</span> <span style="color:#008080">source</span><span style="font-weight:bold">=</span>{item.image} <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.image} /&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.title}&gt;{item.title}&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.container}&gt;
+</span></span><span style="display:flex;"><span>      {data.map((item) =&gt; renderItem(item))}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  container<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    padding<span style="font-weight:bold">:</span> <span style="color:#099">16</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  item<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flexDirection<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;row&#39;</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    marginVertical<span style="font-weight:bold">:</span> <span style="color:#099">8</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  image<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    width<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    height<span style="font-weight:bold">:</span> <span style="color:#099">100</span>,
+</span></span><span style="display:flex;"><span>    borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">50</span>,
+</span></span><span style="display:flex;"><span>    marginRight<span style="font-weight:bold">:</span> <span style="color:#099">16</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  title<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">16</span>,
+</span></span><span style="display:flex;"><span>    fontWeight<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;bold&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>In this example, we have a simple screen that displays a list of items, each with an image and some text. We use an array of data to render each item using a map function. However, this code is not optimized for performance for a few reasons:</p>
+<ul>
+<li>
+<p>We are using a <code>map</code> function to render each item individually. While this is a common React pattern, it can be inefficient for long lists, as it creates a new component instance for each item.</p>
+</li>
+<li>
+<p>We are not using any performance optimizations like FlatList, which can improve performance by rendering only the items that are currently visible on the screen.</p>
+</li>
+<li>
+<p>We are not using any caching or preloading techniques for the images, which can lead to slow rendering and a poor user experience.</p>
+</li>
+</ul>
+<p>To optimize this code for performance, we could use <code>FlatList</code> instead of rendering each item individually. <code>FlatList</code> only renders the items that are currently visible on the screen, and it provides several performance optimizations like view recycling and lazy loading. We could also use an image caching library like react-native-fast-image to improve image rendering performance. Here&rsquo;s an example of how we could optimize the code using <code>FlatList</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { View, Text, StyleSheet, FlatList } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> FastImage from <span style="color:#b84">&#39;react-native-fast-image&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> Example <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> data <span style="font-weight:bold">=</span> [
+</span></span><span style="display:flex;"><span>    { id<span style="font-weight:bold">:</span> <span style="color:#099">1</span>, title<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;Item 1&#39;</span>, image<span style="font-weight:bold">:</span> require(<span style="color:#b84">&#39;./images/item1.jpg&#39;</span>) },
+</span></span><span style="display:flex;"><span>    { id<span style="font-weight:bold">:</span> <span style="color:#099">2</span>, title<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;Item 2&#39;</span>, image<span style="font-weight:bold">:</span> require(<span style="color:#b84">&#39;./images/item2.jpg&#39;</span>) },
+</span></span><span style="display:flex;"><span>    { id<span style="font-weight:bold">:</span> <span style="color:#099">3</span>, title<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;Item 3&#39;</span>, image<span style="font-weight:bold">:</span> require(<span style="color:#b84">&#39;./images/item3.jpg&#39;</span>) },
+</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  ];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> renderItem <span style="font-weight:bold">=</span> ({ item }) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.item}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">FastImage</span> <span style="color:#008080">source</span><span style="font-weight:bold">=</span>{item.image} <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.image} /&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.title}&gt;{item.title}&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span>
+</span></span></code></pre></div><h3 id="3-not-testing-on-real-devices">3. Not testing on real devices</h3>
+<p>Testing on real devices is an essential step in the React Native development process, as it helps ensure that your app functions correctly on a wide range of devices and operating systems. Here&rsquo;s an example of React Native code that is not tested on a real device:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { View, Text, StyleSheet } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> Example <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.container}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.title}&gt;Hello, world<span style="font-weight:bold">!</span>&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.subtitle}&gt;This is an example screen.&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  container<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  title<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">24</span>,
+</span></span><span style="display:flex;"><span>    fontWeight<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;bold&#39;</span>,
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">16</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  subtitle<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">16</span>,
+</span></span><span style="display:flex;"><span>    color<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;gray&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>This code defines a simple screen with some text, but it doesn&rsquo;t include any device-specific functionality or components. While this code may work correctly on the developer&rsquo;s machine or in a simulator, it may not function as expected on a real device due to differences in hardware, software, and user behavior.</p>
+<p>To ensure that this code works correctly on real devices, we should test it on a variety of devices and operating systems. This can be done using a combination of <a href="https://reactnative.dev/docs/testing-overview">manual testing</a> and automated testing tools like <a href="https://www.browserstack.com/guide/appium-react-native-for-automation#:~:text=Appium%20is%20a%20mobile%20application,both%20Android%20and%20iOS%20applications.">Appium</a> or <a href="https://wix.github.io/Detox/">Detox</a>. We should also test the app in a variety of real-world scenarios, such as poor network connectivity, low battery life, and different user interaction patterns.</p>
+<p>In addition to testing on real devices, we should also use tools like <a href="https://rnfirebase.io/crashlytics/usage">Crashlytics</a> or <a href="https://docs.sentry.io/platforms/react-native/">Sentry</a> to monitor app performance and detect any crashes or errors that occur in the field. By testing on real devices and monitoring app performance, we can ensure that our app functions correctly for all users, regardless of their device or operating system.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>React Native Styling Animation is a powerful and easy-to-use feature that can enhance the user experience in your mobile app. By following the techniques, tips, and tricks outlined in this article, you can create stunning and interactive animations that captivate users. Remember to keep your animations simple, optimize for performance, and test on real devices to ensure a smooth user experience.</p>
+<h2 id="faqs">FAQs</h2>
+<ul>
+<li>
+<p>Q: Can I use React Native Styling Animation with other animation libraries?</p>
+<p>A: Yes, React Native Styling Animation can be used with other animation libraries, such as React Native Animatable or Lottie.</p>
+</li>
+<li>
+<p>Q: Can I use React Native Styling Animation with React Native Elements?</p>
+<p>A: Yes, React Native Styling Animation can be used with React Native Elements, a popular UI library for React Native.</p>
+</li>
+<li>
+<p>Q: Can I use React Native Styling Animation with Expo?</p>
+<p>A: Yes, React Native Styling Animation can be used with Expo, a toolchain and platform for building and deploying React Native apps.</p>
+</li>
+</ul>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/react-native/">react native</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-styling-animation%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-styling-animation%2f&amp;text=Mastering%20React%20Native%20Styling%20Animation-%20Techniques%2c%20Tips%2c%20and%20Tricks&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-styling-animation%2f&amp;title=Mastering%20React%20Native%20Styling%20Animation-%20Techniques%2c%20Tips%2c%20and%20Tricks"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share Mastering React Native Styling Animation- Techniques, Tips, and Tricks on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-styling-animation%2f&title=Mastering%20React%20Native%20Styling%20Animation-%20Techniques%2c%20Tips%2c%20and%20Tricks">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-styling-animation%2f&amp;description=Mastering%20React%20Native%20Styling%20Animation-%20Techniques%2c%20Tips%2c%20and%20Tricks" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/react-native/react-native-stylesheet/"
+            data-toggle="tooltip" data-placement="top" title="React Native Styleshee- A Comprehensive Guide for Beginners">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/techs/tips-to-optimize-landing-page/"
+            data-toggle="tooltip" data-placement="top" title="12 Tips to Optimize Landing Page Image Size">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-stylesheet/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Styleshee- A Comprehensive Guide for Beginners</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  27 March 272712
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;8&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to effortlessly style your React Native applications with CSS. Read on for tips, tricks, and FAQs on mastering CSS for React Native styling.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-style-sheet_hu3d03a01dcc18bc5be0e67db3d8d209a6_7324566_500x0_resize_q75_box.jpg" alt="/images/react-native-style-sheet.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

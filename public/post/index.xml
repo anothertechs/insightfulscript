@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>InsightfulScript</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>12 Tips to Optimize Landing Page Image Size</title>
+      <link>http://localhost:1313/post/tips-to-optimize-landing-page/</link>
+      <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/tips-to-optimize-landing-page/</guid>
+      <description>12 Tips to Optimize Landing Page Image Size Image size optimization is essential for optimizing your landing page.&#xA;When images are too large, they can take longer to load and affect the overall performance of your page.</description>
+    </item>
+    <item>
+      <title>Tailwind Z-Index - How to Use It with Examples</title>
+      <link>http://localhost:1313/post/tailwindcss-z-index/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/tailwindcss-z-index/</guid>
+      <description>Tailwind Z-Index: How to Use It with Examples If you&amp;rsquo;ve ever worked with web design and front-end development, you know that positioning elements on top of each other can be tricky.</description>
+    </item>
+    <item>
+      <title>Candlestick Pattern - Dumpling Tops and Frypan Bottoms</title>
+      <link>http://localhost:1313/post/dumpling-top-and-frypan-bottoms/</link>
+      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/dumpling-top-and-frypan-bottoms/</guid>
+      <description>Candlestick Pattern - Dumpling Tops and Frypan Bottoms Dumpling top and frypan bottoms. Someone must have been hungry when they thought of these names !!&#xA;Dumpling Top Candlestick Pattern Several Japanese candlesticks form the top structure of a dumpling.</description>
+    </item>
+    <item>
+      <title>Candlestick Pattern - Understanding Counterattack candlestick pattern</title>
+      <link>http://localhost:1313/post/counter-attack-candlestick/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/counter-attack-candlestick/</guid>
+      <description>Candlestick Pattern - Understanding Counterattack candlestick pattern There is no shortage of reversal indicators in technical analysis and candlestick patterns. The counterattack candlestick pattern is one such trend reversal indicator that many traders use to enter a positional trade.</description>
+    </item>
+    <item>
+      <title>Javascript Regex cheatsheet 2021</title>
+      <link>http://localhost:1313/post/javascript-regex-cheat-sheat-2021/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/javascript-regex-cheat-sheat-2021/</guid>
+      <description>Javascript Regex Cheatsheet A Regular Expression (RegEx) is a string of characters that defines a search pattern. Regex can save you hundreds of lines of code and can be used with Javascript or any programming language (and even CLI tools)</description>
+    </item>
+    <item>
+      <title>Parallel Programming with C&#43;&#43;</title>
+      <link>http://localhost:1313/post/parallel-programming-stl/</link>
+      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/parallel-programming-stl/</guid>
+      <description>C++17 - New Parallel Algorithm of STL C++17 introduces parallel algorithms. However, there aren&amp;rsquo;t many implementations where the additional functionalities can be used.&#xA;The concept is straightforward. More than 100 algorithms are included in the Standard Template (STL) for searching, counting, and manipulating ranges and their constituents.</description>
+    </item>
+  </channel>
+</rss>

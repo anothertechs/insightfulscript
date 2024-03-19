@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>OpenCV - Understanding Convex Hull using C&#43;&#43; - InsightfulScript</title>
+<meta name="description" content="A tutorial on determining a shape&#39;s or a group of points&#39; Convex Hull.  The OpenCV code implementation in C&#43;&#43; and Python is shared.">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/cpp\/opencv\/opencv-convexhull\/",
+          "name": "Open cv understanding convex hull using c"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim Master"
+  },
+  "headline": "OpenCV - Understanding Convex Hull using C\u002b\u002b",
+  "description" : "A tutorial on determining a shape\u0027s or a group of points\u0027 Convex Hull.  The OpenCV code implementation in C\u002b\u002b and Python is shared.",
+  "inLanguage" : "en",
+  "wordCount":  1053 ,
+  "datePublished" : "2022-04-01T00:00:00",
+  "dateModified" : "2022-04-01T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, cpp, opencv" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/cpp\/opencv\/opencv-convexhull\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="OpenCV - Understanding Convex Hull using C&#43;&#43;" />
+<meta name="twitter:title" content="OpenCV - Understanding Convex Hull using C&#43;&#43;">
+<meta property="og:description" content="A tutorial on determining a shape&#39;s or a group of points&#39; Convex Hull.  The OpenCV code implementation in C&#43;&#43; and Python is shared.">
+<meta name="twitter:card" content="A tutorial on determining a shape&#39;s or a group of points&#39; Convex Hull.  The OpenCV code implementation in C&#43;&#43; and Python is shared.">
+<meta name="twitter:description" content="A tutorial on determining a shape&#39;s or a group of points&#39; Convex Hull.  The OpenCV code implementation in C&#43;&#43; and Python is shared.">
+<meta property="og:image" content="http://localhost:1313/1%2AS6qd7TxmhYCyImzgmIof9A.png" />
+<meta name="twitter:image" content="http://localhost:1313/1%2AS6qd7TxmhYCyImzgmIof9A.png">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/cpp/opencv/opencv-convexhull/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/cpp/opencv/opencv-convexhull/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="opencv,convex,hull,c&#43;&#43;,cpp,detection,image,boundary,edges,detection,points,algorithms,applications,code,blur,threshold,binary">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                OpenCV - Understanding Convex Hull using C&#43;&#43;
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/collections/programming/cpp/opencv/opencv-convexhull/1*S6qd7TxmhYCyImzgmIof9A.png" alt="1*S6qd7TxmhYCyImzgmIof9A.png" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="opencv---understanding-convex-hull-using-c">OpenCV - Understanding Convex Hull using C++</h1>
+<p>Finding and analysing the forms present in an image is one technique to solving most computer vision problems, and getting the contour is one of them.
+I would describe a contour to a newbie as &ldquo;just a curve joining all the points lying on the shape&rsquo;s perimeter.&rdquo;</p>
+<p>Let&rsquo;s say I have the image of my hand below, and the contour of the hand is represented by the green line.
+The red dots represent the spots that we link to form the contour curve.</p>
+<p><img src="ss.png" alt="convex Hull"></p>
+<p>My advanced mathematics lesson, where they introduced contours, is still fresh in my mind. However, it was difficult to connect with the importance of this topic because the teacher never highlighted any real-world applications of the contour. And today is the day when I discover just how crucial they are in computer vision.</p>
+<h2 id="what-is-convex-hull">What is Convex Hull?</h2>
+<p>An item that has no interior angles higher than 180 degrees is said to be <strong>convex</strong>. Non-Convex or Concave refers to a shape that is not convex.
+The exterior or shape of an object is referred to as the <strong>hull</strong>.<br>
+As a result, a shape&rsquo;s or a group of points&rsquo; <strong>Convex Hull</strong> is a tightly fitting convex boundary around the points or the shape.</p>
+<p><img src="conv.jpg" alt="Convex Hull "></p>
+<p><strong>A convex hull of an object, in layman&rsquo;s terms, is the smallest boundary that can completely encircle or wrap the thing (or contour of that object).</strong></p>
+<p>The convex hull can be found using a variety of approaches. The following are some of the most frequent algorithms and their associated temporal complexities. The number of input points is n, while the number of points on the hull is h.</p>
+<ul>
+<li><a href="https://www.sciencedirect.com/science/article/pii/0167865582900162">Sklansky</a> (1982) — O(nlogn) ( OpenCV uses this algorithm)</li>
+<li><a href="https://en.wikipedia.org/wiki/Gift_wrapping_algorithm">Gift wrapping</a>, a.k.a. Jarvis march — O(nh)</li>
+<li><a href="https://en.wikipedia.org/wiki/Graham_scan">Graham scan</a> — O(nlogn)</li>
+<li><a href="https://en.wikipedia.org/wiki/Chan%27s_algorithm">Chan’s algorithm</a> — O(nlogh)</li>
+</ul>
+<h2 id="implementing-convex-hull-using-opencv">Implementing Convex Hull Using OpenCV</h2>
+<h2 id="1-read-the-input-image">1. Read the Input Image</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>src <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>imread( argv[<span style="color:#099">1</span>],cv<span style="font-weight:bold">::</span>IMREAD_GRAYSCALE);
+</span></span></code></pre></div><h2 id="2-convert-input-image-into-binary-form">2. Convert Input Image into Binary Form</h2>
+<ol>
+<li>Convert Image to grayscale (Which we have done while reading image).</li>
+<li>Remove Noise from the image by applying any blurring algorithm (Here I have used Gaussain Blur)</li>
+<li>Then Thershold the image to make it into Binary Form.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> cv<span style="font-weight:bold">::</span>GaussianBlur( src, src, cv<span style="font-weight:bold">::</span>Size(<span style="color:#099">3</span>,<span style="color:#099">3</span>),<span style="color:#099">0</span> ); <span style="color:#998;font-style:italic">//Applying GaussianBlur of Kernel(3x3)
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    ShowImg(<span style="color:#b84">&#34;Image After Applying Blur&#34;</span>,src);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> max_thresh <span style="font-weight:bold">=</span> <span style="color:#099">255</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> std<span style="font-weight:bold">::</span>string source_window <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;Canny &#34;</span>;
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>createTrackbar( <span style="color:#b84">&#34;Canny thresh:&#34;</span>, source_window, <span style="font-weight:bold">&amp;</span>thresh, max_thresh, thresh_callback );
+</span></span><span style="display:flex;"><span>    thresh_callback( <span style="color:#099">0</span>, <span style="color:#099">0</span> );
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>waitKey();
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> <span style="color:#099">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">thresh_callback</span>(<span style="color:#458;font-weight:bold">int</span>, <span style="color:#458;font-weight:bold">void</span><span style="font-weight:bold">*</span> )
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>Mat canny_output;
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>Canny( src, canny_output, thresh, thresh<span style="font-weight:bold">*</span><span style="color:#099">2</span> );
+</span></span><span style="display:flex;"><span>....
+</span></span></code></pre></div><ol start="3">
+<li>Finding Contour
+Next, we use OpenCV&rsquo;s <code>findContour</code> function to find the contour around each image.</li>
+</ol>
+<p>If you&rsquo;re a newbie, you might be wondering why we didn&rsquo;t just utilise edge detection. Edge detection would simply have provided us with the position of the edges.</p>
+<p>However, we&rsquo;re curious about how edges are connected to one another. findContour finds the connections and returns a list of the points that make up a contour.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    std<span style="font-weight:bold">::</span>vector<span style="font-weight:bold">&lt;</span>std<span style="font-weight:bold">::</span>vector<span style="font-weight:bold">&lt;</span>cv<span style="font-weight:bold">::</span>Point<span style="font-weight:bold">&gt;</span> <span style="font-weight:bold">&gt;</span> contours;
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>findContours( canny_output, contours, cv<span style="font-weight:bold">::</span>RETR_TREE, cv<span style="font-weight:bold">::</span>CHAIN_APPROX_SIMPLE );
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><ol start="4">
+<li>Finding Convex Hull using <code>convexHull</code> function
+We can now get the Convex Hull for each of the contours now that we&rsquo;ve got the contours. The <code>convexHull</code> function can be used to do this.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>   std<span style="font-weight:bold">::</span>vector<span style="font-weight:bold">&lt;</span>std<span style="font-weight:bold">::</span>vector<span style="font-weight:bold">&lt;</span>cv<span style="font-weight:bold">::</span>Point<span style="font-weight:bold">&gt;</span> <span style="font-weight:bold">&gt;</span>hull( contours.size() );
+</span></span><span style="display:flex;"><span>   <span style="font-weight:bold">for</span>( size_t i <span style="font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="font-weight:bold">&lt;</span> contours.size(); i<span style="font-weight:bold">++</span> )
+</span></span><span style="display:flex;"><span>   {
+</span></span><span style="display:flex;"><span>       cv<span style="font-weight:bold">::</span>convexHull( contours[i], hull[i] );
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><ol start="5">
+<li>Drawing Convex Hull
+The last step is to visualise the convex hulls we&rsquo;ve discovered so far. Because a convex hull is essentially a contour, we can use OpenCV&rsquo;s <code>drawContours</code> function to create one.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>Scalar contours_color <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>Scalar(<span style="color:#099">255</span>,<span style="color:#099">0</span>,<span style="color:#099">0</span>); <span style="color:#998;font-style:italic">//Blue Color
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    cv<span style="font-weight:bold">::</span>Scalar hull_color <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>Scalar(<span style="color:#099">0</span>,<span style="color:#099">0</span>,<span style="color:#099">255</span>); <span style="color:#998;font-style:italic">//Red Color
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    <span style="font-weight:bold">for</span>( size_t i <span style="font-weight:bold">=</span> <span style="color:#099">0</span>; i<span style="font-weight:bold">&lt;</span> contours.size(); i<span style="font-weight:bold">++</span> )
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        cv<span style="font-weight:bold">::</span>Scalar color <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>Scalar( rng.uniform(<span style="color:#099">0</span>, <span style="color:#099">256</span>), rng.uniform(<span style="color:#099">0</span>,<span style="color:#099">256</span>), rng.uniform(<span style="color:#099">0</span>,<span style="color:#099">256</span>) );
+</span></span><span style="display:flex;"><span>        cv<span style="font-weight:bold">::</span>drawContours( drawing, contours, (<span style="color:#458;font-weight:bold">int</span>)i, contours_color );
+</span></span><span style="display:flex;"><span>        cv<span style="font-weight:bold">::</span>drawContours( drawing, hull, (<span style="color:#458;font-weight:bold">int</span>)i, hull_color );
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><h2 id="output">Output</h2>
+<p><img src="brett.jpg" alt="Input"></p>
+<p><img src="output.png" alt="Output"></p>
+<h2 id="applications">Applications</h2>
+<h3 id="from-a-set-of-points-create-a-boundary">From a set of points, create a boundary</h3>
+<p>Regular readers of our blog would recall that we utilised convexHull in our face swap application previously. We used the convex hull to find the face&rsquo;s boundary based on the facial landmarks discovered by Dlib.</p>
+<p>We can retrieve feature points information instead of contour information in a variety of additional applications. We recover a grayscale depth map that is a collection of points in several active illumination systems, such as Kinect. The convex hull of these points can be used to find the boundaries of an object in the scene.</p>
+<h3 id="avoidance-of-collisions">Avoidance of Collisions</h3>
+<p><img src="convehullcar.png" alt=""></p>
+<p>Consider an automobile to be a collection of points, with the polygon (minimum set) holding all of them. If the convex hull can avoid the obstructions, the automobile should be able to as well.</p>
+<p>Finding the intersection of random contours is substantially more computationally intensive than finding the collision of two convex polygons.
+As a result, a convex hull is preferable for collision detection and avoidance.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://amzn.to/3L9k6TD">OpenCV Computer Vision Application Programming Cookbook</a></li>
+<li><a href="https://amzn.to/3D8zOeL">OpenCV 4 Computer Vision Application Programming Cookbook: Build complex computer vision applications with OpenCV and C++, 4th Edition</a></li>
+<li><a href="https://amzn.to/3iowMJM">Modern C++ Programming Cookbook</a></li>
+<li><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwiwqLG6r_P2AhVR4HMBHf2mCX0QFnoECAMQAQ&amp;url=https%3A%2F%2Fdocs.opencv.org%2F3.4%2Fd7%2Fd1d%2Ftutorial_hull.html&amp;usg=AOvVaw0bLlPkmERpjI_jW3p-tPZC">OpenCV Docs</a></li>
+</ul>
+<h2 id="code">Code</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold">#include</span> <span style="color:#999;font-weight:bold">&#34;opencv2/imgcodecs.hpp&#34;</span><span style="color:#999;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold">#include</span> <span style="color:#999;font-weight:bold">&#34;opencv2/highgui.hpp&#34;</span><span style="color:#999;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold">#include</span> <span style="color:#999;font-weight:bold">&#34;opencv2/imgproc.hpp&#34;</span><span style="color:#999;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold">#include</span> <span style="color:#999;font-weight:bold">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold"></span>
+</span></span><span style="display:flex;"><span>cv<span style="font-weight:bold">::</span>Mat src;
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">int</span> thresh <span style="font-weight:bold">=</span> <span style="color:#099">100</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">thresh_callback</span>(<span style="color:#458;font-weight:bold">int</span>, <span style="color:#458;font-weight:bold">void</span><span style="font-weight:bold">*</span> );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">ErrorMsg</span>(std<span style="font-weight:bold">::</span>string msg) {
+</span></span><span style="display:flex;"><span>    std<span style="font-weight:bold">::</span>cout <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;!! Error !! </span><span style="color:#b84">\n</span><span style="color:#b84">&#34;</span> ;
+</span></span><span style="display:flex;"><span>    std<span style="font-weight:bold">::</span>cout <span style="font-weight:bold">&lt;&lt;</span> msg <span style="font-weight:bold">&lt;&lt;</span> std<span style="font-weight:bold">::</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">ShowImg</span>(<span style="font-weight:bold">const</span> std<span style="font-weight:bold">::</span>string windowName,cv<span style="font-weight:bold">::</span>Mat<span style="font-weight:bold">&amp;</span> img)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>namedWindow( windowName );
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>imshow( windowName, img );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>( <span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#458;font-weight:bold">char</span><span style="font-weight:bold">**</span> argv )
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span>(argc <span style="font-weight:bold">&lt;</span> <span style="color:#099">1</span>) {
+</span></span><span style="display:flex;"><span>        ErrorMsg(<span style="color:#b84">&#34;Please Provide Input Image</span><span style="color:#b84">\n</span><span style="color:#b84">&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    src <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>imread( argv[<span style="color:#099">1</span>],cv<span style="font-weight:bold">::</span>IMREAD_GRAYSCALE);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span>( src.empty() )
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        ErrorMsg(<span style="color:#b84">&#34;Could not open or find the image!</span><span style="color:#b84">\n</span><span style="color:#b84">&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> <span style="font-weight:bold">-</span><span style="color:#099">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>GaussianBlur( src, src, cv<span style="font-weight:bold">::</span>Size(<span style="color:#099">3</span>,<span style="color:#099">3</span>),<span style="color:#099">0</span> ); <span style="color:#998;font-style:italic">//Applying GaussianBlur of Kernel(3x3)
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    ShowImg(<span style="color:#b84">&#34;Image After Applying Blur&#34;</span>,src);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> max_thresh <span style="font-weight:bold">=</span> <span style="color:#099">255</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> std<span style="font-weight:bold">::</span>string source_window <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;Canny &#34;</span>;
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>createTrackbar( <span style="color:#b84">&#34;Canny thresh:&#34;</span>, source_window, <span style="font-weight:bold">&amp;</span>thresh, max_thresh, thresh_callback );
+</span></span><span style="display:flex;"><span>    thresh_callback( <span style="color:#099">0</span>, <span style="color:#099">0</span> );
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>waitKey();
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> <span style="color:#099">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">thresh_callback</span>(<span style="color:#458;font-weight:bold">int</span>, <span style="color:#458;font-weight:bold">void</span><span style="font-weight:bold">*</span> )
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>Mat canny_output;
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>Canny( src, canny_output, thresh, thresh<span style="font-weight:bold">*</span><span style="color:#099">2</span> );
+</span></span><span style="display:flex;"><span>    std<span style="font-weight:bold">::</span>vector<span style="font-weight:bold">&lt;</span>std<span style="font-weight:bold">::</span>vector<span style="font-weight:bold">&lt;</span>cv<span style="font-weight:bold">::</span>Point<span style="font-weight:bold">&gt;</span> <span style="font-weight:bold">&gt;</span> contours;
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>findContours( canny_output, contours, cv<span style="font-weight:bold">::</span>RETR_TREE, cv<span style="font-weight:bold">::</span>CHAIN_APPROX_SIMPLE );
+</span></span><span style="display:flex;"><span>    std<span style="font-weight:bold">::</span>vector<span style="font-weight:bold">&lt;</span>std<span style="font-weight:bold">::</span>vector<span style="font-weight:bold">&lt;</span>cv<span style="font-weight:bold">::</span>Point<span style="font-weight:bold">&gt;</span> <span style="font-weight:bold">&gt;</span>hull( contours.size() );
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">for</span>( size_t i <span style="font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="font-weight:bold">&lt;</span> contours.size(); i<span style="font-weight:bold">++</span> )
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        cv<span style="font-weight:bold">::</span>convexHull( contours[i], hull[i] );
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>Mat drawing <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>Mat<span style="font-weight:bold">::</span>zeros( canny_output.size(), CV_8UC3 );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>Scalar contours_color <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>Scalar(<span style="color:#099">255</span>,<span style="color:#099">0</span>,<span style="color:#099">0</span>); <span style="color:#998;font-style:italic">//Blue Color
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    cv<span style="font-weight:bold">::</span>Scalar hull_color <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>Scalar(<span style="color:#099">0</span>,<span style="color:#099">0</span>,<span style="color:#099">255</span>); <span style="color:#998;font-style:italic">//Red Color
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    <span style="font-weight:bold">for</span>( size_t i <span style="font-weight:bold">=</span> <span style="color:#099">0</span>; i<span style="font-weight:bold">&lt;</span> contours.size(); i<span style="font-weight:bold">++</span> )
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        cv<span style="font-weight:bold">::</span>Scalar color <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>Scalar( rng.uniform(<span style="color:#099">0</span>, <span style="color:#099">256</span>), rng.uniform(<span style="color:#099">0</span>,<span style="color:#099">256</span>), rng.uniform(<span style="color:#099">0</span>,<span style="color:#099">256</span>) );
+</span></span><span style="display:flex;"><span>        cv<span style="font-weight:bold">::</span>drawContours( drawing, contours, (<span style="color:#458;font-weight:bold">int</span>)i, contours_color );
+</span></span><span style="display:flex;"><span>        cv<span style="font-weight:bold">::</span>drawContours( drawing, hull, (<span style="color:#458;font-weight:bold">int</span>)i, hull_color );
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ShowImg(<span style="color:#b84">&#34;Hull: &#34;</span>, drawing);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/cpp/">cpp</a>
+        
+        <a href="http://localhost:1313/tags/opencv/">opencv</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fcpp%2fopencv%2fopencv-convexhull%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fcpp%2fopencv%2fopencv-convexhull%2f&amp;text=OpenCV%20-%20Understanding%20Convex%20Hull%20using%20C%2b%2b&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fcpp%2fopencv%2fopencv-convexhull%2f&amp;title=OpenCV%20-%20Understanding%20Convex%20Hull%20using%20C%2b%2b"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share OpenCV - Understanding Convex Hull using C&#43;&#43; on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fcpp%2fopencv%2fopencv-convexhull%2f&title=OpenCV%20-%20Understanding%20Convex%20Hull%20using%20C%2b%2b">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fcpp%2fopencv%2fopencv-convexhull%2f&amp;description=OpenCV%20-%20Understanding%20Convex%20Hull%20using%20C%2b%2b" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim Master
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/cpp/opencv/contour-detection/"
+            data-toggle="tooltip" data-placement="top" title="OpenCV - Contour Detection Using C&#43;&#43;">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/cpp/opencv/opencv-hough-line-detection/"
+            data-toggle="tooltip" data-placement="top" title="OpenCV - Understanding Hough Transform Using C&#43;&#43;">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

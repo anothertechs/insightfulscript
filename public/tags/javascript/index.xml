@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on InsightfulScript</title>
+    <link>http://localhost:1313/tags/javascript/</link>
+    <description>Recent content in Javascript on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Sun, 26 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nodejs- forEach loop cheatsheet</title>
+      <link>http://localhost:1313/collections/programming/javascript/nodejs-foreach-loop/</link>
+      <pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/javascript/nodejs-foreach-loop/</guid>
+      <description>Nodejs- forEach loop cheatsheet You can use looping to run through each item in an array and customise and output each one as you see fit. Loops are a crucial tool for rendering arrays in JavaScript, just as they are in any other programming language.</description>
+    </item>
+    <item>
+      <title>Javascript Regex cheatsheet 2021</title>
+      <link>http://localhost:1313/collections/programming/javascript/javascript-regex-cheat-sheat-2021/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/javascript/javascript-regex-cheat-sheat-2021/</guid>
+      <description>Javascript Regex Cheatsheet A Regular Expression (RegEx) is a string of characters that defines a search pattern. Regex can save you hundreds of lines of code and can be used with Javascript or any programming language (and even CLI tools)</description>
+    </item>
+    <item>
+      <title>Javascript Regex cheatsheet 2021</title>
+      <link>http://localhost:1313/post/javascript-regex-cheat-sheat-2021/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/javascript-regex-cheat-sheat-2021/</guid>
+      <description>Javascript Regex Cheatsheet A Regular Expression (RegEx) is a string of characters that defines a search pattern. Regex can save you hundreds of lines of code and can be used with Javascript or any programming language (and even CLI tools)</description>
+    </item>
+    <item>
+      <title>Javascript Beginners Tips and Best Practices 2021</title>
+      <link>http://localhost:1313/collections/programming/javascript/javascript-beginner-tip-2021/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/javascript/javascript-beginner-tip-2021/</guid>
+      <description>Javascript Beginners Tips and Best Practices 2021 I&amp;rsquo;ll discuss JavaScript tips, tactics, and best practises for beginners that I use and find valuable in this blog.&#xA;Using Numeric Separator When dealing with enormous numbers, this is one of the most commonly utilised operators.</description>
+    </item>
+    <item>
+      <title>Javascript String Methods Cheat Sheet 2021</title>
+      <link>http://localhost:1313/collections/programming/javascript/javascript-string-methods-cheat-sheet-2021/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/javascript/javascript-string-methods-cheat-sheet-2021/</guid>
+      <description>Javascript String Methods Cheat Sheet 2021 Use these JavaScript string methods to easily perform character manipulation.&#xA;When programming in JavaScript, you often come across scenarios that require string manipulation. For example, when retrieving email , you may need to convert all characters to lowercase or use regular expressions to check if the entered password meets conditions.</description>
+    </item>
+  </channel>
+</rss>

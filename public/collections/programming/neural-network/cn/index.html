@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Implementing Convolutional Neural Network (CNN) using Python - InsightfulScript</title>
+<meta name="description" content="In this tutorial, we&#39;ll show you how to design convolutional neural network (CNN) models Create CNN models to solve a classification problem.">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/neural-network\/cn\/",
+          "name": "Implementing convolutional neural network ( cnn) using python"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim"
+  },
+  "headline": "Implementing Convolutional Neural Network (CNN) using Python",
+  "description" : "In this tutorial, we\u0027ll show you how to design convolutional neural network (CNN) models Create CNN models to solve a classification problem.",
+  "inLanguage" : "en",
+  "wordCount":  1460 ,
+  "datePublished" : "2021-08-23T00:00:00",
+  "dateModified" : "2021-08-23T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, Neural Network" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/neural-network\/cn\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Implementing Convolutional Neural Network (CNN) using Python" />
+<meta name="twitter:title" content="Implementing Convolutional Neural Network (CNN) using Python">
+<meta property="og:description" content="In this tutorial, we&#39;ll show you how to design convolutional neural network (CNN) models Create CNN models to solve a classification problem.">
+<meta name="twitter:card" content="In this tutorial, we&#39;ll show you how to design convolutional neural network (CNN) models Create CNN models to solve a classification problem.">
+<meta name="twitter:description" content="In this tutorial, we&#39;ll show you how to design convolutional neural network (CNN) models Create CNN models to solve a classification problem.">
+<meta property="og:image" content="http://localhost:1313/images/cnn.png" />
+<meta name="twitter:image" content="http://localhost:1313/images/cnn.png">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/neural-network/cn/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/neural-network/cn/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="convolutional,neural,network,cnn,python">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                Implementing Convolutional Neural Network (CNN) using Python
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/images/cnn.png" alt="/images/cnn.png" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="what-is-convolutional-neural-network-cnn">What is Convolutional Neural Network (CNN)</h1>
+<p>In our <a href="https://anothertechs.com/programming/neural-network/cnn/">previous</a> article we have discussed how a simple neural network works.The problem with fully conntected neural network is that they are computationally expensive. Also, by adding lots of layer we come across some problem:</p>
+<ol>
+<li>We run into problem of <a href="https://en.wikipedia.org/wiki/Vanishing_gradient_problem">vanashing gradient problem</a>.</li>
+<li>Another issue is that number of trainable parameter grows rapidly. Because of this trainning slows down or became practically impossible.</li>
+<li>Fully connected neural network can be easily exposed to overfitting</li>
+</ol>
+<p>Convolutional Neural Network (or CNN) can solve this problem by finding correlations between adjacent input between dataset (eg. image or time series). This means that not every node in the network is connected to every other node in the next layer and this cut down number of weight parameter required to be trained in the model.</p>
+<h2 id="how-convolutional-neural-network-cnn-works">How Convolutional Neural Network (CNN) works</h2>
+<p>According to wikipedia a <strong>convolution</strong> is a operation between to function the produce third function expression how the shape of one modified by the other. In convolutional neural network this means that we move a window or filter across the image being studied. We can imagine this as a 2x2(or 3x3) filter sliding accross all the available nodes/ pixels in the input image.</p>
+<p><img src="typical_cnn.webp" alt="CNN"></p>
+<p>Now let&rsquo;s look at some of the important term used in convolutional nerual network (CNN)</p>
+<h2 id="components-of-convolutional-neural-network-cnn">Components of Convolutional Neural Network (CNN)</h2>
+<h3 id="feature-mapping-or-activation-map">Feature mapping (or activation map)</h3>
+<p>Whenever we use a filter matrix(or slidding window) accross the image to compute the convolution operation the resultant matrix is called <strong>Feature Map</strong>.Because of this mapping our network learn to recognize common geometrical object such as edge,line etc.</p>
+<p>Convolution layers need multiple filters(For example an image consists of 3 channel Red,Green and Blue).This multiple filters will produce their own 2D output, then this outputs is then combined to produced a single output (Feature map or activation map). Each channel will be trained to detect certain key feature.The ouptut dimenssion of the feature map will be 1 more than the input channel.</p>
+<h3 id="polling">Polling</h3>
+<p><img src="./max_polling.webp" alt="Max Polling"></p>
+<p>Polling is a type of sliding window technique, but instead of applying weights, we apply some statistical function of some type over content window. The most common type of polling is <strong>max polling</strong>. And the output of max polling is the maximum value in that content window.</p>
+<h3 id="strides">Strides</h3>
+<p>Strides is the number of pixels which shits over the input image.For example if strides is 1 then we move the window 1 pixels at a time, when it is 2 we move the windows 2 pixels at a time and so on.</p>
+<p><em>In polling if strides is greater than 1 then the ouput size will reduce. For example if the input image is of size 5x5 and if we apply strides of 2 than our output will be of 3x3 this process is called <strong>down sampling</strong> and it reduce the number of trainning parmeter</em></p>
+<h3 id="padding">Padding</h3>
+<p>Sometimes our sliding window doest not fit perfactly with the input image. So we have two options:</p>
+<ul>
+<li>Pad the image with zero(also called zero-padding).</li>
+<li>Drop or clip the part of the image where our filter window did not fit. This is also known as valid padding which keeps only valid part of the image.</li>
+</ul>
+<h2 id="implementing-convolutional-nerual-network">Implementing Convolutional Nerual Network</h2>
+<p>Firt let&rsquo;s import our necessary libraries:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> <span style="color:#555">torch</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> <span style="color:#555">torch.nn</span> <span style="font-weight:bold">as</span> <span style="color:#555">nn</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">from</span> <span style="color:#555">torch.autograd</span> <span style="font-weight:bold">import</span> Variable
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> <span style="color:#555">torch.nn.functional</span> <span style="font-weight:bold">as</span> <span style="color:#555">F</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> <span style="color:#555">torch.optim</span> <span style="font-weight:bold">as</span> <span style="color:#555">optim</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">from</span> <span style="color:#555">torchvision</span> <span style="font-weight:bold">import</span> datasets,transforms
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">from</span> <span style="color:#555">tqdm</span> <span style="font-weight:bold">import</span> tqdm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>device <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>device(<span style="color:#b84">&#34;cuda:0&#34;</span> <span style="font-weight:bold">if</span> torch<span style="font-weight:bold">.</span>cuda<span style="font-weight:bold">.</span>is_available() <span style="font-weight:bold">else</span> <span style="color:#b84">&#34;cpu&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">def</span> <span style="color:#900;font-weight:bold">get_data</span>(batch_size <span style="font-weight:bold">=</span> <span style="color:#099">200</span>,train <span style="font-weight:bold">=</span> <span style="font-weight:bold">True</span>):
+</span></span><span style="display:flex;"><span>    data <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>utils<span style="font-weight:bold">.</span>data<span style="font-weight:bold">.</span>DataLoader(
+</span></span><span style="display:flex;"><span>        datasets<span style="font-weight:bold">.</span>MNIST(<span style="color:#b84">&#39;../data&#39;</span>, train<span style="font-weight:bold">=</span>train, download<span style="font-weight:bold">=</span><span style="font-weight:bold">True</span>,
+</span></span><span style="display:flex;"><span>                       transform<span style="font-weight:bold">=</span>transforms<span style="font-weight:bold">.</span>Compose([
+</span></span><span style="display:flex;"><span>                           transforms<span style="font-weight:bold">.</span>ToTensor(),
+</span></span><span style="display:flex;"><span>                           transforms<span style="font-weight:bold">.</span>Normalize((<span style="color:#099">0.1307</span>,), (<span style="color:#099">0.3081</span>,))
+</span></span><span style="display:flex;"><span>                       ])),
+</span></span><span style="display:flex;"><span>        batch_size<span style="font-weight:bold">=</span>batch_size, shuffle<span style="font-weight:bold">=</span><span style="font-weight:bold">True</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> data
+</span></span></code></pre></div><p>Now let&rsquo;s create our model class</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Model</span>(nn<span style="font-weight:bold">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#999">super</span>(Model,self)<span style="font-weight:bold">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>l1 <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Sequential(
+</span></span><span style="display:flex;"><span>                nn<span style="font-weight:bold">.</span>Conv2d(<span style="color:#099">1</span>,<span style="color:#099">32</span>,kernel_size <span style="font-weight:bold">=</span> <span style="color:#099">5</span>,stride <span style="font-weight:bold">=</span> <span style="color:#099">1</span>,padding <span style="font-weight:bold">=</span> <span style="color:#099">2</span>),
+</span></span><span style="display:flex;"><span>                nn<span style="font-weight:bold">.</span>ReLU(),
+</span></span><span style="display:flex;"><span>                nn<span style="font-weight:bold">.</span>MaxPool2d(kernel_size <span style="font-weight:bold">=</span> <span style="color:#099">2</span>, stride <span style="font-weight:bold">=</span> <span style="color:#099">2</span>)
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>l2 <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Sequential(
+</span></span><span style="display:flex;"><span>                nn<span style="font-weight:bold">.</span>Conv2d(<span style="color:#099">32</span>,<span style="color:#099">64</span>,kernel_size <span style="font-weight:bold">=</span> <span style="color:#099">5</span>,stride <span style="font-weight:bold">=</span> <span style="color:#099">1</span>,padding <span style="font-weight:bold">=</span> <span style="color:#099">2</span>),
+</span></span><span style="display:flex;"><span>                nn<span style="font-weight:bold">.</span>ReLU(),
+</span></span><span style="display:flex;"><span>                nn<span style="font-weight:bold">.</span>MaxPool2d(kernel_size <span style="font-weight:bold">=</span> <span style="color:#099">2</span>, stride <span style="font-weight:bold">=</span> <span style="color:#099">2</span>)
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>drop_out <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Dropout()
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>fc1 <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Linear(<span style="color:#099">7</span><span style="font-weight:bold">*</span><span style="color:#099">7</span><span style="font-weight:bold">*</span><span style="color:#099">64</span>,<span style="color:#099">1000</span>)
+</span></span><span style="display:flex;"><span>        self<span style="font-weight:bold">.</span>fc2 <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>Linear(<span style="color:#099">1000</span>,<span style="color:#099">10</span>)
+</span></span></code></pre></div><p>As we have discussed in our <a href="https://anothertechs.com/programming/neural-network/cnn/">last section</a> to create a nerual network all you need is to inherit the <code>nn.Module</code> class in your model.</p>
+<p>Next we create sequential object. The <code>nn.Sequential()</code> method allow us to create sequential ordered layer in our network. As in our case we have create convolution-&gt;ReLU-&gt;polling.sequence.</p>
+<p>The <code>nn.Conv2d()</code> method is used the create set of convolution filters and we have passed to parameters first is our input channel which is 1 for gray scale image and the next is number of output channel.The <code>kernel_size</code> argument is the size of our sliding window of our image and the last two argument are strides and padding.</p>
+<p>To know the dimenssion of our output image we have formula:</p>
+<p>Wout = ((Win - F + 2P)/S) + 1 (Same formula is calculated for Height)</p>
+<p>Wout = Width of ouput
+F = Filter size(or window size)
+P = Padding
+S = Stride</p>
+<p>If we wish to keep our input and output dimenssion same we have to take <code>kernel_size</code> = 5 and <code>stride</code> = 1. If we put all the value in above formula we get <code>padding</code> = 2.</p>
+<p><code>nn.ReLU()</code> is our activation function.
+The last element on our sequential object of <code>self.l1</code> is <code>nn.MaxPool2d</code>. First argument given to this method is polling size which we have given as 2x2. Next we want to down sample our date by giving the stride 2. So our 28x28 pixel image will now be 14x14 pixel(You can also put the value in above formula, you will get Wout = 14 if you put padding = 0).</p>
+<p>Similaryly, we have define our second layer i.e <code>self.l2</code>.After this operation our ouput will be of dimensssion 7x7 pixels.</p>
+<p>Next we use <code>nn.Dropout</code> to avoid overfitting.Finally we create two fully connected layer <code>self.fc1</code> and <code>self.fc2</code> by using <code>nn.Linear()</code>.The input size of first layer will be 7x7x64 which is dimenssion of image and number of channel from previous <code>Sequential</code> layer and this is connected to 1000 nodes.Finally this 1000 node is than connected to 10 nodes.</p>
+<p>Now let&rsquo;s write our <code>froward()</code> method to tell our network how our data should flow.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>        <span style="font-weight:bold">def</span> <span style="color:#900;font-weight:bold">forward</span>(self,x):
+</span></span><span style="display:flex;"><span>            x <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>l1(x)
+</span></span><span style="display:flex;"><span>            x <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>l2(x)
+</span></span><span style="display:flex;"><span>            x <span style="font-weight:bold">=</span> x<span style="font-weight:bold">.</span>reshape(x<span style="font-weight:bold">.</span>size(<span style="color:#099">0</span>),<span style="font-weight:bold">-</span><span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>            x <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>drop_out(x)
+</span></span><span style="display:flex;"><span>            x <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>fc1(x)
+</span></span><span style="display:flex;"><span>            x <span style="font-weight:bold">=</span> self<span style="font-weight:bold">.</span>fc2(x)
+</span></span><span style="display:flex;"><span>            x <span style="font-weight:bold">=</span> x<span style="font-weight:bold">.</span>reshape(x<span style="font-weight:bold">.</span>size(<span style="color:#099">0</span>),<span style="font-weight:bold">-</span><span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	    <span style="font-weight:bold">return</span> x
+</span></span></code></pre></div><p>The first two line of <code>forward</code> is straight forward. After line <code>self.l2(x)</code> we apply <code>reshape</code> method which flatten our data of dimession 7x7x64 to 3136x1. Next dropout is applied followed by two fully connected layer,with finaly output being returned.</p>
+<p>Now we create our main function:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold">if</span> __name__  <span style="font-weight:bold">==</span> <span style="color:#b84">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    cnn <span style="font-weight:bold">=</span> Model()
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span> torch<span style="font-weight:bold">.</span>cuda<span style="font-weight:bold">.</span>is_available():
+</span></span><span style="display:flex;"><span>        cnn<span style="font-weight:bold">.</span>cuda()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    criterion <span style="font-weight:bold">=</span> nn<span style="font-weight:bold">.</span>CrossEntropyLoss()
+</span></span><span style="display:flex;"><span>    optimizer <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>optim<span style="font-weight:bold">.</span>Adam(cnn<span style="font-weight:bold">.</span>parameters(),lr <span style="font-weight:bold">=</span> <span style="color:#099">0.01</span>)
+</span></span></code></pre></div><p>First of all we create instance of our Model class called <code>cnn</code>. Next we define our loss function which in our case is <code>nn.CrossEntropyLoss()</code>. Then we define our optimize,here I have used <code>Adam</code> optimizer, which takes model parameter as it&rsquo;s firt input and we have given <em>learning rate</em> to be 0.01.</p>
+<p>Now let&rsquo;s train our model:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    train <span style="font-weight:bold">=</span> get_data()
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">for</span> epoch <span style="font-weight:bold">in</span> tqdm(<span style="color:#999">range</span>(<span style="color:#099">10</span>)):
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">for</span> i,(images,target) <span style="font-weight:bold">in</span> <span style="color:#999">enumerate</span>(train):
+</span></span><span style="display:flex;"><span>            images <span style="font-weight:bold">=</span> images<span style="font-weight:bold">.</span>to(device)
+</span></span><span style="display:flex;"><span>            target <span style="font-weight:bold">=</span> target<span style="font-weight:bold">.</span>to(device)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            out <span style="font-weight:bold">=</span> cnn(images)
+</span></span><span style="display:flex;"><span>            loss <span style="font-weight:bold">=</span> criterion(out,target)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#998;font-style:italic"># Back-propogation</span>
+</span></span><span style="display:flex;"><span>            optimizer<span style="font-weight:bold">.</span>zero_grad()
+</span></span><span style="display:flex;"><span>            loss<span style="font-weight:bold">.</span>backward(https:<span style="font-weight:bold">//</span>miro<span style="font-weight:bold">.</span>medium<span style="font-weight:bold">.</span>com<span style="font-weight:bold">/</span><span style="color:#999">max</span><span style="font-weight:bold">/</span><span style="color:#099">3944</span><span style="font-weight:bold">/</span><span style="color:#099">1</span><span style="font-weight:bold">*</span>YejW73f36BGhNGhrtbz67g<span style="font-weight:bold">.</span>png)
+</span></span><span style="display:flex;"><span>            optimizer<span style="font-weight:bold">.</span>step()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            _,pred <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>max(out<span style="font-weight:bold">.</span>data,<span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>            correct <span style="font-weight:bold">=</span> (pred <span style="font-weight:bold">==</span> target)<span style="font-weight:bold">.</span>sum()<span style="font-weight:bold">.</span>item()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">if</span> i <span style="font-weight:bold">%</span> <span style="color:#099">100</span> <span style="font-weight:bold">==</span> <span style="color:#099">0</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#999">print</span>(<span style="color:#b84">f</span><span style="color:#b84">&#34; epoch: </span><span style="color:#b84">{</span>epoch<span style="color:#b84">}</span><span style="color:#b84">\t</span><span style="color:#b84">loss: </span><span style="color:#b84">{</span>loss<span style="font-weight:bold">.</span>data<span style="color:#b84">}</span><span style="color:#b84">\t</span><span style="color:#b84">Accuracy: </span><span style="color:#b84">{</span>(correct<span style="font-weight:bold">/</span>target<span style="font-weight:bold">.</span>size(<span style="color:#099">0</span>)) <span style="font-weight:bold">*</span> <span style="color:#099">100</span><span style="color:#b84">}</span><span style="color:#b84">%&#34;</span>)
+</span></span></code></pre></div><p>In trainning I have used 10 epochs. Next we iterate to our <em>DataLoader</em> object(i.e <code>train</code>).Then we pass our datasets(i.e <code>images</code>) to our model.Using <code>criterion</code> we calculate our loss. Next step is to perform back propogation, first we make gradient to be zero which is done by using <code>optimizer.zero_grad()</code>. Next we call <code>backword()</code> on our loss variable to perfrom back-propogation. After the gradient has been calculated we optimize our model by using <code>optimizer.step()</code> method.</p>
+<p>Now to test model:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic"># Testing</span>
+</span></span><span style="display:flex;"><span>    test <span style="font-weight:bold">=</span> get_data(train <span style="font-weight:bold">=</span> <span style="font-weight:bold">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">with</span> torch<span style="font-weight:bold">.</span>no_grad():
+</span></span><span style="display:flex;"><span>        correct <span style="font-weight:bold">=</span> <span style="color:#099">0</span>
+</span></span><span style="display:flex;"><span>        total <span style="font-weight:bold">=</span> <span style="color:#099">0</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">for</span> i,(images,target) <span style="font-weight:bold">in</span> tqdm(<span style="color:#999">enumerate</span>(train)):
+</span></span><span style="display:flex;"><span>            images <span style="font-weight:bold">=</span> images<span style="font-weight:bold">.</span>to(device)
+</span></span><span style="display:flex;"><span>            target <span style="font-weight:bold">=</span> target<span style="font-weight:bold">.</span>to(device)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            out <span style="font-weight:bold">=</span> cnn(images)
+</span></span><span style="display:flex;"><span>            _,pred <span style="font-weight:bold">=</span> torch<span style="font-weight:bold">.</span>max(out<span style="font-weight:bold">.</span>data,<span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>            total <span style="font-weight:bold">+=</span> target<span style="font-weight:bold">.</span>size(<span style="color:#099">0</span>)
+</span></span><span style="display:flex;"><span>            correct <span style="font-weight:bold">+=</span> (pred <span style="font-weight:bold">==</span> target)<span style="font-weight:bold">.</span>sum()<span style="font-weight:bold">.</span>item()
+</span></span><span style="display:flex;"><span>        <span style="color:#999">print</span>(<span style="color:#b84">f</span><span style="color:#b84">&#34;Accuracy: </span><span style="color:#b84">{</span>(correct<span style="font-weight:bold">/</span>total) <span style="font-weight:bold">*</span> <span style="color:#099">100</span><span style="color:#b84">}</span><span style="color:#b84">&#34;</span>)
+</span></span></code></pre></div><p>Testing model is pretty much similar to trainning model except, in testing model we don&rsquo;t want to update weights of our model. For this we use <code>torch.no_grad()</code> which tell pytorch not to update weight.</p>
+<h3 id="output">OUTPUT</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>epoch: 6	loss: 0.35762882232666016	Accuracy: 86.0%
+</span></span><span style="display:flex;"><span>epoch: 6	loss: 0.345419317483902	Accuracy: 88.5%
+</span></span><span style="display:flex;"><span>epoch: 6	loss: 0.3479294180870056	Accuracy: 90.0%
+</span></span><span style="display:flex;"><span>70%|█████████████████████████████████████████████████████████████████▊                            | 7/10 <span style="font-weight:bold">[</span>08:18&lt;03:34, 71.46s/it<span style="font-weight:bold">]</span> epoch: 7	loss: 0.5705909729003906	Accuracy: 85.0%
+</span></span><span style="display:flex;"><span>epoch: 7	loss: 0.36838656663894653	Accuracy: 89.5%
+</span></span><span style="display:flex;"><span>epoch: 7	loss: 0.2633790671825409	Accuracy: 91.5%
+</span></span><span style="display:flex;"><span>80%|███████████████████████████████████████████████████████████████████████████▏                  | 8/10 <span style="font-weight:bold">[</span>09:30&lt;02:23, 71.59s/it<span style="font-weight:bold">]</span> epoch: 8	loss: 0.31612157821655273	Accuracy: 89.0%
+</span></span><span style="display:flex;"><span>epoch: 8	loss: 0.2783728539943695	Accuracy: 91.0%
+</span></span><span style="display:flex;"><span>epoch: 8	loss: 0.38499078154563904	Accuracy: 90.5%
+</span></span><span style="display:flex;"><span>90%|████████████████████████████████████████████████████████████████████████████████████▌         | 9/10 <span style="font-weight:bold">[</span>10:42&lt;01:11, 71.68s/it<span style="font-weight:bold">]</span> epoch: 9	loss: 0.2609010934829712	Accuracy: 91.5%
+</span></span><span style="display:flex;"><span>epoch: 9	loss: 0.32276371121406555	Accuracy: 88.5%
+</span></span><span style="display:flex;"><span>epoch: 9	loss: 0.4422188997268677	Accuracy: 87.0%
+</span></span><span style="display:flex;"><span>100%|█████████████████████████████████████████████████████████████████████████████████████████████| 10/10 <span style="font-weight:bold">[</span>11:54&lt;00:00, 71.45s/it<span style="font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>300it <span style="font-weight:bold">[</span>00:30,  9.96it/s<span style="font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>Accuracy: 89.43333333333334
+</span></span></code></pre></div><h3 id="references">References</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">CNN</a></li>
+<li><a href="https://medium.com/swlh/convolutional-neural-networks-mathematics-1beb3e6447c0">https://medium.com/swlh/convolutional-neural-networks-mathematics-1beb3e6447c0</a></li>
+<li><a href="https://www.geeksforgeeks.org/feature-mapping/">Feature Mapping</a></li>
+<li><a href="https://pytorch.org/docs/stable/nn.html">PyTorch torch.nn</a></li>
+<li><a href="https://pytorch.org/docs/stable/nn.html#convolution-layers">PyTorch Convolution Layer</a></li>
+<li><a href="https://pytorch.org/docs/stable/nn.html#normalization-layers">PyTorch Normalization Layer</a></li>
+</ul>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/neural-network/">Neural Network</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fneural-network%2fcn%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fneural-network%2fcn%2f&amp;text=Implementing%20Convolutional%20Neural%20Network%20%28CNN%29%20using%20Python&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fneural-network%2fcn%2f&amp;title=Implementing%20Convolutional%20Neural%20Network%20%28CNN%29%20using%20Python"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share Implementing Convolutional Neural Network (CNN) using Python on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fneural-network%2fcn%2f&title=Implementing%20Convolutional%20Neural%20Network%20%28CNN%29%20using%20Python">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fneural-network%2fcn%2f&amp;description=Implementing%20Convolutional%20Neural%20Network%20%28CNN%29%20using%20Python" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/neural-network/cnn/"
+            data-toggle="tooltip" data-placement="top" title="Implementing Convolutional Neural Network (CNN) using PyTorch">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/javascript/javascript-regex-cheat-sheat-2021/"
+            data-toggle="tooltip" data-placement="top" title="Javascript Regex cheatsheet 2021">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

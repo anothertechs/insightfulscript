@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>React Tutorial - Creating a simple weather app using React and Material UI - InsightfulScript</title>
+<meta name="description" content="We&#39;ll make a weather app with the react js material UI framework in this article.">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/react\/weather-app-using-react\/",
+          "name": "React tutorial creating a simple weather app using react and material ui"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim Master"
+  },
+  "headline": "React Tutorial - Creating a simple weather app using React and Material UI",
+  "description" : "We\u0027ll make a weather app with the react js material UI framework in this article.",
+  "inLanguage" : "en",
+  "wordCount":  849 ,
+  "datePublished" : "2021-06-15T00:00:00",
+  "dateModified" : "2021-06-15T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, react" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/react\/weather-app-using-react\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="React Tutorial - Creating a simple weather app using React and Material UI" />
+<meta name="twitter:title" content="React Tutorial - Creating a simple weather app using React and Material UI">
+<meta property="og:description" content="We&#39;ll make a weather app with the react js material UI framework in this article.">
+<meta name="twitter:card" content="We&#39;ll make a weather app with the react js material UI framework in this article.">
+<meta name="twitter:description" content="We&#39;ll make a weather app with the react js material UI framework in this article.">
+<meta property="og:image" content="http://localhost:1313/images/images-wim-van-t.png" />
+<meta name="twitter:image" content="http://localhost:1313/images/images-wim-van-t.png">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/react/weather-app-using-react/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/react/weather-app-using-react/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="react,reactjs,React,weather,app,API,material,ui,tutorial,openweathermap,App.js,implemnentation,creating">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                React Tutorial - Creating a simple weather app using React and Material UI
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="react-tutorial---creating-weather-app-using-material-ui">React Tutorial - Creating weather App using Material UI</h1>
+<p>In this article we will be building a weather app using react js material UI framework. We will also be using <a href="https://openweathermap.org/">openweathermap</a> API for fetching the weather data from the site.</p>
+<p>The idea is simple we are going to create a <strong>Card</strong> component which will consists of a <strong>TextField</strong> where the user can write the name of the city.</p>
+<p>After getting the name of the city from input field we will then fetch this to our <a href="https://openweathermap.org/">openweathermap</a> API. If every thing goes right this API will give respone of weatherReport in <strong>json</strong> format or else it will give error.</p>
+<p>Then we will only take the values which we will be needing for our App from json respone. And finally we are going to diplay that value.</p>
+<p>Now without further due let&rsquo;s build our App.</p>
+<h2 id="implementation">Implementation</h2>
+<p>We will build three components :</p>
+<ul>
+<li><code> App.js</code> : This component will take input from the user and pass that value to <code>weatherAPI</code> components as prop.</li>
+<li><code>weatherAPI.js</code> : This component will take the value from <code>App.js</code> and fetch it to <a href="https://openweathermap.org/">openweathermap</a> API. After getting respone the json object is passed throung our <code>Display</code> components.</li>
+<li><code>weatherReportDisplay</code> : This component simply dislay the weather information.</li>
+</ul>
+<p>Now let&rsquo;s start by writing our first component:</p>
+<p><strong>App.js</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React from <span style="color:#b84">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> Grid from <span style="color:#b84">&#34;@material-ui/core/Grid&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> Card from <span style="color:#b84">&#34;@material-ui/core/Card&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { makeStyles } from <span style="color:#b84">&#34;@material-ui/core/styles&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> CardContent from <span style="color:#b84">&#34;@material-ui/core/CardContent&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> TextField from <span style="color:#b84">&#34;@material-ui/core/TextField&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> WeatherAPI from <span style="color:#b84">&#34;./weatherAPI&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> bgImg from <span style="color:#b84">&#34;./images/bg-img.jpg&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> style <span style="font-weight:bold">=</span> makeStyles((theme) =&gt; ({
+</span></span><span style="display:flex;"><span>  root<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    marginTop<span style="font-weight:bold">:</span> <span style="color:#099">50</span>,
+</span></span><span style="display:flex;"><span>    display<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;flex&#34;</span>,
+</span></span><span style="display:flex;"><span>    width<span style="font-weight:bold">:</span> <span style="color:#099">550</span>,
+</span></span><span style="display:flex;"><span>    height<span style="font-weight:bold">:</span> <span style="color:#099">250</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  cardcss<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    backgroundImage<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;url(&#34;</span> <span style="font-weight:bold">+</span> bgImg <span style="font-weight:bold">+</span> <span style="color:#b84">&#34;)&#34;</span>,
+</span></span><span style="display:flex;"><span>    backgroundPosition<span style="font-weight:bold">:</span> <span style="color:#b84">&#34;center&#34;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> App() {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> classes <span style="font-weight:bold">=</span> style();
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [city, setCity] <span style="font-weight:bold">=</span> React.useState(<span style="font-weight:bold">null</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&lt;</span>Grid className<span style="font-weight:bold">=</span>{classes.root} alignItems<span style="font-weight:bold">=</span><span style="color:#b84">&#34;center&#34;</span> container justify<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&lt;</span>Card className<span style="font-weight:bold">=</span>{classes.cardcss}<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">&lt;</span>CardContent<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span>TextField
+</span></span><span style="display:flex;"><span>            autoFocus
+</span></span><span style="display:flex;"><span>            label<span style="font-weight:bold">=</span><span style="color:#b84">&#34;City Name&#34;</span>
+</span></span><span style="display:flex;"><span>            onChange<span style="font-weight:bold">=</span>{(e) =&gt; {
+</span></span><span style="display:flex;"><span>              setCity(e.target.value);
+</span></span><span style="display:flex;"><span>            }}
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span>WeatherAPI city<span style="font-weight:bold">=</span>{city} <span style="font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/CardContent&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Card&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Grid&gt;</span>
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">default</span> App;
+</span></span></code></pre></div><p>This statless is simple. We are creating a state name <code>city</code> using new feature of react js called react hooks. Whenever user writes the value in input field the state of the function get&rsquo;s updated and passed it to weatherAPI component.</p>
+<p><strong>weatherAPI.js</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> React from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> LinearProgress from <span style="color:#b84">&#39;@material-ui/core/LinearProgress&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> Display from <span style="color:#b84">&#39;./weatherReportDisplay&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> API_KEY <span style="font-weight:bold">=</span> <span style="color:#998;font-style:italic">/* Your API key here */</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> UNITS <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;Metric&#34;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> LANG <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;en&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">class</span> WeatherAPI <span style="font-weight:bold">extends</span> React.Component {
+</span></span><span style="display:flex;"><span>    constructor(props) {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">super</span>(props);
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">this</span>.state <span style="font-weight:bold">=</span> {
+</span></span><span style="display:flex;"><span>            weatherReport <span style="font-weight:bold">:</span> <span style="font-weight:bold">null</span>,
+</span></span><span style="display:flex;"><span>            isLoading <span style="font-weight:bold">:</span> <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>            error <span style="font-weight:bold">:</span> <span style="font-weight:bold">null</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    componentDidUpdate() {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">var</span> URL <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;http://api.openweathermap.org/data/2.5/weather?q=&#34;</span> <span style="font-weight:bold">+</span> <span style="font-weight:bold">this</span>.props.city
+</span></span><span style="display:flex;"><span>                        <span style="font-weight:bold">+</span> <span style="color:#b84">&#34;&amp;lang=&#34;</span> <span style="font-weight:bold">+</span> LANG <span style="font-weight:bold">+</span> <span style="color:#b84">&#34;&amp;appid=&#34;</span> <span style="font-weight:bold">+</span> API_KEY <span style="font-weight:bold">+</span> <span style="color:#b84">&#34;&amp;units=&#34;</span><span style="font-weight:bold">+</span> UNITS
+</span></span><span style="display:flex;"><span>    fetch(URL).then(response =&gt;{
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">if</span>(response.ok) {<span style="font-weight:bold">return</span> response.json() }
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">else</span> { <span style="font-weight:bold">throw</span> <span style="font-weight:bold">new</span> <span style="color:#999">Error</span>(<span style="color:#b84">&#34;SOMETHING WENT WRONG&#34;</span>)}})
+</span></span><span style="display:flex;"><span>            .then(data =&gt; <span style="font-weight:bold">this</span>.setState(
+</span></span><span style="display:flex;"><span>                { weatherReport <span style="font-weight:bold">:</span> data,
+</span></span><span style="display:flex;"><span>                    isLoading<span style="font-weight:bold">:</span> <span style="font-weight:bold">false</span> }))
+</span></span><span style="display:flex;"><span>            .<span style="font-weight:bold">catch</span>(error =&gt; <span style="font-weight:bold">this</span>.setState( {error, isLoading <span style="font-weight:bold">:</span> <span style="font-weight:bold">true</span> }));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    render() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">if</span>(<span style="font-weight:bold">this</span>.state.isLoading) {
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">if</span>(<span style="font-weight:bold">this</span>.props.city <span style="font-weight:bold">!=</span> <span style="font-weight:bold">null</span>) {
+</span></span><span style="display:flex;"><span>                <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>                    <span style="font-weight:bold">&lt;</span>div<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="font-weight:bold">&lt;</span>LinearProgress  <span style="font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/div&gt;</span>
+</span></span><span style="display:flex;"><span>                    )
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">else</span> <span style="font-weight:bold">return</span> <span style="font-weight:bold">null</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">return</span>(
+</span></span><span style="display:flex;"><span>                <span style="font-weight:bold">&lt;</span>Display weatherReport <span style="font-weight:bold">=</span> {<span style="font-weight:bold">this</span>.state.weatherReport}<span style="font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">default</span> WeatherAPI;
+</span></span></code></pre></div><p>For simplicity of our app here we have used statefull component. Here we have used <code>componentDidUpdate</code> method which will continusly update the state value of this component whenever input field changes.
+The state of this component hold 3 value:</p>
+<ol>
+<li><code>weatherReport</code> Which will hold our json response.</li>
+<li><code>isLoading</code> Used for loading bar.</li>
+<li><code>error</code> If server respone with any error.</li>
+</ol>
+<p>In <code>componentDidUpdate</code> method we are using javascript <strong>promise</strong> object.Which will contain some value either solved or unsolved when fetching data from website.The <code>.json()</code> method of promise object converts it into json format.</p>
+<p>In the <code>render</code> method we first check that weather we have got response or not by checking <code>isLoading</code> state.Which only set to false whenever we get a response from server.</p>
+<p>If everythings went fine <code>weatherReport</code> state is passed to <code>Display</code> component.</p>
+<p><strong>weatherReportDisplay.js</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React from <span style="color:#b84">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> Typography from <span style="color:#b84">&#34;@material-ui/core/Typography&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> CardContent from <span style="color:#b84">&#34;@material-ui/core/CardContent&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> Box from <span style="color:#b84">&#34;@material-ui/core/Box&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> Display({ weatherReport }) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> lon <span style="font-weight:bold">=</span> weatherReport.coord.lon;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> lat <span style="font-weight:bold">=</span> weatherReport.coord.lat;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> weathermain <span style="font-weight:bold">=</span> weatherReport.weather[<span style="color:#099">0</span>].main;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> weatherdiscription <span style="font-weight:bold">=</span> weatherReport.weather[<span style="color:#099">0</span>].description;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> temp <span style="font-weight:bold">=</span> weatherReport.main.temp;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> pressure <span style="font-weight:bold">=</span> weatherReport.main.pressure;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> humidity <span style="font-weight:bold">=</span> weatherReport.main.humidity;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> wind <span style="font-weight:bold">=</span> weatherReport.wind.speed;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> country <span style="font-weight:bold">=</span> weatherReport.sys.country;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> city <span style="font-weight:bold">=</span> weatherReport.name;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&lt;</span>div<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&lt;</span>CardContent<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">&lt;</span>Box display<span style="font-weight:bold">=</span><span style="color:#b84">&#34;flex&#34;</span> flexDirection<span style="font-weight:bold">=</span><span style="color:#b84">&#34;row&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span>Box p<span style="font-weight:bold">=</span>{<span style="color:#099">1</span>}<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span>Typography variant<span style="font-weight:bold">=</span><span style="color:#b84">&#34;h2&#34;</span> color<span style="font-weight:bold">=</span><span style="color:#b84">&#34;textPrimary&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>              {city},{country}
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Typography&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span>Typography variant<span style="font-weight:bold">=</span><span style="color:#b84">&#34;caption&#34;</span> color<span style="font-weight:bold">=</span><span style="color:#b84">&#34;textSecondary&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>              {lon}, {lat}
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Typography&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Box&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Box&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/CardContent&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&lt;</span>CardContent<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">&lt;</span>Box display<span style="font-weight:bold">=</span><span style="color:#b84">&#34;flex&#34;</span> flexDirection<span style="font-weight:bold">=</span><span style="color:#b84">&#34;row-reverse&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span>Box p<span style="font-weight:bold">=</span>{<span style="color:#099">0</span>}<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span>Typography variant<span style="font-weight:bold">=</span><span style="color:#b84">&#34;h4&#34;</span> color<span style="font-weight:bold">=</span><span style="color:#b84">&#34;textPrimary&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>              Temp<span style="font-weight:bold">:</span> {temp}
+</span></span><span style="display:flex;"><span>              <span style="font-weight:bold">&lt;</span>span<span style="font-weight:bold">&gt;&amp;</span><span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#099">176</span>;<span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/span&gt;</span>
+</span></span><span style="display:flex;"><span>              {<span style="color:#b84">&#34;C&#34;</span>}
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Typography&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Box&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Box&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/CardContent&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&lt;</span>CardContent<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">&lt;</span>Box display<span style="font-weight:bold">=</span><span style="color:#b84">&#34;flex&#34;</span> flexDirection<span style="font-weight:bold">=</span><span style="color:#b84">&#34;row-reverse&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span>Box p<span style="font-weight:bold">=</span>{<span style="color:#099">0</span>}<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span>Typography variant<span style="font-weight:bold">=</span><span style="color:#b84">&#34;h6&#34;</span> color<span style="font-weight:bold">=</span><span style="color:#b84">&#34;textSecondary&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>              {weatherdiscription}
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Typography&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Box&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Box&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/CardContent&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&lt;</span>CardContent<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">&lt;</span>Box display<span style="font-weight:bold">=</span><span style="color:#b84">&#34;flex&#34;</span> flexDirection<span style="font-weight:bold">=</span><span style="color:#b84">&#34;row&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span>Box p<span style="font-weight:bold">=</span>{<span style="color:#099">1</span>}<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span>Typography variant<span style="font-weight:bold">=</span><span style="color:#b84">&#34;h6&#34;</span> color<span style="font-weight:bold">=</span><span style="color:#b84">&#34;textPrimary&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>              Humidity<span style="font-weight:bold">:</span> {humidity} <span style="font-weight:bold">%</span>
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Typography&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Box&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span>Box p<span style="font-weight:bold">=</span>{<span style="color:#099">1</span>}<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span>Typography variant<span style="font-weight:bold">=</span><span style="color:#b84">&#34;h6&#34;</span> color<span style="font-weight:bold">=</span><span style="color:#b84">&#34;textPrimary&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>              pressure<span style="font-weight:bold">:</span> {pressure} pa
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Typography&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Box&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span>Box p<span style="font-weight:bold">=</span>{<span style="color:#099">1</span>}<span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span>Typography variant<span style="font-weight:bold">=</span><span style="color:#b84">&#34;h6&#34;</span> color<span style="font-weight:bold">=</span><span style="color:#b84">&#34;textPrimary&#34;</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>              wind<span style="font-weight:bold">:</span> {wind} km<span style="font-weight:bold">/</span>h
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Typography&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Box&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Box&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/CardContent&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/div&gt;</span>
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">default</span> Display;
+</span></span></code></pre></div><p>This component displays weather information provided by <code>weatherAPI</code> component. Here from the json object we have chosen certain value for displaying such as temprature,humidity,pressure,etc. The <code>Box</code> component provided by material UI is used for manging layout.</p>
+<p>That&rsquo;s it now try to implement the above app yourself.After successfull implemnentation try adding more feature such as weather icon or litter bit of animation.</p>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/react/">react</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact%2fweather-app-using-react%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact%2fweather-app-using-react%2f&amp;text=React%20Tutorial%20-%20Creating%20a%20simple%20weather%20app%20using%20React%20and%20Material%20UI&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact%2fweather-app-using-react%2f&amp;title=React%20Tutorial%20-%20Creating%20a%20simple%20weather%20app%20using%20React%20and%20Material%20UI"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share React Tutorial - Creating a simple weather app using React and Material UI on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact%2fweather-app-using-react%2f&title=React%20Tutorial%20-%20Creating%20a%20simple%20weather%20app%20using%20React%20and%20Material%20UI">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact%2fweather-app-using-react%2f&amp;description=React%20Tutorial%20-%20Creating%20a%20simple%20weather%20app%20using%20React%20and%20Material%20UI" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim Master
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/crypto/crypto-currency-to-invest-in-2021/"
+            data-toggle="tooltip" data-placement="top" title="5 Crypto currencies you may want to invest in">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/react/react-18-alpha/"
+            data-toggle="tooltip" data-placement="top" title="React 18 is out !">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

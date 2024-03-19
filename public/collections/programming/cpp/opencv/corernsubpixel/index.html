@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C&#43;&#43; - InsightfulScript</title>
+<meta name="description" content="In this tutorial we will look cornerSubPix() function which is use to find corner at sub-pixel level">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/cpp\/opencv\/corernsubpixel\/",
+          "name": "Open cv detecting corner location in subpixel(corner sub pix()) using c"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim"
+  },
+  "headline": "OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C\u002b\u002b",
+  "description" : "In this tutorial we will look cornerSubPix() function which is use to find corner at sub-pixel level",
+  "inLanguage" : "en",
+  "wordCount":  1004 ,
+  "datePublished" : "2021-08-16T00:00:00",
+  "dateModified" : "2021-08-16T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, cpp, opencv" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/cpp\/opencv\/corernsubpixel\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C&#43;&#43;" />
+<meta name="twitter:title" content="OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C&#43;&#43;">
+<meta property="og:description" content="In this tutorial we will look cornerSubPix() function which is use to find corner at sub-pixel level">
+<meta name="twitter:card" content="In this tutorial we will look cornerSubPix() function which is use to find corner at sub-pixel level">
+<meta name="twitter:description" content="In this tutorial we will look cornerSubPix() function which is use to find corner at sub-pixel level">
+<meta property="og:image" content="http://localhost:1313/images/original-corner-output.jpg" />
+<meta name="twitter:image" content="http://localhost:1313/images/original-corner-output.jpg">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/cpp/opencv/corernsubpixel/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/cpp/opencv/corernsubpixel/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="c&#43;&#43;,cpp,corner,cornerSubPix,sub,pixel,opnencv,code,location,detection,harris,shi,tomasi,computer,vision,criteria,zero,zone,image,measurement,code,example,function,refining,refined,iterating,array,matrix">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C&#43;&#43;
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/images/original-corner-output.jpg" alt="/images/original-corner-output.jpg" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="opencv---detecting-corner-location-in-subpixelcornersubpix-using-c">OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C++</h1>
+<p>A digital photo&rsquo;s smallest component is called a &ldquo;pixel&rdquo;. Between pixel information is just inaccessible to the human sight. There are some applications that require more accuracy than a camera can provide. Exact measurements are needed, for example, when recreating a 3D object from an image. Mathematical strategies were developed to improve the accuracy of corner recognition.</p>
+<h2 id="why-there-is-need-of-subpixel-accuracy-">Why there is need of subpixel accuracy ?</h2>
+<p>Take a look at this square! It is zoomed in quite a bit, so you can see the pixel-by-pixel breakdown. Look at this image and see if you can spot the corner.</p>
+<p><img src="./corner-multiple-pixels.webp" alt=""></p>
+<p>As you can see, there isn&rsquo;t a single pixel in the corner. In reality, it&rsquo;s nearly impossible to get corners to line up perfectly with pixels.</p>
+<p>The <a href="./https://docs.opencv.org/master/d4/d8c/tutorial_py_shi_tomasi.html">Shi-Tomasi</a> and <a href="https://anothertechs.com/programming/cpp/opencv-corner-harris-cpp/">Harris</a> methods, for example, will give you something like this (53, 786).
+Scientists and others want a place like this (53.786, 786.110).</p>
+<p>Here we have absolute pixel-perfect precision on display. Despite the fact that 53.786, 786.110 is not available, you&rsquo;ve confirmed that the corner is exactly at this address.</p>
+<p>What&rsquo;s the point of going through the hassle of figuring out the decimal?
+They are one of the most crucial aspects of an image.
+Also, you&rsquo;ll need the extra precision in a variety of circumstances:</p>
+<ul>
+<li>Stereo vision</li>
+<li>3D reconstruction</li>
+<li>Camera calibration</li>
+<li>Tracking</li>
+</ul>
+<p>As a result, a lot of effort has gone into improving accuracy and speed.</p>
+<h2 id="subpixel-corners-in-opencv">Subpixel corners in OpenCV</h2>
+<p>Subpixel corners can be found using OpenCV&rsquo;s built-in feature. Using the <a href="https://en.wikipedia.org/wiki/Dot_product">dot product</a> methodology, it refines corners identified by previous systems, such as the <a href="https://anothertechs.com/programming/cpp/opencv-corner-harris-cpp/">corner harris detector</a>. Iterative refining occurs once a termination criteria is met.</p>
+<p><img src="./cornersubpix.webp" alt="Corner Sub Pixel"></p>
+<h2 id="opencv-cornersubpixel-function">OpenCV cornerSubPixel function</h2>
+<p><code>void cv::cornerSubPix( InputArray image, InputOutputArray corners, Size winSize, Size zeroZone, TermCriteria criteria )</code></p>
+<p><strong>Parameter</strong>:</p>
+<ul>
+<li><strong>image</strong>: Input image.</li>
+<li><strong>corners</strong>: As the name suggests, this array stores the approximate corners at the start of the process.
+As a result of the function, this array is modified with revised corner positions.</li>
+<li><strong>winSize</strong>: This function relies on a number of equations to perform its job. Several pixels around the corner are used to get this effect, as well. If you use winSize, you may control how many pixels are extracted from a certain window.</li>
+<li><strong>zeroZone</strong>: This function also solves numerous equations using the same way. When it comes to &ldquo;solving&rdquo; problems, a matrix is used. This matrix is inverted in order to find a solution to this problem. But some matrices cannot be inverted. Some pixels surrounding the corner are ignored to prevent this. That area is zeroZone.</li>
+<li><strong>criteria</strong>: Criteria for stopping the iterative corner refinement procedure. To put it another way, the process of refining the angle of the corner comes to an end either once a set of conditions is met.(<code>CV_TERMCRIT_ITER</code> or <code>CV_TERMCRIT_EPS</code> or both)</li>
+</ul>
+<h2 id="opencv---termcriteria">OpenCV - TermCriteria</h2>
+<p><code>TermCriteria()</code> is commonly used to generate the structure we need.
+To terminate the method, we can specify the number of iterations to be performed or the convergence metric to achieve a certain value in the <code>CV_TERMCRIT_ITER</code> or <code>CV_TERMCRIT_EPS</code> arguments (respectively). They specify whether one or both of these criteria should be used to terminate the algorithm based on their values.</p>
+<p>In order to be able to halt when either limit is reached, we have both types of termination available: <code>CV_TERMCRIT_ITER</code> | <code>CV_TERMCRIT_EPS</code></p>
+<h2 id="c-code-for-calculating-sub-pixel-corner">C++ code for calculating sub-pixel corner</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold">#include</span> <span style="color:#999;font-weight:bold">&#34;opencv2/highgui.hpp&#34;</span><span style="color:#999;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold">#include</span> <span style="color:#999;font-weight:bold">&#34;opencv2/imgproc.hpp&#34;</span><span style="color:#999;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold">#include</span> <span style="color:#999;font-weight:bold">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold"></span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cv<span style="font-weight:bold">::</span>Mat src, src_gray;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">int</span> maxCorners <span style="font-weight:bold">=</span> <span style="color:#099">10</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> MAXTRACKBAR <span style="font-weight:bold">=</span> <span style="color:#099">25</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> std<span style="font-weight:bold">::</span>string source_window <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;Source Image&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">trackFeatures</span>( <span style="color:#458;font-weight:bold">int</span>, <span style="color:#458;font-weight:bold">void</span><span style="font-weight:bold">*</span> );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>( <span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#458;font-weight:bold">char</span><span style="font-weight:bold">**</span> argv )
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span>(argc <span style="font-weight:bold">&lt;</span> <span style="color:#099">2</span> ) {
+</span></span><span style="display:flex;"><span>        std<span style="font-weight:bold">::</span>cout <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;Usage: &#34;</span> <span style="font-weight:bold">&lt;&lt;</span> argv[<span style="color:#099">0</span>] <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34; &lt;Input image&gt;</span><span style="color:#b84">\n</span><span style="color:#b84">&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> <span style="font-weight:bold">-</span><span style="color:#099">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    src <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>imread(argv[<span style="color:#099">1</span>]) ;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span>( src.empty() )
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        std<span style="font-weight:bold">::</span>cout <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;Could not open or find the image!</span><span style="color:#b84">\n\n</span><span style="color:#b84">&#34;</span> ;
+</span></span><span style="display:flex;"><span>        std<span style="font-weight:bold">::</span>cout <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;Usage: &#34;</span> <span style="font-weight:bold">&lt;&lt;</span> argv[<span style="color:#099">0</span>] <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34; &lt;Input image&gt;</span><span style="color:#b84">\n</span><span style="color:#b84">&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> <span style="font-weight:bold">-</span><span style="color:#099">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>cvtColor( src, src_gray, cv<span style="font-weight:bold">::</span>COLOR_BGR2GRAY );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>namedWindow( source_window );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>createTrackbar( <span style="color:#b84">&#34;Max corners:&#34;</span>, source_window, <span style="font-weight:bold">&amp;</span>maxCorners, MAXTRACKBAR, trackFeatures );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    trackFeatures( <span style="color:#099">0</span>, <span style="color:#099">0</span> );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>waitKey();
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> <span style="color:#099">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">trackFeatures</span>( <span style="color:#458;font-weight:bold">int</span>, <span style="color:#458;font-weight:bold">void</span><span style="font-weight:bold">*</span> )
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    maxCorners <span style="font-weight:bold">=</span> MAX(maxCorners, <span style="color:#099">1</span>);
+</span></span><span style="display:flex;"><span>    std<span style="font-weight:bold">::</span>vector<span style="font-weight:bold">&lt;</span>cv<span style="font-weight:bold">::</span>Point2f<span style="font-weight:bold">&gt;</span> corners;
+</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">double</span> qualityLevel <span style="font-weight:bold">=</span> <span style="color:#099">0.01</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">double</span> minDistance <span style="font-weight:bold">=</span> <span style="color:#099">10</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">int</span> blockSize <span style="font-weight:bold">=</span> <span style="color:#099">3</span>, gradientSize <span style="font-weight:bold">=</span> <span style="color:#099">3</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">bool</span> useHarrisDetector <span style="font-weight:bold">=</span> <span style="color:#999">true</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">double</span> k <span style="font-weight:bold">=</span> <span style="color:#099">0.04</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>Mat copy <span style="font-weight:bold">=</span> src.clone();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>goodFeaturesToTrack( src_gray,
+</span></span><span style="display:flex;"><span>                         corners,
+</span></span><span style="display:flex;"><span>                         maxCorners,
+</span></span><span style="display:flex;"><span>                         qualityLevel,
+</span></span><span style="display:flex;"><span>                         minDistance,
+</span></span><span style="display:flex;"><span>                         cv<span style="font-weight:bold">::</span>Mat(),
+</span></span><span style="display:flex;"><span>                         blockSize,
+</span></span><span style="display:flex;"><span>                         gradientSize,
+</span></span><span style="display:flex;"><span>                         useHarrisDetector,
+</span></span><span style="display:flex;"><span>                         k );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    std<span style="font-weight:bold">::</span>cout <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;** Number of corners detected: &#34;</span> <span style="font-weight:bold">&lt;&lt;</span> corners.size() <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;</span><span style="color:#b84">\n</span><span style="color:#b84">&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">int</span> radius <span style="font-weight:bold">=</span> <span style="color:#099">8</span>;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">for</span>( size_t i <span style="font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="font-weight:bold">&lt;</span> corners.size(); i<span style="font-weight:bold">++</span> )
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        std<span style="font-weight:bold">::</span>cout <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34; -- Original Corner Detected [&#34;</span> <span style="font-weight:bold">&lt;&lt;</span> i <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;]  (&#34;</span> <span style="font-weight:bold">&lt;&lt;</span> corners[i].x <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;,&#34;</span> <span style="font-weight:bold">&lt;&lt;</span> corners[i].y <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;)</span><span style="color:#b84">\n</span><span style="color:#b84">&#34;</span> ;
+</span></span><span style="display:flex;"><span>        cv<span style="font-weight:bold">::</span>circle( copy, corners[i], radius, cv<span style="font-weight:bold">::</span>Scalar(<span style="color:#099">0</span>,<span style="color:#099">255</span>,<span style="color:#099">0</span>), cv<span style="font-weight:bold">::</span>FILLED );
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>Size winSize <span style="font-weight:bold">=</span>  cv<span style="font-weight:bold">::</span>Size( <span style="color:#099">5</span>, <span style="color:#099">5</span> );
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>Size zeroZone <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>Size( <span style="font-weight:bold">-</span><span style="color:#099">1</span>, <span style="font-weight:bold">-</span><span style="color:#099">1</span> );
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>TermCriteria criteria <span style="font-weight:bold">=</span> cv<span style="font-weight:bold">::</span>TermCriteria( cv<span style="font-weight:bold">::</span>TermCriteria<span style="font-weight:bold">::</span>EPS <span style="font-weight:bold">+</span> cv<span style="font-weight:bold">::</span>TermCriteria<span style="font-weight:bold">::</span>COUNT, <span style="color:#099">40</span>, <span style="color:#099">0.001</span> );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    std<span style="font-weight:bold">::</span>vector<span style="font-weight:bold">&lt;</span>cv<span style="font-weight:bold">::</span>Point2f<span style="font-weight:bold">&gt;</span> refinedCorners(corners);
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>cornerSubPix( src_gray, refinedCorners, winSize, zeroZone, criteria );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">for</span>( size_t i <span style="font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="font-weight:bold">&lt;</span> refinedCorners.size(); i<span style="font-weight:bold">++</span> )
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        std<span style="font-weight:bold">::</span>cout <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34; -- Refined Corner [&#34;</span> <span style="font-weight:bold">&lt;&lt;</span> i <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;]  (&#34;</span> <span style="font-weight:bold">&lt;&lt;</span> refinedCorners[i].x <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;,&#34;</span> <span style="font-weight:bold">&lt;&lt;</span> refinedCorners[i].y <span style="font-weight:bold">&lt;&lt;</span> <span style="color:#b84">&#34;)</span><span style="color:#b84">\n</span><span style="color:#b84">&#34;</span> ;
+</span></span><span style="display:flex;"><span>        cv<span style="font-weight:bold">::</span>circle( copy, refinedCorners[i], radius, cv<span style="font-weight:bold">::</span>Scalar(<span style="color:#099">0</span>,<span style="color:#099">0</span>,<span style="color:#099">255</span>), cv<span style="font-weight:bold">::</span>FILLED );
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>namedWindow( source_window.c_str() );
+</span></span><span style="display:flex;"><span>    cv<span style="font-weight:bold">::</span>imshow( source_window, copy );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="code-explanation">Code Explanation</h2>
+<ul>
+<li>
+<p>We start by reading our input image using <code>cv::imread()</code> and converting it into gray scale using <code>cv::cvtColor()</code>.</p>
+</li>
+<li>
+<p>Then we use <code>goodFeaturesToTrack()</code> function to find corners in the image. In this function we have used corner <a href="https://vovkos.github.io/doxyrest-showcase/opencv/sphinx_rtd_theme/page_tutorial_corner_subpixeles.html">Harris detection algorithm</a> to detect corner in the image. The coordinate of image corners are stored in <code>corners</code> variable.</p>
+</li>
+<li>
+<p>Out of this coordinates in <code>corner</code> variable we find corners at sub-pixel level using <code>cv::cornerSubPix()</code> function.</p>
+</li>
+</ul>
+<h2 id="output">Output</h2>
+<p><img src="./refined-corner-output.webp" alt="Refined corner Output"></p>
+<p>In this output <strong>green</strong> circle represent corner detected using <a href="https://vovkos.github.io/doxyrest-showcase/opencv/sphinx_rtd_theme/page_tutorial_corner_subpixeles.html">Harris Corner detection algorithm</a> and <strong>red</strong> circle represent the refined corner which is calculated using <code>cv::cornerSubPix()</code> function.</p>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://amzn.to/3N7WwbC">Building Computer Vision Projects with OpenCV 4 and C++</a></li>
+<li><a href="https://amzn.to/3toR4sR">Learning OpenCV 3: Computer Vision In C++ With The OpenCV Library</a></li>
+<li><a href="https://amzn.to/37ztG3o">OpenCV 4 Computer Vision Application Programming Cookbook: Build complex computer vision applications with OpenCV and C++, 4th Edition </a></li>
+<li><a href="https://amzn.to/3ilHaC5">Object-Oriented Programming with C++ | 8th Edition </a></li>
+<li><a href="https://stackoverflow.com/questions/18955760/how-does-cvtermcriteria-work-in-opencv">https://stackoverflow.com/questions/18955760/how-does-cvtermcriteria-work-in-opencv</a></li>
+<li><a href="https://vovkos.github.io/doxyrest-showcase/opencv/sphinx_rtd_theme/page_tutorial_corner_subpixeles.html">https://vovkos.github.io/doxyrest-showcase/opencv/sphinx_rtd_theme/page_tutorial_corner_subpixeles.html</a></li>
+<li><a href="https://aishack.in/tutorials/subpixel-corners-increasing-accuracy/">https://aishack.in/tutorials/subpixel-corners-increasing-accuracy/</a></li>
+</ul>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/cpp/">cpp</a>
+        
+        <a href="http://localhost:1313/tags/opencv/">opencv</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fcpp%2fopencv%2fcorernsubpixel%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fcpp%2fopencv%2fcorernsubpixel%2f&amp;text=OpenCV%20-%20Detecting%20corner%20location%20in%20subpixel%28cornerSubPix%28%29%29%20using%20C%2b%2b&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fcpp%2fopencv%2fcorernsubpixel%2f&amp;title=OpenCV%20-%20Detecting%20corner%20location%20in%20subpixel%28cornerSubPix%28%29%29%20using%20C%2b%2b"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C&#43;&#43; on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fcpp%2fopencv%2fcorernsubpixel%2f&title=OpenCV%20-%20Detecting%20corner%20location%20in%20subpixel%28cornerSubPix%28%29%29%20using%20C%2b%2b">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fcpp%2fopencv%2fcorernsubpixel%2f&amp;description=OpenCV%20-%20Detecting%20corner%20location%20in%20subpixel%28cornerSubPix%28%29%29%20using%20C%2b%2b" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/reviews/best-coding-app-ios-ipados/"
+            data-toggle="tooltip" data-placement="top" title="Best Coding Apps for iOS and ipad0S">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/react/react-state-props/"
+            data-toggle="tooltip" data-placement="top" title="Understanding State and Props in React">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

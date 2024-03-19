@@ -1,0 +1,1695 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/collections/</loc>
+      
+        <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react-native/react-native-biomatric/</loc>
+      
+        <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/</loc>
+      
+        <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/programming/</loc>
+      
+        <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/react-native/</loc>
+      
+        <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/</loc>
+      
+        <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react-native/react-native-modal/</loc>
+      
+        <lastmod>2023-04-03T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/post/</loc>
+      
+        <lastmod>2023-03-31T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/techs/tips-to-optimize-landing-page/</loc>
+      
+        <lastmod>2023-03-31T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/post/tips-to-optimize-landing-page/</loc>
+      
+        <lastmod>2023-03-31T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/techs/</loc>
+      
+        <lastmod>2023-03-31T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react-native/react-native-styling-animation/</loc>
+      
+        <lastmod>2023-03-29T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react-native/react-native-stylesheet/</loc>
+      
+        <lastmod>2023-03-27T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react-native/react-native-firebase/</loc>
+      
+        <lastmod>2023-03-24T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/tailwindcss/tailwindcss-scrollbar/</loc>
+      
+        <lastmod>2023-03-23T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/tailwindcss/</loc>
+      
+        <lastmod>2023-03-23T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/tailwindcss/tailwindcss-z-index/</loc>
+      
+        <lastmod>2023-03-21T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/post/tailwindcss-z-index/</loc>
+      
+        <lastmod>2023-03-21T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/react/</loc>
+      
+        <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-router/</loc>
+      
+        <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/python/</loc>
+      
+        <lastmod>2022-12-19T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/python/schedule-python-scripts-as-cron-jobs/</loc>
+      
+        <lastmod>2022-12-19T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/best-candlestick-pattern/</loc>
+      
+        <lastmod>2022-12-07T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/crypto/</loc>
+      
+        <lastmod>2022-12-07T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-calender/</loc>
+      
+        <lastmod>2022-09-06T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/python/numpy/numpy-array-reshape/</loc>
+      
+        <lastmod>2022-08-31T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/python/python-array/</loc>
+      
+        <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-usecallbackhook/</loc>
+      
+        <lastmod>2022-08-25T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-usememo-hook/</loc>
+      
+        <lastmod>2022-08-10T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-api-call/</loc>
+      
+        <lastmod>2022-07-23T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-usereducer-hook/</loc>
+      
+        <lastmod>2022-07-17T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-uselayouteffect/</loc>
+      
+        <lastmod>2022-07-14T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-creating-custom-hooks/</loc>
+      
+        <lastmod>2022-07-11T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-createref-hook/</loc>
+      
+        <lastmod>2022-07-04T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-usecontext-hook/</loc>
+      
+        <lastmod>2022-06-30T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-higher-order-components/</loc>
+      
+        <lastmod>2022-06-16T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-conditional-rendering/</loc>
+      
+        <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/rising-falling-window/</loc>
+      
+        <lastmod>2022-06-07T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/tower-top-bottom-pattern/</loc>
+      
+        <lastmod>2022-06-02T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/dumpling-top-and-frypan-bottoms/</loc>
+      
+        <lastmod>2022-05-25T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/post/dumpling-top-and-frypan-bottoms/</loc>
+      
+        <lastmod>2022-05-25T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/counter-attack-candlestick/</loc>
+      
+        <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/post/counter-attack-candlestick/</loc>
+      
+        <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/cpp/</loc>
+      
+        <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/opencv/</loc>
+      
+        <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/opencv-creating-own-dataset-cpp/</loc>
+      
+        <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/opencv-face-detection/</loc>
+      
+        <lastmod>2022-04-27T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/opencv-grabcut/</loc>
+      
+        <lastmod>2022-04-22T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/opencv-watershed/</loc>
+      
+        <lastmod>2022-04-16T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/opencv-stereo-image-depth-estimation/</loc>
+      
+        <lastmod>2022-04-07T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/opencv-hough-line-detection/</loc>
+      
+        <lastmod>2022-04-04T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/opencv-convexhull/</loc>
+      
+        <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/contour-detection/</loc>
+      
+        <lastmod>2022-03-25T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/canny-edge-detection/</loc>
+      
+        <lastmod>2022-03-23T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/opencv-low-high-pass-filter/</loc>
+      
+        <lastmod>2022-03-22T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv-fourier-transform-cpp/</loc>
+      
+        <lastmod>2022-03-18T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/machine-learning/</loc>
+      
+        <lastmod>2022-02-11T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/machine-learning/mlops/what-is-mlops/</loc>
+      
+        <lastmod>2022-02-11T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react-native/react-native-elements/</loc>
+      
+        <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/python/python-class-method-decorator/</loc>
+      
+        <lastmod>2021-11-12T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/seo/social-media-automation-tools/</loc>
+      
+        <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/seo/</loc>
+      
+        <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react-native/react-native-webview/</loc>
+      
+        <lastmod>2021-10-28T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/review/</loc>
+      
+        <lastmod>2021-10-19T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/reviews/best-html-online-course/</loc>
+      
+        <lastmod>2021-10-19T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react-native/react-native-navigation-stack/</loc>
+      
+        <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/machine-learning/kaggle-data-science-projects/</loc>
+      
+        <lastmod>2021-10-07T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/machine-learning/machine-learning-projects/</loc>
+      
+        <lastmod>2021-09-27T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/javascript/</loc>
+      
+        <lastmod>2021-09-26T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/javascript/nodejs-foreach-loop/</loc>
+      
+        <lastmod>2021-09-26T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/neural-network/auto-encoders/</loc>
+      
+        <lastmod>2021-09-23T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/neural-network/</loc>
+      
+        <lastmod>2021-09-23T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/python/pandas-data-profiling/</loc>
+      
+        <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/reviews/best-sql-online-courses/</loc>
+      
+        <lastmod>2021-09-08T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/machine-learning/what-is-machine-learning/</loc>
+      
+        <lastmod>2021-09-07T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/three-mountain-top/</loc>
+      
+        <lastmod>2021-09-03T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/neural-network/resnet/</loc>
+      
+        <lastmod>2021-09-02T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/javascript/javascript-regex-cheat-sheat-2021/</loc>
+      
+        <lastmod>2021-08-27T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/post/javascript-regex-cheat-sheat-2021/</loc>
+      
+        <lastmod>2021-08-27T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/neural-network/cn/</loc>
+      
+        <lastmod>2021-08-23T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/neural-network/cnn/</loc>
+      
+        <lastmod>2021-08-21T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/machine-learning/sgd/</loc>
+      
+        <lastmod>2021-08-20T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/three-white-soliders/</loc>
+      
+        <lastmod>2021-08-20T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/material-ui-responsive-drawer/</loc>
+      
+        <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-social-card/</loc>
+      
+        <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-statefull-stateless/</loc>
+      
+        <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-state-props/</loc>
+      
+        <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/corernsubpixel/</loc>
+      
+        <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/reviews/best-coding-app-ios-ipados/</loc>
+      
+        <lastmod>2021-08-15T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/linux/gnome-customize/</loc>
+      
+        <lastmod>2021-08-14T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/linux/</loc>
+      
+        <lastmod>2021-08-14T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/calculate-histogram/</loc>
+      
+        <lastmod>2021-08-12T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/reviews/machine-learning-libraries-2021/</loc>
+      
+        <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/reviews/</loc>
+      
+        <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/image-rotation/</loc>
+      
+        <lastmod>2021-08-03T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv/fill-contours-cpp/</loc>
+      
+        <lastmod>2021-07-29T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/opencv-corner-harris-cpp/</loc>
+      
+        <lastmod>2021-07-28T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/python/python-data-structure-cheat-sheet-2021/</loc>
+      
+        <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/cpp/parallel-programming-stl/</loc>
+      
+        <lastmod>2021-07-21T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/post/parallel-programming-stl/</loc>
+      
+        <lastmod>2021-07-21T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/three-black-crow/</loc>
+      
+        <lastmod>2021-07-16T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/upside-gap-two-crows/</loc>
+      
+        <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/belt-hold-line/</loc>
+      
+        <lastmod>2021-07-13T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/techs/top-10-chrome-flags-2021/</loc>
+      
+        <lastmod>2021-07-11T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/reviews/github-copilot/</loc>
+      
+        <lastmod>2021-07-09T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/tweezer-candle-stick-pattern/</loc>
+      
+        <lastmod>2021-07-08T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/techs/apple-app-tracking-transparency-feature/</loc>
+      
+        <lastmod>2021-07-06T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/javascript/javascript-beginner-tip-2021/</loc>
+      
+        <lastmod>2021-07-05T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/harami-pattern/</loc>
+      
+        <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/inverted-hammer/</loc>
+      
+        <lastmod>2021-07-02T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/shooting-star/</loc>
+      
+        <lastmod>2021-07-01T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/everything-you-need-to-know-about-doji-star/</loc>
+      
+        <lastmod>2021-06-29T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/javascript/javascript-string-methods-cheat-sheet-2021/</loc>
+      
+        <lastmod>2021-06-28T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/how-to-buy-cryptocurrency-in-india/</loc>
+      
+        <lastmod>2021-06-27T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/evening-star/</loc>
+      
+        <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/merge-sort-algorithm/</loc>
+      
+        <lastmod>2021-06-26T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/reviews/windows-11-is-here/</loc>
+      
+        <lastmod>2021-06-25T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/morning-star/</loc>
+      
+        <lastmod>2021-06-24T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/linux/beginners-guid-to-snap/</loc>
+      
+        <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/piercing-pattern/</loc>
+      
+        <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/dark-cloud-cover/</loc>
+      
+        <lastmod>2021-06-20T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/the-engulfing-pattern/</loc>
+      
+        <lastmod>2021-06-19T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/python/downloading-youtube-video-using-python/</loc>
+      
+        <lastmod>2021-06-19T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/hanging-man-pattern/</loc>
+      
+        <lastmod>2021-06-17T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/reviews/top-linux-distros-for-beginners/</loc>
+      
+        <lastmod>2021-06-16T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/hammer-signal/</loc>
+      
+        <lastmod>2021-06-16T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/softwares/</loc>
+      
+        <lastmod>2021-06-16T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/softwares/windows/windows-package-mangaer-winget/</loc>
+      
+        <lastmod>2021-06-16T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/every-thing-to-know-about-cryptocurrency/</loc>
+      
+        <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/react-18-alpha/</loc>
+      
+        <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/react/weather-app-using-react/</loc>
+      
+        <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/crypto/crypto-currency-to-invest-in-2021/</loc>
+      
+        <lastmod>2021-06-14T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/techs/best-android-browser-for-privacy/</loc>
+      
+        <lastmod>2021-06-14T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/tags/progamming/</loc>
+      
+        <lastmod>2021-06-14T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/collections/programming/starter-guid-to-ssh/</loc>
+      
+        <lastmod>2021-06-14T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/notes/2020/change/</loc>
+      
+        <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/notes/2020/change2/</loc>
+      
+        <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/notes/2020/change3/</loc>
+      
+        <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/notes/</loc>
+      
+        <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/about/</loc>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/categories/</loc>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+        <priority>0.5</priority>
+
+    </url>
+  
+</urlset>
+
+

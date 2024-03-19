@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces - InsightfulScript</title>
+<meta name="description" content="Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/react-native\/react-native-modal\/",
+          "name": "React native modal a beginner\u0027s guide to creating user friendly interfaces"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim"
+  },
+  "headline": "React Native Modal- A Beginner\u0027s Guide to Creating User-Friendly Interfaces",
+  "description" : "Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.",
+  "inLanguage" : "en",
+  "wordCount":  2438 ,
+  "datePublished" : "2023-04-03T00:00:00",
+  "dateModified" : "2023-04-03T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, react native" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/react-native\/react-native-modal\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces" />
+<meta name="twitter:title" content="React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces">
+<meta property="og:description" content="Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.">
+<meta name="twitter:card" content="Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.">
+<meta name="twitter:description" content="Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.">
+<meta property="og:image" content="http://localhost:1313/images/react-native-model-guide.jpg" />
+<meta name="twitter:image" content="http://localhost:1313/images/react-native-model-guide.jpg">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/react-native/react-native-modal/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="best,React,Native,Modal,React,Native,Modal,tutorial,React,Native,Modal,example,React,Native,Modal,animation,how,to,use,React,Native,Modal,React,Native,Modal">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/images/react-native-model-guide.jpg" alt="/images/react-native-model-guide.jpg" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="react-native-modal--a-beginners-guide-to-creating-user-friendly-interfaces">React Native Modal- A Beginner&rsquo;s Guide to Creating User-Friendly Interfaces</h1>
+<h2 id="introduction">Introduction</h2>
+<p>React Native is a popular JavaScript framework that allows developers to create mobile applications for iOS and Android using a single codebase. It offers a wide range of components that can be used to create complex user interfaces. One such component is the React Native Modal.</p>
+<p>Modal is a popup window that appears on top of the current screen, and it can be used for a variety of purposes, such as displaying information, confirming user actions, or prompting for input. React Native Modal is a powerful and versatile component that makes it easy to create customizable modals for your app.</p>
+<p>In this guide, we will walk you through the basics of using React Native Modal, including how to create, customize, and implement it in your app. By the end of this article, you will have a solid understanding of how to create user-friendly interfaces with React Native Modal.</p>
+<h2 id="table-of-content">Table of Content</h2>
+<ul>
+<li>What is React Native Modal?</li>
+<li>How to create a React Native Modal?</li>
+<li>Customizing React Native Modal</li>
+<li>Use Case Example of React Native Modal</li>
+<li>Frequently Asked Questions (FAQs)</li>
+<li>Conclusion</li>
+</ul>
+<h2 id="what-is-react-native-modal">What is React Native Modal?</h2>
+<p>React Native Modal is a component that provides a simple way to create modals in your mobile application. It allows you to create a popup window that can be displayed on top of the current screen, making it ideal for displaying information, getting user input, or confirming user actions.</p>
+<p>Modal is a user-friendly way to interact with your app, as it provides a focused and interruptive experience. When a modal is displayed, the user cannot interact with the rest of the app until they have interacted with the modal.</p>
+<h2 id="how-to-create-a-react-native-modal">How to create a React Native Modal?</h2>
+<p>Creating a React Native Modal is straightforward, and it involves using the Modal component that comes with React Native. Here&rsquo;s an example of how to create a basic modal:</p>
+<ol>
+<li>Import Modal component from React Native:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> { Modal } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span></code></pre></div><ol start="2">
+<li>Create a state variable that will determine whether the modal is visible or not:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">const</span> [modalVisible, setModalVisible] <span style="font-weight:bold">=</span> useState(<span style="font-weight:bold">false</span>);
+</span></span></code></pre></div><ol start="3">
+<li>Create a function that will toggle the modal&rsquo;s visibility when called:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">const</span> toggleModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  setModalVisible(<span style="font-weight:bold">!</span>modalVisible);
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><ol start="4">
+<li>Create a button that will trigger the toggleModal function when pressed:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080">Button</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008080">title</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Open Modal&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal}
+</span></span><span style="display:flex;"><span>/&gt;
+</span></span></code></pre></div><ol start="5">
+<li>Finally, create the Modal component and include the content you want to display:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>&lt;<span style="color:#000080">Modal</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008080">visible</span><span style="font-weight:bold">=</span>{modalVisible}
+</span></span><span style="display:flex;"><span>  <span style="color:#008080">animationType</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;slide&#34;</span>
+</span></span><span style="display:flex;"><span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">Text</span>&gt;This is a modal<span style="font-weight:bold">!</span>&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">Button</span> <span style="color:#008080">title</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Close&#34;</span> <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal} /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080">Modal</span>&gt;
+</span></span></code></pre></div><p>This example creates a basic modal that displays a text message and a close button. When the button is pressed, the modal&rsquo;s visibility is toggled, and the modal is closed.</p>
+<h2 id="customizing-react-native-modal">Customizing React Native Modal</h2>
+<p>React Native Modal is highly customizable, and you can modify its appearance and behavior to suit your needs. Here are some of the ways you can customize your modals:</p>
+<h3 id="1-animation-type">1. Animation type</h3>
+<p>You can specify the animation type that will be used when the modal is displayed or closed. There are several animation types to choose from, including slide, fade, and none.</p>
+<h4 id="example">Example</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> { Modal } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> MyModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span> <span style="font-weight:bold">const</span> [modalVisible, setModalVisible] <span style="font-weight:bold">=</span> useState(<span style="font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="font-weight:bold">const</span> toggleModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>   setModalVisible(<span style="font-weight:bold">!</span>modalVisible);
+</span></span><span style="display:flex;"><span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>   &lt;&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#000080">Button</span> <span style="color:#008080">title</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Open Modal&#34;</span> <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal} /&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#000080">Modal</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#008080">visible</span><span style="font-weight:bold">=</span>{modalVisible}
+</span></span><span style="display:flex;"><span>       <span style="color:#008080">animationType</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;slide&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">//</span> <span style="color:#008080">Change</span> <span style="color:#008080">animation</span> <span style="color:#008080">type</span> <span style="color:#008080">here</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#008080">onRequestClose</span><span style="font-weight:bold">=</span>{toggleModal}
+</span></span><span style="display:flex;"><span>     &gt;
+</span></span><span style="display:flex;"><span>       &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalContainer}&gt;
+</span></span><span style="display:flex;"><span>         &lt;<span style="color:#000080">Text</span>&gt;This is my modal<span style="font-weight:bold">!</span>&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>         &lt;<span style="color:#000080">Button</span> <span style="color:#008080">title</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Close Modal&#34;</span> <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal} /&gt;
+</span></span><span style="display:flex;"><span>       &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;/<span style="color:#000080">Modal</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;/&gt;
+</span></span><span style="display:flex;"><span> );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span> modalContainer<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>   backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;white&#39;</span>,
+</span></span><span style="display:flex;"><span>   padding<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>   borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span> },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>In the code above, we&rsquo;ve changed the animation type of the modal to &lsquo;slide&rsquo;. This means that the modal will slide up from the bottom of the screen when it&rsquo;s opened and slide down when it&rsquo;s closed.</p>
+<p>Other animation types you can choose from include &lsquo;fade&rsquo;, which fades the modal in and out, and &rsquo;none&rsquo;, which displays the modal without any animation.</p>
+<p>You can experiment with different animation types to find the one that works best for your app&rsquo;s design and user experience.</p>
+<h3 id="2-background-color">2. Background color</h3>
+<p>You can change the background color of the modal to match your app&rsquo;s theme or branding.</p>
+<p><img src="./react-native-model-background.png" alt="React Native Backgroud Color"></p>
+<h4 id="example-1">Example</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> { Modal } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> MyModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span> <span style="font-weight:bold">const</span> [modalVisible, setModalVisible] <span style="font-weight:bold">=</span> useState(<span style="font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="font-weight:bold">const</span> toggleModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>   setModalVisible(<span style="font-weight:bold">!</span>modalVisible);
+</span></span><span style="display:flex;"><span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>   &lt;&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#000080">Button</span> <span style="color:#008080">title</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Open Modal&#34;</span> <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal} /&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#000080">Modal</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#008080">visible</span><span style="font-weight:bold">=</span>{modalVisible}
+</span></span><span style="display:flex;"><span>       <span style="color:#008080">transparent</span><span style="font-weight:bold">=</span>{<span style="font-weight:bold">true</span>}
+</span></span><span style="display:flex;"><span>       <span style="color:#008080">animationType</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;slide&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#008080">onRequestClose</span><span style="font-weight:bold">=</span>{toggleModal}
+</span></span><span style="display:flex;"><span>     &gt;
+</span></span><span style="display:flex;"><span>       &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalContainer}&gt;
+</span></span><span style="display:flex;"><span>         &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalView}&gt;
+</span></span><span style="display:flex;"><span>           &lt;<span style="color:#000080">Text</span>&gt;This is my modal<span style="font-weight:bold">!</span>&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>           &lt;<span style="color:#000080">Button</span> <span style="color:#008080">title</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Close Modal&#34;</span> <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal} /&gt;
+</span></span><span style="display:flex;"><span>         &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>       &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;/<span style="color:#000080">Modal</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;/&gt;
+</span></span><span style="display:flex;"><span> );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span> modalContainer<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>   flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>   justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>   alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>   backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;rgba(0,0,0,0.5)&#39;</span>,
+</span></span><span style="display:flex;"><span> },
+</span></span><span style="display:flex;"><span> modalView<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>   backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;white&#39;</span>,
+</span></span><span style="display:flex;"><span>   padding<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>   borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>   alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>   elevation<span style="font-weight:bold">:</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span> },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>In the code above, we&rsquo;ve set the backgroundColor style property of the modalContainer to <code>rgba(0,0,0,0.5)</code>, which is a semi-transparent black color. This will give the modal a dimmed background when it&rsquo;s displayed.</p>
+<p>You can experiment with different colors to find the one that works best for your app&rsquo;s design and user experience. If you want to make the modal completely transparent, you can set <code>transparent={true}</code> on the Modal component.</p>
+<p><em>In the example code above, we&rsquo;ve also added a <code>modalView</code> style to customize the appearance of the modal itself. This includes a white background color, padding, and rounded corners. You can customize this style as well to achieve the desired look for your modal.</em></p>
+<h3 id="3-content-layout">3. Content layout</h3>
+<p>You can add any content you want to the modal, including text, images, and other components. You can also adjust the layout of the content to fit the modal&rsquo;s dimensions.</p>
+<h4 id="example-2">Example</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> { Modal } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> MyModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [modalVisible, setModalVisible] <span style="font-weight:bold">=</span> useState(<span style="font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> toggleModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    setModalVisible(<span style="font-weight:bold">!</span>modalVisible);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Button</span> <span style="color:#008080">title</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Open Modal&#34;</span> <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal} /&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Modal</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">visible</span><span style="font-weight:bold">=</span>{modalVisible}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">transparent</span><span style="font-weight:bold">=</span>{<span style="font-weight:bold">true</span>}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">animationType</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;slide&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">onRequestClose</span><span style="font-weight:bold">=</span>{toggleModal}
+</span></span><span style="display:flex;"><span>      &gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalContainer}&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalView}&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalHeader}&gt;Modal Header&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalContent}&gt;
+</span></span><span style="display:flex;"><span>              &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalText}&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tristique urna eget commodo laoreet. Aliquam ac justo <span style="font-weight:bold">in</span> augue vehicula commodo vitae quis tellus. Morbi lobortis ac quam id convallis. Ut imperdiet blandit metus vitae auctor.&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>              &lt;<span style="color:#000080">Image</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalImage} <span style="color:#008080">source</span><span style="font-weight:bold">=</span>{require(<span style="color:#b84">&#39;./image.jpg&#39;</span>)} /&gt;
+</span></span><span style="display:flex;"><span>              &lt;<span style="color:#000080">Button</span> <span style="color:#008080">title</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;Close Modal&#34;</span> <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal} /&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">Modal</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  modalContainer<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;rgba(0,0,0,0.5)&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modalView<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;white&#39;</span>,
+</span></span><span style="display:flex;"><span>    borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>    padding<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    elevation<span style="font-weight:bold">:</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modalHeader<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">24</span>,
+</span></span><span style="display:flex;"><span>    fontWeight<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;bold&#39;</span>,
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modalContent<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modalText<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modalImage<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    width<span style="font-weight:bold">:</span> <span style="color:#099">200</span>,
+</span></span><span style="display:flex;"><span>    height<span style="font-weight:bold">:</span> <span style="color:#099">200</span>,
+</span></span><span style="display:flex;"><span>    resizeMode<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;contain&#39;</span>,
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>In the code above, we&rsquo;ve created a basic layout for the content of the modal. The modal itself is centered on the screen and has a semi-transparent black background.</p>
+<p>Inside the modal, we have a header with a bold text style, followed by the main content of the modal. In this example, the content includes a text block, an image, and a button to close the modal.</p>
+<p>To customize the layout of the content, we&rsquo;ve added several styles to the StyleSheet.create function. These include styles for the header, the content container, the text block, the image, and the modal itself.</p>
+<p>You can adjust these styles to achieve the desired layout and appearance for your modal content. For example, you might want to add additional text blocks or images, or adjust the spacing between elements.</p>
+<h3 id="4-size-and-position">4. Size and position</h3>
+<p>You can control the size and position of the modal by setting its width, height, and margin values.</p>
+<h4 id="example-3">Example</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> { Modal, View, StyleSheet, TouchableOpacity, Text } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> MyModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [modalVisible, setModalVisible] <span style="font-weight:bold">=</span> useState(<span style="font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> toggleModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    setModalVisible(<span style="font-weight:bold">!</span>modalVisible);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.container}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">TouchableOpacity</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.button} <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.buttonText}&gt;Open Modal&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">TouchableOpacity</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Modal</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">visible</span><span style="font-weight:bold">=</span>{modalVisible}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">transparent</span><span style="font-weight:bold">=</span>{<span style="font-weight:bold">true</span>}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">animationType</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;slide&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">onRequestClose</span><span style="font-weight:bold">=</span>{toggleModal}
+</span></span><span style="display:flex;"><span>      &gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalContainer}&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalView}&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalHeader}&gt;Modal Header&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalContent}&gt;
+</span></span><span style="display:flex;"><span>              &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalText}&gt;
+</span></span><span style="display:flex;"><span>                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</span></span><span style="display:flex;"><span>                Nulla tristique urna eget commodo laoreet. Aliquam ac justo
+</span></span><span style="display:flex;"><span>                <span style="font-weight:bold">in</span> augue vehicula commodo vitae quis tellus.
+</span></span><span style="display:flex;"><span>              &lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>              &lt;<span style="color:#000080">TouchableOpacity</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.button} <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal}&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.buttonText}&gt;Close Modal&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>              &lt;/<span style="color:#000080">TouchableOpacity</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">Modal</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  container<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  button<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;#2196F3&#39;</span>,
+</span></span><span style="display:flex;"><span>    padding<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>    borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  buttonText<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    color<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;white&#39;</span>,
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>    fontWeight<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;bold&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modalContainer<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;rgba(0,0,0,0.5)&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modalView<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;white&#39;</span>,
+</span></span><span style="display:flex;"><span>    borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>    padding<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    elevation<span style="font-weight:bold">:</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span>    width<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;80%&#39;</span>, <span style="color:#998;font-style:italic">// Set width to 80% of screen width
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    height<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;50%&#39;</span>, <span style="color:#998;font-style:italic">// Set height to 50% of screen height
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  },
+</span></span><span style="display:flex;"><span>  modalHeader<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">24</span>,
+</span></span><span style="display:flex;"><span>    fontWeight<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;bold&#39;</span>,
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modalContent<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modalText<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>In the code above, we&rsquo;ve added two new styles to control the size and position of the modal:</p>
+<ul>
+<li>
+<p><code>modalView</code>: This style sets the width and height of the modal to 80% and 50% of the screen, respectively. This ensures that the modal is large enough to display its contents, but not so large as to obscure the rest of the screen. We&rsquo;ve also centered the modal horizontally and vertically using alignItems and justifyContent.</p>
+</li>
+<li>
+<p><code>modalContainer</code>: This style sets the background color of the modal container to a semi-transparent black, giving the modal a dimmed appearance. We&rsquo;ve also centered the container horizontally and vertically using alignItems and justifyContent.</p>
+</li>
+</ul>
+<p>You can adjust these styles to achieve the desired size and position for your modal. For example, you might want to make the modal taller or wider, or position it differently on the screen.</p>
+<h3 id="5-transparency">5. Transparency</h3>
+<p>You can adjust the transparency of the modal by setting its opacity value.</p>
+<h4 id="example-4">Example</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React, { useState } from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { Modal, Text, TouchableOpacity, View, StyleSheet } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> MyModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [modalVisible, setModalVisible] <span style="font-weight:bold">=</span> useState(<span style="font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> toggleModal <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    setModalVisible(<span style="font-weight:bold">!</span>modalVisible);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.container}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">TouchableOpacity</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.button} <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.buttonText}&gt;Open Modal&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">TouchableOpacity</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Modal</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">visible</span><span style="font-weight:bold">=</span>{modalVisible}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">transparent</span><span style="font-weight:bold">=</span>{<span style="font-weight:bold">true</span>}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">animationType</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;fade&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">onRequestClose</span><span style="font-weight:bold">=</span>{toggleModal}
+</span></span><span style="display:flex;"><span>      &gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modal}&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modalText}&gt;This is my modal&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#000080">TouchableOpacity</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.button} <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{toggleModal}&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.buttonText}&gt;Close Modal&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;/<span style="color:#000080">TouchableOpacity</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">Modal</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  container<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  button<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;#2196F3&#39;</span>,
+</span></span><span style="display:flex;"><span>    padding<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>    borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  buttonText<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    color<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;white&#39;</span>,
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>    fontWeight<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;bold&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modal<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;rgba(0, 0, 0, 0.5)&#39;</span>,
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  modalText<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>    color<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;white&#39;</span>,
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>In the code above, we&rsquo;ve set the <code>transparent</code> prop of the Modal to true and the backgroundColor of the modal to <code>rgba(0, 0, 0, 0.5)</code>. This creates a semi-transparent background for the modal that allows the content behind it to show through to some extent.</p>
+<p><em>The <code>rgba</code> color format used above includes an alpha channel that determines the transparency of the color. The alpha value ranges from <code>0</code> (fully transparent) to <code>1</code> (fully opaque). In this case, we&rsquo;ve set the alpha value to <code>0.5</code>, which creates a semi-transparent background.</em></p>
+<p>You can adjust the alpha value as needed to achieve the desired level of transparency. Keep in mind that setting the transparency too high may make the modal difficult to read or interact with.</p>
+<h2 id="use-case-example-of-react-native-modal">Use Case Example of React Native Modal</h2>
+<p>Imagine you&rsquo;re building a mobile app that allows users to book appointments with service providers. When a user selects a specific service, you want to display a modal that shows the available time slots for that service.</p>
+<p>To implement this functionality using a React Native Modal, you could create a component that renders a list of available time slots and wraps it in a Modal component. Here&rsquo;s an example:</p>
+<p><img src="./react-native-mode-usecase.png" alt="React Native Modal Use Case"></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="font-weight:bold">import</span> React, { useState } from <span style="color:#b84">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> { Modal, Text, TouchableOpacity, View, StyleSheet } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> {  Button } from <span style="color:#b84">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> App <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [isModalVisible, setIsModalVisible] <span style="font-weight:bold">=</span> useState(<span style="font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [timeSlots, setTimeSlots] <span style="font-weight:bold">=</span> useState([
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#39;9:00 AM&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#39;10:00 AM&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#39;11:00 AM&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#39;12:00 PM&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#39;1:00 PM&#39;</span>,
+</span></span><span style="display:flex;"><span>  ]);
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> service <span style="font-weight:bold">=</span> <span style="color:#b84">&#39;Haircut&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> handleModalClose <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    setIsModalVisible(<span style="font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">Button</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">title</span><span style="font-weight:bold">=</span>{<span style="color:#b84">`Select a time for </span><span style="color:#b84">${</span>service<span style="color:#b84">}</span><span style="color:#b84">`</span>}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{() =&gt; setIsModalVisible(<span style="font-weight:bold">true</span>)}
+</span></span><span style="display:flex;"><span>      /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">AppointmentModal</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">visible</span><span style="font-weight:bold">=</span>{isModalVisible}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">onClose</span><span style="font-weight:bold">=</span>{handleModalClose}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">service</span><span style="font-weight:bold">=</span>{service}
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">timeSlots</span><span style="font-weight:bold">=</span>{timeSlots}
+</span></span><span style="display:flex;"><span>      /&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> AppointmentModal <span style="font-weight:bold">=</span> ({ visible, onClose, service, timeSlots }) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> [selectedTimeSlot, setSelectedTimeSlot] <span style="font-weight:bold">=</span> useState(<span style="font-weight:bold">null</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> handleTimeSlotSelect <span style="font-weight:bold">=</span> (timeSlot) =&gt; {
+</span></span><span style="display:flex;"><span>    setSelectedTimeSlot(timeSlot);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> handleBookAppointment <span style="font-weight:bold">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">// Code to book the selected appointment goes here
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    onClose();
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">Modal</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#008080">visible</span><span style="font-weight:bold">=</span>{visible}
+</span></span><span style="display:flex;"><span>      <span style="color:#008080">transparent</span><span style="font-weight:bold">=</span>{<span style="font-weight:bold">true</span>}
+</span></span><span style="display:flex;"><span>      <span style="color:#008080">animationType</span><span style="font-weight:bold">=</span><span style="color:#b84">&#34;slide&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#008080">onRequestClose</span><span style="font-weight:bold">=</span>{onClose}
+</span></span><span style="display:flex;"><span>    &gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.modal}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.title}&gt;Available time slots <span style="font-weight:bold">for</span> {service}&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">View</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.timeSlotsContainer}&gt;
+</span></span><span style="display:flex;"><span>          {timeSlots.map((timeSlot) =&gt; (
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#000080">TouchableOpacity</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#008080">key</span><span style="font-weight:bold">=</span>{timeSlot}
+</span></span><span style="display:flex;"><span>              <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{[
+</span></span><span style="display:flex;"><span>                styles.timeSlotButton,
+</span></span><span style="display:flex;"><span>                selectedTimeSlot <span style="font-weight:bold">===</span> timeSlot <span style="font-weight:bold">&amp;&amp;</span> styles.selectedTimeSlot,
+</span></span><span style="display:flex;"><span>              ]}
+</span></span><span style="display:flex;"><span>              <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{() =&gt; handleTimeSlotSelect(timeSlot)}
+</span></span><span style="display:flex;"><span>            &gt;
+</span></span><span style="display:flex;"><span>              &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.timeSlotText}&gt;{timeSlot}&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#000080">TouchableOpacity</span>&gt;
+</span></span><span style="display:flex;"><span>          ))}
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">TouchableOpacity</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.bookButton}
+</span></span><span style="display:flex;"><span>          <span style="color:#008080">disabled</span><span style="font-weight:bold">=</span>{<span style="font-weight:bold">!</span>selectedTimeSlot}
+</span></span><span style="display:flex;"><span>          <span style="color:#008080">onPress</span><span style="font-weight:bold">=</span>{handleBookAppointment}
+</span></span><span style="display:flex;"><span>        &gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#000080">Text</span> <span style="color:#008080">style</span><span style="font-weight:bold">=</span>{styles.bookButtonText}&gt;Book Appointment&lt;/<span style="color:#000080">Text</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#000080">TouchableOpacity</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#000080">View</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">Modal</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> styles <span style="font-weight:bold">=</span> StyleSheet.create({
+</span></span><span style="display:flex;"><span>  modal<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    flex<span style="font-weight:bold">:</span> <span style="color:#099">1</span>,
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;rgba(0, 0, 0, 0.5)&#39;</span>,
+</span></span><span style="display:flex;"><span>    alignItems<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>    justifyContent<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;center&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  title<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">20</span>,
+</span></span><span style="display:flex;"><span>    fontWeight<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;bold&#39;</span>,
+</span></span><span style="display:flex;"><span>    marginBottom<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>    color<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;#fff&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  timeSlotsContainer<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;#fff&#39;</span>,
+</span></span><span style="display:flex;"><span>    borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span>    padding<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>    maxHeight<span style="font-weight:bold">:</span> <span style="color:#099">300</span>,
+</span></span><span style="display:flex;"><span>    width<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;80%&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  timeSlotButton<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    padding<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>    borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span>    marginVertical<span style="font-weight:bold">:</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  selectedTimeSlot<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;#2196F3&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  timeSlotText<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">16</span>,
+</span></span><span style="display:flex;"><span>    color<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;#000&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  bookButton<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    backgroundColor<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;#2196F3&#39;</span>,
+</span></span><span style="display:flex;"><span>    padding<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>    borderRadius<span style="font-weight:bold">:</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span>    marginTop<span style="font-weight:bold">:</span> <span style="color:#099">10</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  bookButtonText<span style="font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>    fontSize<span style="font-weight:bold">:</span> <span style="color:#099">16</span>,
+</span></span><span style="display:flex;"><span>    fontWeight<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;bold&#39;</span>,
+</span></span><span style="display:flex;"><span>    color<span style="font-weight:bold">:</span> <span style="color:#b84">&#39;#fff&#39;</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">default</span> App;
+</span></span></code></pre></div><p>We&rsquo;re using a Modal component to display the list of available time slots for a specific service. The component takes in a <code>visible</code> prop that determines whether the Modal should be displayed or not, as well as an <code>onClose</code> prop that&rsquo;s called when the user closes the Modal.</p>
+<p>The Modal is rendered with a semi-transparent background and is centered on the screen. The list of available time slots is displayed in a separate container that&rsquo;s styled with a white</p>
+<h2 id="frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</h2>
+<p>Q: Can I customize the size and position of the modal?</p>
+<p>A: Yes, you can control the size and position of the modal by setting its width, height, and margin values.</p>
+<p>Q: Can I use multiple modals in my app?</p>
+<p>A: Yes, you can use as many modals as you need in your app.</p>
+<p>Q: Can I change the animation type of the modal?</p>
+<p>A: Yes, you can choose from several animation types, including slide, fade, and none.</p>
+<p>Q: Can I add custom content to the modal?</p>
+<p>A: Yes, you can add any content you want to the modal, including text, images, and other components.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>React Native Modal is a powerful component that makes it easy to create user-friendly modals in your mobile app. By following the steps outlined in this guide, you can create, customize, and implement a modal that fits your app&rsquo;s needs. Remember to test your modal thoroughly and consider user feedback to improve the user experience. With React Native Modal, you can create a professional-looking app that users will love.</p>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/react-native/">react native</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-modal%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-modal%2f&amp;text=React%20Native%20Modal-%20A%20Beginner%27s%20Guide%20to%20Creating%20User-Friendly%20Interfaces&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-modal%2f&amp;title=React%20Native%20Modal-%20A%20Beginner%27s%20Guide%20to%20Creating%20User-Friendly%20Interfaces"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-modal%2f&title=React%20Native%20Modal-%20A%20Beginner%27s%20Guide%20to%20Creating%20User-Friendly%20Interfaces">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2freact-native%2freact-native-modal%2f&amp;description=React%20Native%20Modal-%20A%20Beginner%27s%20Guide%20to%20Creating%20User-Friendly%20Interfaces" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/techs/tips-to-optimize-landing-page/"
+            data-toggle="tooltip" data-placement="top" title="12 Tips to Optimize Landing Page Image Size">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/"
+            data-toggle="tooltip" data-placement="top" title="Implementing Biometric Authentication in React Native Made Easy">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-stylesheet/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Styleshee- A Comprehensive Guide for Beginners</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  27 March 272712
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;8&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to effortlessly style your React Native applications with CSS. Read on for tips, tricks, and FAQs on mastering CSS for React Native styling.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-style-sheet_hu3d03a01dcc18bc5be0e67db3d8d209a6_7324566_500x0_resize_q75_box.jpg" alt="/images/react-native-style-sheet.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

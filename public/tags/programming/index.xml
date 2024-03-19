@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on InsightfulScript</title>
+    <link>http://localhost:1313/tags/programming/</link>
+    <description>Recent content in Programming on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Thu, 13 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementing Biometric Authentication in React Native Made Easy</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-biomatric/</link>
+      <pubDate>Thu, 13 Apr 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-biomatric/</guid>
+      <description>Implementing Biometric Authentication in React Native Made Easy An extremely safe and practical method of user authentication is biometric authentication. To confirm a user&amp;rsquo;s identification, it uses physical or behavioural traits like fingerprints or facial recognition.</description>
+    </item>
+    <item>
+      <title>React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-modal/</link>
+      <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-modal/</guid>
+      <description>React Native Modal- A Beginner&amp;rsquo;s Guide to Creating User-Friendly Interfaces Introduction React Native is a popular JavaScript framework that allows developers to create mobile applications for iOS and Android using a single codebase.</description>
+    </item>
+    <item>
+      <title>Mastering React Native Styling Animation- Techniques, Tips, and Tricks</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-styling-animation/</link>
+      <pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-styling-animation/</guid>
+      <description>Animations have the power to enhance the user experience in a mobile application. With React Native Styling Animation, you can add beautiful and interactive animations to your app. This powerful feature provides developers with an easy and effective way to create dynamic animations that can captivate users.</description>
+    </item>
+    <item>
+      <title>React Native Styleshee- A Comprehensive Guide for Beginners</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-stylesheet/</link>
+      <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-stylesheet/</guid>
+      <description>React Native Stylesheet: A Comprehensive Guide for Beginners Introduction React Native has become an incredibly popular tool for building cross-platform mobile applications, and for good reason. It allows developers to write code once and deploy it on multiple platforms, without sacrificing the native look and feel that users have come to expect.</description>
+    </item>
+    <item>
+      <title>React Native Firebase- A Comprehensive Guide</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-firebase/</link>
+      <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-firebase/</guid>
+      <description>React Native Firebase: A Comprehensive Guide React Native Firebase is a powerful tool that combines the capabilities of Firebase, a mobile and web application development platform, with React Native, a popular framework for building mobile apps.</description>
+    </item>
+    <item>
+      <title>How to Customize Scrollbar in TailwindCSS</title>
+      <link>http://localhost:1313/collections/programming/tailwindcss/tailwindcss-scrollbar/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/tailwindcss/tailwindcss-scrollbar/</guid>
+      <description>How to Customize Scrollbar in TailwindCSS If you&amp;rsquo;re looking for a way to improve the look and feel of your website, you might want to consider using Tailwind CSS. This popular utility-first CSS framework can help you style your website in a way that&amp;rsquo;s both easy and efficient.</description>
+    </item>
+    <item>
+      <title>Tailwind Z-Index - How to Use It with Examples</title>
+      <link>http://localhost:1313/collections/programming/tailwindcss/tailwindcss-z-index/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/tailwindcss/tailwindcss-z-index/</guid>
+      <description>Tailwind Z-Index: How to Use It with Examples If you&amp;rsquo;ve ever worked with web design and front-end development, you know that positioning elements on top of each other can be tricky.</description>
+    </item>
+    <item>
+      <title>Tailwind Z-Index - How to Use It with Examples</title>
+      <link>http://localhost:1313/post/tailwindcss-z-index/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/tailwindcss-z-index/</guid>
+      <description>Tailwind Z-Index: How to Use It with Examples If you&amp;rsquo;ve ever worked with web design and front-end development, you know that positioning elements on top of each other can be tricky.</description>
+    </item>
+    <item>
+      <title>React Router - A Simple Introduction For Beginners</title>
+      <link>http://localhost:1313/collections/programming/react/react-router/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-router/</guid>
+      <description>Understanding React Router: A Comprehensive Guide for Beginners If you&amp;rsquo;re a web developer who uses React, you know that building single-page applications can be a challenge. React Router is an essential tool for creating dynamic, client-side web applications.</description>
+    </item>
+    <item>
+      <title>Scheduling python program using Cron Jobs</title>
+      <link>http://localhost:1313/collections/programming/python/schedule-python-scripts-as-cron-jobs/</link>
+      <pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/schedule-python-scripts-as-cron-jobs/</guid>
+      <description>Scheduling python program using Cron Jobs Whether you are a website owner or just someone who needs to schedule execution of Python scripts, Cron jobs can be very helpful.&#xA;Introduction to Cron Jobs A cron job is a time-based task that is set to run at specific intervals.</description>
+    </item>
+    <item>
+      <title>react-calender - Building a calender app in React JS</title>
+      <link>http://localhost:1313/collections/programming/react/react-calender/</link>
+      <pubDate>Tue, 06 Sep 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-calender/</guid>
+      <description>React Calender In your react web app, managing and modifying dates is a common task. You may do things like add events or create reminders. You can do this by including a calendar in your web application.</description>
+    </item>
+    <item>
+      <title>Reshaping Numpy Arrays- A Comprehensive Guide to Numpy Array Reshape</title>
+      <link>http://localhost:1313/collections/programming/python/numpy/numpy-array-reshape/</link>
+      <pubDate>Wed, 31 Aug 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/numpy/numpy-array-reshape/</guid>
+      <description>Reshaping Numpy Arrays: A Comprehensive Guide to Numpy Array ReshapeNumpy Reshape You might frequently want to reshape an existing array into an array with a different number of dimensions while working with Numpy arrays.</description>
+    </item>
+    <item>
+      <title>Python Array - Everything you need to know about</title>
+      <link>http://localhost:1313/collections/programming/python/python-array/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/python-array/</guid>
+      <description>Python Array This article will teach you how to use Python arrays. You&amp;rsquo;ll learn how to define them as well as the various methods for performing operations on them.&#xA;The article discusses arrays created by importing the array module in python.</description>
+    </item>
+    <item>
+      <title>Boost Your React App&#39;s Performance with useCallback() Hook</title>
+      <link>http://localhost:1313/collections/programming/react/react-usecallbackhook/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-usecallbackhook/</guid>
+      <description>Boost Your React App&amp;rsquo;s Performance with useCallback() Hook Are you looking for ways to boost your React app&amp;rsquo;s performance? Look no further than the useCallback() hook! In this article, we&amp;rsquo;ll explore how this powerful hook can help improve your app&amp;rsquo;s speed and user experience.</description>
+    </item>
+    <item>
+      <title>React JS - useMemo hook in React</title>
+      <link>http://localhost:1313/collections/programming/react/react-usememo-hook/</link>
+      <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-usememo-hook/</guid>
+      <description>ReactJS - useMemo hook in React In software development, we&amp;rsquo;re typically fixated on performance improvements and ways to speed up our products so that users have a better experience.&#xA;One strategy for improving performance is memoization.</description>
+    </item>
+    <item>
+      <title>A Beginner&#39;s Guide to React API Calls- Learn How to Make GET Requests with React</title>
+      <link>http://localhost:1313/collections/programming/react/react-api-call/</link>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-api-call/</guid>
+      <description>A Beginner&amp;rsquo;s Guide to React API Calls: Learn How to Make GET Requests with React If you&amp;rsquo;re a developer working with React, you know how challenging it can be to keep up with all the APIs available.</description>
+    </item>
+    <item>
+      <title>React JS - useReducer hook in react</title>
+      <link>http://localhost:1313/collections/programming/react/react-usereducer-hook/</link>
+      <pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-usereducer-hook/</guid>
+      <description>ReactJS - useReducer() hook in react Hooks in React introduced a new method of building and thinking about React apps. So far, one of the most popular hooks among developers is useReducer, which allows us to manage certain complex state manipulations and updates, and this is what we&amp;rsquo;ll learn about in this post.</description>
+    </item>
+    <item>
+      <title>React useLayoutEffect- A Comprehensive Guide</title>
+      <link>http://localhost:1313/collections/programming/react/react-uselayouteffect/</link>
+      <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-uselayouteffect/</guid>
+      <description>ReatJS - What is useLayoutEffect hook in react React is a well-known and rapidly developing JavaScript library in the web development industry. React is now an excellent alternative for developing interactive, modern real-world applications due to its ease of use and data-fetching capabilities.</description>
+    </item>
+    <item>
+      <title>React JS - Creating custom hooks in React</title>
+      <link>http://localhost:1313/collections/programming/react/react-creating-custom-hooks/</link>
+      <pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-creating-custom-hooks/</guid>
+      <description>ReactJS - Creating Custom hooks in React With the help of custom React hooks, you may provide your React applications additional, distinctive functionality.&#xA;Installing a third-party library designed to address your issue is frequently the simplest way to add a certain functionality to your application.</description>
+    </item>
+    <item>
+      <title>React JS - A complete guide to React refs</title>
+      <link>http://localhost:1313/collections/programming/react/react-createref-hook/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-createref-hook/</guid>
+      <description>ReactJS - A complete guide to refs and useRef() in React We will talk about how to directly manipulate DOM elements in React in this tutorial.&#xA;Although the React Framework constructs your components and abstracts your code from DOM manipulation, developers can still access it.</description>
+    </item>
+    <item>
+      <title>React useContext Hook- Simplifying State Management in React</title>
+      <link>http://localhost:1313/collections/programming/react/react-usecontext-hook/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-usecontext-hook/</guid>
+      <description>React useContext Hook: Simplifying State Management in React In a typical React application, data is passed top-down (from parent to child) by props, however this can be challenging for some prop types (such locale preference and UI theme), which are needed by numerous components that are nested at different levels within an application.</description>
+    </item>
+    <item>
+      <title>ReactJS - Understanding Higher Order Components in React</title>
+      <link>http://localhost:1313/collections/programming/react/react-higher-order-components/</link>
+      <pubDate>Thu, 16 Jun 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-higher-order-components/</guid>
+      <description>ReactJS - Understanding Higher-Order Components in React **A function that takes a component and returns a new component is known as a higher-order component.**React&amp;rsquo;s higher-order components (HOCs) were inspired by JavaScript&amp;rsquo;s higher-order functions.</description>
+    </item>
+    <item>
+      <title>Mastering React Conditional Rendering- A Comprehensive Guide</title>
+      <link>http://localhost:1313/collections/programming/react/react-conditional-rendering/</link>
+      <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-conditional-rendering/</guid>
+      <description>Mastering React Conditional Rendering: A Comprehensive Guide Conditional rendering is a crucial aspect of React that allows developers to render different components based on certain conditions. This feature helps to create dynamic and responsive user interfaces, making React a popular choice for building complex web applications.</description>
+    </item>
+    <item>
+      <title>OpenCV - Face Recognition using LBPH Classifier in C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-creating-own-dataset-cpp/</link>
+      <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-creating-own-dataset-cpp/</guid>
+      <description>OpenCV - Face Recognition using LBPH Classifier in C++ We learned HOW TO RECOGNIZE FACES in my OpenCV tutorial. Now, as shown below, we will gather and use our own data to recognize different faces using LBPH:</description>
+    </item>
+    <item>
+      <title>OpenCV - Face Detection using Haar cascade classifiers (C&#43;&#43;)</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-face-detection/</link>
+      <pubDate>Wed, 27 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-face-detection/</guid>
+      <description>OpenCV - Face Detection using Haar cascade classifiers (C++) The fact that computer vision makes very futuristic-sounding jobs a reality is one of the many reasons why it is a fascinating subject.</description>
+    </item>
+    <item>
+      <title>OpenCV - Removing Background from an image using GrabCut algorithm(C&#43;&#43;)</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-grabcut/</link>
+      <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-grabcut/</guid>
+      <description>OpenCV - Removing Background from an Image using GrabCut Algorithm (C++) This may be appropriate for you if you are a newbie in the field of computer vision, as I am.</description>
+    </item>
+    <item>
+      <title>OpenCV - Image Segmentation using Watershed algorithm C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-watershed/</link>
+      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-watershed/</guid>
+      <description>OpenCV - Image Segmentation using Watershed algorithm C++ The watershed technique is a well-known segmentation algorithm that is particularly good for extracting touching or overlapping items in photographs.&#xA;Marker-based Watershed algorithm We must start with user-defined markers when using the watershed method.</description>
+    </item>
+    <item>
+      <title>OpenCV - Stereo Vision and Depth Estimation using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-stereo-image-depth-estimation/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-stereo-image-depth-estimation/</guid>
+      <description>OpenCV - Stereo Vision and Depth Estimation using C++ Have you ever wondered how robots travel by themselves, grip various things, or avoid collisions while moving? For such purposes, stereo vision-based depth estimate is a common method.</description>
+    </item>
+    <item>
+      <title>OpenCV - Understanding Hough Transform Using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-hough-line-detection/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-hough-line-detection/</guid>
+      <description>OpenCV - Understanding Hough Transform Using C++ Before we can apply the Hough transform to images, we must first learn what a Hough space is, which we shall do through an example.</description>
+    </item>
+    <item>
+      <title>OpenCV - Understanding Convex Hull using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-convexhull/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-convexhull/</guid>
+      <description>OpenCV - Understanding Convex Hull using C++ Finding and analysing the forms present in an image is one technique to solving most computer vision problems, and getting the contour is one of them.</description>
+    </item>
+    <item>
+      <title>OpenCV - Contour Detection Using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/contour-detection/</link>
+      <pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/contour-detection/</guid>
+      <description>OpenCV - Contour Detection Using C++ Contour detection is an important task in computer vision, not only because of the obvious element of detecting contours of subjects in an image or video frame, but also because of the derivative processes associated with identifying contours.</description>
+    </item>
+    <item>
+      <title>OpenCV - Understanding Canny Edge Detection Using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/canny-edge-detection/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/canny-edge-detection/</guid>
+      <description>OpenCV - Understanding Canny Edge Detection Using C++ Edge detection is a type of image processing that identifies the borders (edges) of objects or regions inside a picture. The edges of an image are one of the most important aspects of it.</description>
+    </item>
+    <item>
+      <title>OpenCV - Understanding Low Pass And High Pass Filter using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-low-high-pass-filter/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-low-high-pass-filter/</guid>
+      <description>OpenCV - Understanding Low Pass And High Pass Filter using C++ In the past post, we took in a few basic insights regarding the Fourier change and why it merits learning.</description>
+    </item>
+    <item>
+      <title>OpenCV dft() - Fourier Transform using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv-fourier-transform-cpp/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv-fourier-transform-cpp/</guid>
+      <description>OpenCV Fourier Transform using C++ In OpenCV, the idea of Fourier Transform is used in a lot of the processing you do on pictures and videos.&#xA;Joseph Fourier was a French mathematician who worked in the 18th century, discovering and popularising several mathematical concepts.</description>
+    </item>
+    <item>
+      <title>MLOps - Beginners Guid to MLOps,What It Is, and How to Implement It</title>
+      <link>http://localhost:1313/collections/programming/machine-learning/mlops/what-is-mlops/</link>
+      <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/machine-learning/mlops/what-is-mlops/</guid>
+      <description>MLOps: A Beginners Guid to MLOps We were all studying about the software development lifecycle (SDLC) until recently, and how it goes from requirement elicitation to designing, programming, testing, deployment, and maintenance.</description>
+    </item>
+    <item>
+      <title>A Comprehansive Guid to React Native Elements</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-elements/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-elements/</guid>
+      <description>A Comprehansive Guid to React Native Elements React Native Elements (RNE) are a cross-platform user interface toolkit. These elements may now be utilised on the web, and your codebase can be shared between both React Native and React web projects.</description>
+    </item>
+    <item>
+      <title>Python Class Method Decorator- A Comprehensive Guide</title>
+      <link>http://localhost:1313/collections/programming/python/python-class-method-decorator/</link>
+      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/python-class-method-decorator/</guid>
+      <description>Python Class Method Decorator: A Comprehensive Guide Python is a powerful programming language that supports many features that make programming easier and more efficient. One of these features is the class method decorator.</description>
+    </item>
+    <item>
+      <title>React Native WebView Starter Guid</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-webview/</link>
+      <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-webview/</guid>
+      <description>WebViews in React Native allow access to any online site from within the mobile app.&#xA;In a React Native project, the WebView component is used to load webpages. It used to be included in React Native out of the box, but it has since been removed from the core and added to the React Native Community libraries; for additional information, see The Slimmening proposal.</description>
+    </item>
+    <item>
+      <title>A Comprehensive Guide to React Native Navigation Stack- Best Practices and Tips</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-navigation-stack/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-navigation-stack/</guid>
+      <description>A Comprehensive Guide to React Native Navigation Stack: Best Practices and Tips React Native Navigation Stack is an essential component for building mobile applications using React Native. It provides a flexible and powerful navigation solution that can help you create intuitive and easy-to-use interfaces for your users.</description>
+    </item>
+    <item>
+      <title>Kaggle Data Science Projects for Beginners</title>
+      <link>http://localhost:1313/collections/programming/machine-learning/kaggle-data-science-projects/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/machine-learning/kaggle-data-science-projects/</guid>
+      <description>Kaggle Data Science Projects for Beginners Introduction Kaggle has established itself as one of the most essential stepping stones for students and professionals interested in Data Science these days.&#xA;Kaggle features a wealth of online resources to aid in the learning of Data Science.</description>
+    </item>
+    <item>
+      <title>Best Machine Learning Projects For Beginners with Source Code [2021]</title>
+      <link>http://localhost:1313/collections/programming/machine-learning/machine-learning-projects/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/machine-learning/machine-learning-projects/</guid>
+      <description>Best Machine Learning Projects As Artificial Intelligence (AI) continues to advance at a breakneck pace in 2021, mastering Machine Learning (ML) will become increasingly vital for all players in the field.</description>
+    </item>
+    <item>
+      <title>Nodejs- forEach loop cheatsheet</title>
+      <link>http://localhost:1313/collections/programming/javascript/nodejs-foreach-loop/</link>
+      <pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/javascript/nodejs-foreach-loop/</guid>
+      <description>Nodejs- forEach loop cheatsheet You can use looping to run through each item in an array and customise and output each one as you see fit. Loops are a crucial tool for rendering arrays in JavaScript, just as they are in any other programming language.</description>
+    </item>
+    <item>
+      <title>A Comprehensive Guide to Auto-Encoders in Neural Networks</title>
+      <link>http://localhost:1313/collections/programming/neural-network/auto-encoders/</link>
+      <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/neural-network/auto-encoders/</guid>
+      <description>A Comprehensive Guide to Auto-Encoders in Neural Networks&amp;quot; In our last section we have seen what is ResNet and how to implement it. In this article we will look at AutoEncoders and how to implement it in PyTorch.</description>
+    </item>
+    <item>
+      <title>Everything you need to know about Python Pandas Data Profiling</title>
+      <link>http://localhost:1313/collections/programming/python/pandas-data-profiling/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/pandas-data-profiling/</guid>
+      <description>What is Pandas Data Profiling ? The Pandas library has a large number of functions. It aids in data manipulation and offers a diverse set of features for practically any activity.</description>
+    </item>
+    <item>
+      <title>What is Machine Learning ?</title>
+      <link>http://localhost:1313/collections/programming/machine-learning/what-is-machine-learning/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/machine-learning/what-is-machine-learning/</guid>
+      <description>What is Machine Learning ? According to Wikipedia:&#xA;Machine learning is a scientific study of algorithm and statistical model of computer system.&#xA;That is machine learning is used to perform certain tasks without using any human interaction.</description>
+    </item>
+    <item>
+      <title>ResNet -  Understanding the Revolutionary Neural Network Architecture for Deep Learning</title>
+      <link>http://localhost:1313/collections/programming/neural-network/resnet/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/neural-network/resnet/</guid>
+      <description>ResNet: Understanding the Revolutionary Neural Network Architecture for Deep Learning ResNet (Residual Network) is a powerful convolutional neural network architecture that has revolutionized the field of deep learning. It was introduced in a research paper by Microsoft Research Asia in 2015 and has since become one of the most popular deep learning models due to its high accuracy and efficiency.</description>
+    </item>
+    <item>
+      <title>Javascript Regex cheatsheet 2021</title>
+      <link>http://localhost:1313/collections/programming/javascript/javascript-regex-cheat-sheat-2021/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/javascript/javascript-regex-cheat-sheat-2021/</guid>
+      <description>Javascript Regex Cheatsheet A Regular Expression (RegEx) is a string of characters that defines a search pattern. Regex can save you hundreds of lines of code and can be used with Javascript or any programming language (and even CLI tools)</description>
+    </item>
+    <item>
+      <title>Javascript Regex cheatsheet 2021</title>
+      <link>http://localhost:1313/post/javascript-regex-cheat-sheat-2021/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/javascript-regex-cheat-sheat-2021/</guid>
+      <description>Javascript Regex Cheatsheet A Regular Expression (RegEx) is a string of characters that defines a search pattern. Regex can save you hundreds of lines of code and can be used with Javascript or any programming language (and even CLI tools)</description>
+    </item>
+    <item>
+      <title>Implementing Convolutional Neural Network (CNN) using Python</title>
+      <link>http://localhost:1313/collections/programming/neural-network/cn/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/neural-network/cn/</guid>
+      <description>What is Convolutional Neural Network (CNN) In our previous article we have discussed how a simple neural network works.The problem with fully conntected neural network is that they are computationally expensive.</description>
+    </item>
+    <item>
+      <title>Implementing Convolutional Neural Network (CNN) using PyTorch</title>
+      <link>http://localhost:1313/collections/programming/neural-network/cnn/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/neural-network/cnn/</guid>
+      <description>Implementing Convolutional Neural Network (CNN) in Pytorch In this turorial, we’ll go through the basic ideas of PyTorch starting at tensors and computational graphs and finishing at the Variable class and the PyTorch autograd functionality.</description>
+    </item>
+    <item>
+      <title>Understanding Stochastic Gradient Descent Descent (SGD) with python</title>
+      <link>http://localhost:1313/collections/programming/machine-learning/sgd/</link>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/machine-learning/sgd/</guid>
+      <description>Stochastic Gradient Descent (SGD) with Python Stochastic gradient descent or SGD is very popular and powerful algorithm used in machine learning. Stochastic Gradient Descent (SGD) is an iterative algorithm which is used to compare various solution till the optimum solution is not found.</description>
+    </item>
+    <item>
+      <title>Creating Responsive Drawer using Material-UI</title>
+      <link>http://localhost:1313/collections/programming/react/material-ui-responsive-drawer/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/material-ui-responsive-drawer/</guid>
+      <description>React Tutorial : Creating responsive Drawer using Material-UI In this article we are going to build a responsive Drawer which adjust itself according to screen size using material-ui framework. If you are new visit here for installing and getting started with Material-UI.</description>
+    </item>
+    <item>
+      <title>Creating Social Card using React and Material UI</title>
+      <link>http://localhost:1313/collections/programming/react/react-social-card/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-social-card/</guid>
+      <description>React Tutorial - Creating a social card using Material UI In this article we will create a simple social card using react&amp;rsquo;s materail UI framework.&#xA;The idea is to create 3 statless component namely SocialCard,CardFront,CardBack.</description>
+    </item>
+    <item>
+      <title>Understand React Stateful and Stateless components</title>
+      <link>http://localhost:1313/collections/programming/react/react-statefull-stateless/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-statefull-stateless/</guid>
+      <description>React js components : Stateful vs stateless What is state ? State is an object which is declared inside the constructor method of the class.They are mutable and are used to interact between different component of the class.</description>
+    </item>
+    <item>
+      <title>Understanding State and Props in React</title>
+      <link>http://localhost:1313/collections/programming/react/react-state-props/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-state-props/</guid>
+      <description>What are state and props in Reactjs In React js we develop different component to develop complex UI.To create dataflow between different component React uses state and porps. Because of state and props it is able to render component with dynamic data.</description>
+    </item>
+    <item>
+      <title>OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/corernsubpixel/</link>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/corernsubpixel/</guid>
+      <description>OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C++ A digital photo&amp;rsquo;s smallest component is called a &amp;ldquo;pixel&amp;rdquo;. Between pixel information is just inaccessible to the human sight. There are some applications that require more accuracy than a camera can provide.</description>
+    </item>
+    <item>
+      <title>calHist() - Calculate histogram using openCV and C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/calculate-histogram/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/calculate-histogram/</guid>
+      <description>calHist() - Calculate histogram using openCV and C++ In practically every element of computer vision, histograms are used. For threshold, we employ gray-scale histograms. For white balance, we employ histograms. For object tracking in photos, such as with the CamShift technique, we use colour histograms.</description>
+    </item>
+    <item>
+      <title>OpenCV - Image Rotation using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/image-rotation/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/image-rotation/</guid>
+      <description>OpenCV - Image Roatation using C++ Image editing is becoming increasingly popular as mobile phones have built-in capabilities that allow you to crop, rotate, and do other things with your images.</description>
+    </item>
+    <item>
+      <title>OpenCV - Fill Contour using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/fill-contours-cpp/</link>
+      <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/fill-contours-cpp/</guid>
+      <description>Introduction Have you ever seen lines drawn around mountain ranges and elevations on topographical maps? Topographical contours are the names given to these lines. They provide an elevation profile of a terrain.</description>
+    </item>
+    <item>
+      <title>Opencv - Harris Corner Detector using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv-corner-harris-cpp/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv-corner-harris-cpp/</guid>
+      <description>Introduction The Harris Corner Detector is a corner detection operator frequently used in computer vision algorithms to extract corners and infer image characteristics. Chris Harris and Mike Stephens invented it in 1988 after improving Moravec&amp;rsquo;s corner detector.</description>
+    </item>
+    <item>
+      <title>Python Data Structure Cheat Sheet- Your Complete Guide</title>
+      <link>http://localhost:1313/collections/programming/python/python-data-structure-cheat-sheet-2021/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/python-data-structure-cheat-sheet-2021/</guid>
+      <description>Python Data Structure Cheat Sheet: Your Complete Guide Python is a popular programming language that is widely used in various fields such as data science, machine learning, web development, and more.</description>
+    </item>
+    <item>
+      <title>Parallel Programming with C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/parallel-programming-stl/</link>
+      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/parallel-programming-stl/</guid>
+      <description>C++17 - New Parallel Algorithm of STL C++17 introduces parallel algorithms. However, there aren&amp;rsquo;t many implementations where the additional functionalities can be used.&#xA;The concept is straightforward. More than 100 algorithms are included in the Standard Template (STL) for searching, counting, and manipulating ranges and their constituents.</description>
+    </item>
+    <item>
+      <title>Parallel Programming with C&#43;&#43;</title>
+      <link>http://localhost:1313/post/parallel-programming-stl/</link>
+      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/parallel-programming-stl/</guid>
+      <description>C++17 - New Parallel Algorithm of STL C++17 introduces parallel algorithms. However, there aren&amp;rsquo;t many implementations where the additional functionalities can be used.&#xA;The concept is straightforward. More than 100 algorithms are included in the Standard Template (STL) for searching, counting, and manipulating ranges and their constituents.</description>
+    </item>
+    <item>
+      <title>Javascript Beginners Tips and Best Practices 2021</title>
+      <link>http://localhost:1313/collections/programming/javascript/javascript-beginner-tip-2021/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/javascript/javascript-beginner-tip-2021/</guid>
+      <description>Javascript Beginners Tips and Best Practices 2021 I&amp;rsquo;ll discuss JavaScript tips, tactics, and best practises for beginners that I use and find valuable in this blog.&#xA;Using Numeric Separator When dealing with enormous numbers, this is one of the most commonly utilised operators.</description>
+    </item>
+    <item>
+      <title>Javascript String Methods Cheat Sheet 2021</title>
+      <link>http://localhost:1313/collections/programming/javascript/javascript-string-methods-cheat-sheet-2021/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/javascript/javascript-string-methods-cheat-sheet-2021/</guid>
+      <description>Javascript String Methods Cheat Sheet 2021 Use these JavaScript string methods to easily perform character manipulation.&#xA;When programming in JavaScript, you often come across scenarios that require string manipulation. For example, when retrieving email , you may need to convert all characters to lowercase or use regular expressions to check if the entered password meets conditions.</description>
+    </item>
+    <item>
+      <title>Understanding Merge sort algorithm</title>
+      <link>http://localhost:1313/collections/programming/merge-sort-algorithm/</link>
+      <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/merge-sort-algorithm/</guid>
+      <description>Understanding Merge Sort Algorithm Merge sort is a sorting algorithm based on &amp;ldquo;divide and conquer&amp;rdquo; technology. It is one of the most efficient classification algorithms.&#xA;In this blog, you will learn about the working principle of the merge sort algorithm, the merge sort algorithm, its time and space complexity, and its implementation in various programming languages such as C++, Python, JavaScript and Java.</description>
+    </item>
+    <item>
+      <title>Downloading YouTube videos using Python</title>
+      <link>http://localhost:1313/collections/programming/python/downloading-youtube-video-using-python/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/python/downloading-youtube-video-using-python/</guid>
+      <description>Tutorial- Downloading YouTube videos using Python Requirements Python (Obvious) pytube Installing pip install pytube Downloading Youtube video After installing pytube, return to the text editor, open the Python file and import pytube:</description>
+    </item>
+    <item>
+      <title>React 18 is out !</title>
+      <link>http://localhost:1313/collections/programming/react/react-18-alpha/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-18-alpha/</guid>
+      <description>React 18 is Out! react core team recently released an alpha version of react18. this version pays more attention to user experience and internal architecture changes, including adaptive concurrency functions,it gives you more control over dom rendering events.</description>
+    </item>
+    <item>
+      <title>React Tutorial - Creating a simple weather app using React and Material UI</title>
+      <link>http://localhost:1313/collections/programming/react/weather-app-using-react/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/weather-app-using-react/</guid>
+      <description>React Tutorial - Creating weather App using Material UI In this article we will be building a weather app using react js material UI framework. We will also be using openweathermap API for fetching the weather data from the site.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neural Network on InsightfulScript</title>
+    <link>http://localhost:1313/tags/neural-network/</link>
+    <description>Recent content in Neural Network on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Thu, 23 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/neural-network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Comprehensive Guide to Auto-Encoders in Neural Networks</title>
+      <link>http://localhost:1313/collections/programming/neural-network/auto-encoders/</link>
+      <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/neural-network/auto-encoders/</guid>
+      <description>A Comprehensive Guide to Auto-Encoders in Neural Networks&amp;quot; In our last section we have seen what is ResNet and how to implement it. In this article we will look at AutoEncoders and how to implement it in PyTorch.</description>
+    </item>
+    <item>
+      <title>ResNet -  Understanding the Revolutionary Neural Network Architecture for Deep Learning</title>
+      <link>http://localhost:1313/collections/programming/neural-network/resnet/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/neural-network/resnet/</guid>
+      <description>ResNet: Understanding the Revolutionary Neural Network Architecture for Deep Learning ResNet (Residual Network) is a powerful convolutional neural network architecture that has revolutionized the field of deep learning. It was introduced in a research paper by Microsoft Research Asia in 2015 and has since become one of the most popular deep learning models due to its high accuracy and efficiency.</description>
+    </item>
+    <item>
+      <title>Implementing Convolutional Neural Network (CNN) using Python</title>
+      <link>http://localhost:1313/collections/programming/neural-network/cn/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/neural-network/cn/</guid>
+      <description>What is Convolutional Neural Network (CNN) In our previous article we have discussed how a simple neural network works.The problem with fully conntected neural network is that they are computationally expensive.</description>
+    </item>
+    <item>
+      <title>Implementing Convolutional Neural Network (CNN) using PyTorch</title>
+      <link>http://localhost:1313/collections/programming/neural-network/cnn/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/neural-network/cnn/</guid>
+      <description>Implementing Convolutional Neural Network (CNN) in Pytorch In this turorial, we’ll go through the basic ideas of PyTorch starting at tensors and computational graphs and finishing at the Variable class and the PyTorch autograd functionality.</description>
+    </item>
+  </channel>
+</rss>

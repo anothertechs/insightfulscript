@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Javascript Regex cheatsheet 2021 - InsightfulScript</title>
+<meta name="description" content="This short guide outlines the most important principles and illustrates them with examples to teach you everything you need to know about JavaScript Regular Expressions.">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/post\/javascript-regex-cheat-sheat-2021\/",
+          "name": "Javascript regex cheatsheet 2021"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim"
+  },
+  "headline": "Javascript Regex cheatsheet 2021",
+  "description" : "This short guide outlines the most important principles and illustrates them with examples to teach you everything you need to know about JavaScript Regular Expressions.",
+  "inLanguage" : "en",
+  "wordCount":  923 ,
+  "datePublished" : "2021-08-27T00:00:00",
+  "dateModified" : "2021-08-27T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, javascript" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/post\/javascript-regex-cheat-sheat-2021\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Javascript Regex cheatsheet 2021" />
+<meta name="twitter:title" content="Javascript Regex cheatsheet 2021">
+<meta property="og:description" content="This short guide outlines the most important principles and illustrates them with examples to teach you everything you need to know about JavaScript Regular Expressions.">
+<meta name="twitter:card" content="This short guide outlines the most important principles and illustrates them with examples to teach you everything you need to know about JavaScript Regular Expressions.">
+<meta name="twitter:description" content="This short guide outlines the most important principles and illustrates them with examples to teach you everything you need to know about JavaScript Regular Expressions.">
+<meta property="og:image" content="http://localhost:1313/images/javascript-regex.png" />
+<meta name="twitter:image" content="http://localhost:1313/images/javascript-regex.png">
+
+<meta property="og:url" content="http://localhost:1313/post/javascript-regex-cheat-sheat-2021/" />
+<link rel="canonical" href="http://localhost:1313/post/javascript-regex-cheat-sheat-2021/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="javascript,regex,regular,expression,2021,cheatsheet,pattern,match">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="post-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                Javascript Regex cheatsheet 2021
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              <span class="post-meta">
+  
+  
+  &nbsp;27 August 272712
+
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/images/javascript-regex.png" alt="/images/javascript-regex.png" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="javascript-regex-cheatsheet">Javascript Regex Cheatsheet</h1>
+<p><strong>A Regular Expression (RegEx) is a string of characters that defines a search pattern.</strong> Regex can save you hundreds of lines of code and can be used with Javascript or any programming language (and even CLI tools)</p>
+<h2 id="basic-of-regular-expression-or-regex">Basic of Regular Expression or Regex</h2>
+<p>In a RegEx, you always start and end the string with &ldquo;/&rdquo;.
+It is your responsibility to write the code in between the slashes.&quot;/apple/&quot; RegEx is the easiest way to match the term &ldquo;apple&rdquo;. Due to RegEx&rsquo;s case-sensitive nature, this will not match &ldquo;aPpLe&rdquo; or &ldquo;Apple&rdquo;.</p>
+<p><img src="./regex-example.webp" alt="Regex Example for matching Email Address"></p>
+<p>A search for apple using the &ldquo;/apple/i&rdquo; keyword will match the words &ldquo;apple&rdquo; and &ldquo;aPpLe&rdquo;. Use &ldquo;/apple|nut/&rdquo; RegEx to match both &ldquo;apple&rdquo; and &ldquo;nut.&rdquo;</p>
+<p>Isn&rsquo;t it simple, eh?</p>
+<h2 id="regex-in-javascript">Regex in Javascript</h2>
+<p>In this lesson, we&rsquo;ll learn how to use RegEx in JS.</p>
+<ul>
+<li><code>str.match(regex)</code>: Returns an array of matches. It turns out that there&rsquo;s a catch here. As an example, try saying <code>&quot;apple apple&quot;.match(/apple/)</code> In the case of a match(/apple/), you would expect to get [&ldquo;apple&rdquo; and &ldquo;apple&rdquo;] but simple [&lsquo;apple&rsquo;] is returned. Add g flag to receive a full array with multiple matches.</li>
+</ul>
+<ul>
+<li><code>regex.test(str)</code>: This method returns either <code>true</code> if the string is matched or <code>false</code> if not.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold">let</span> regex <span style="font-weight:bold">=</span> <span style="color:#808000">/javascript|programming/i</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> str <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;javascript is awesome programming language&#34;</span>;
+</span></span><span style="display:flex;"><span>regex.test(str); <span style="color:#998;font-style:italic">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>str.match(regex); <span style="color:#998;font-style:italic">// [&#34;javascript&#34;, index: 0, input: &#34;javascript is awesome programming language&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>regex <span style="font-weight:bold">=</span> <span style="color:#808000">/javascript|programming/gi</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>str.match(regex); <span style="color:#998;font-style:italic">// [&#34;javascript&#34;, &#34;programming&#34;]
+</span></span></span></code></pre></div><h2 id="wildcard-period-in-regex">Wildcard Period in Regex</h2>
+<p>Let&rsquo;s use the word &lsquo;hug&rsquo; (<code>/hug/</code>) as an example of how we learned to statically match a word. But what if we want to match &lsquo;huh&rsquo;, &lsquo;hug,&rsquo; and &lsquo;hum&rsquo; all at once? It&rsquo;s the wildcard round! That is the correct response. <code>/hu./</code> This will match all three-letter long words that begin with the letter &lsquo;hu.&rsquo;</p>
+<h2 id="matching-string-which-starts-or-ends-with-particular-character-or-word-or-line-using-regex">Matching string which starts or ends with particular character or word or line using Regex</h2>
+<h3 id="to-find-a-character-or-word-at-the-beginning-of-a-string-use-">To find a character or word at the beginning of a string use <code>^</code>.</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold">let</span> regex <span style="font-weight:bold">=</span> <span style="color:#808000">/^123/</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>regex.test(<span style="color:#b84">&#34;__123_123_&#34;</span>); <span style="color:#998;font-style:italic">// false - 123 is not exactly at the beginning!
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>regex.test(<span style="color:#b84">&#34;123___123___&#34;</span>); <span style="color:#998;font-style:italic">// true
+</span></span></span></code></pre></div><h3 id="to-search-for-a-character-or-word-at-the-end-of-string-use--like-so">To search for a character or word at the end of string use <code>$</code> like so</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>regex <span style="font-weight:bold">=</span> <span style="color:#808000">/123$/</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>regex.test(<span style="color:#b84">&#34;__123__123_&#34;</span>); <span style="color:#998;font-style:italic">// false - 123 has to be at the end
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>regex.test(<span style="color:#b84">&#34;__123&#34;</span>); <span style="color:#998;font-style:italic">// true
+</span></span></span></code></pre></div><h2 id="matching-character-which-occur-one-or-more-than-one-time">Matching character which occur one or more than one time</h2>
+<p>We can use <code>+</code> operator to match the occurance of a string one or more the one time</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// With +
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="font-weight:bold">let</span> regex <span style="font-weight:bold">=</span> <span style="color:#808000">/1+/g</span>;
+</span></span><span style="display:flex;"><span><span style="color:#b84">&#34;123&#34;</span>.match(regex); <span style="color:#998;font-style:italic">//[&#34;1&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#b84">&#34;1123&#34;</span>.match(regex); <span style="color:#998;font-style:italic">//[&#34;11&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#b84">&#34;11213&#34;</span>.match(regex); <span style="color:#998;font-style:italic">//[&#34;11&#34;, &#34;1&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#b84">&#34;234&#34;</span>.match(regex); <span style="color:#998;font-style:italic">//null
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//without +
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>regex <span style="font-weight:bold">=</span> <span style="color:#808000">/a/g</span>;
+</span></span><span style="display:flex;"><span><span style="color:#b84">&#34;abc&#34;</span>.match(regex); <span style="color:#998;font-style:italic">//[&#34;1&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#b84">&#34;aabc&#34;</span>.match(regex); <span style="color:#998;font-style:italic">//[&#34;1&#34;,&#34;1&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#b84">&#34;aabac&#34;</span>.match(regex); <span style="color:#998;font-style:italic">//[&#34;1&#34;,&#34;1&#34;, &#34;1&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#b84">&#34;bbc&#34;</span>.match(regex); <span style="color:#998;font-style:italic">//null
+</span></span></span></code></pre></div><h2 id="matching-character-which-occur-zero-or-more">Matching character which occur zero or more</h2>
+<p>We can use <code>*</code> operator to match the occurance of a string zero or more .</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold">let</span> str <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;111&#34;</span>;
+</span></span><span style="display:flex;"><span>str.match(<span style="color:#808000">/1*/g</span>); <span style="color:#998;font-style:italic">// [&#34;111&#34;, &#34;&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>str.match(<span style="color:#808000">/1/g</span>); <span style="color:#998;font-style:italic">// [&#34;1&#34;, &#34;1&#34;, &#34;1&#34;]
+</span></span></span></code></pre></div><h2 id="optional-character">Optional Character</h2>
+<p>The <code>?</code> operator makes a character or string optinal while mathcing regex pattern.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold">let</span> regex <span style="font-weight:bold">=</span> <span style="color:#808000">/1234?5/</span>; <span style="color:#998;font-style:italic">// makes &#39;u&#39; capital
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">let</span> american <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;1235&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">let</span> british <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;12345&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>regex.test(<span style="color:#b84">&#34;1235&#34;</span>); <span style="color:#998;font-style:italic">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>regex.test(<span style="color:#b84">&#34;12345678&#34;</span>); <span style="color:#998;font-style:italic">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>regex.test(<span style="color:#b84">&#34;12365&#34;</span>); <span style="color:#998;font-style:italic">// false
+</span></span></span></code></pre></div><h2 id="matching-character-at-certain-limit-in-regex">Matching character at certain limit in Regex</h2>
+<p>What if you wish to match a set of characters that repeats X times, such as a set of 5 letters that spells out &ldquo;a&rdquo;?
+Let&rsquo;s get this party started, <code>a{5}</code>
+This would only match &lsquo;aaaaa&rsquo;, not &lsquo;aa&rsquo; or &ldquo;aaaaaaaaaa&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold">let</span> str <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;ama baalo maaaaamal aaaaaa&#34;</span>;
+</span></span><span style="display:flex;"><span>console.log(str.match(<span style="color:#808000">/a{5}/g</span>));
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//prints [&#34;aaaaa&#34;. &#34;aaaaa&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//to match &#39;m&#39; letter followed by 5 x &#39;a&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>console.log(str.match(<span style="color:#808000">/ma{5}/</span>));
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// prints [&#34;maaaaa&#34;, indes: 10, ...]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//which means we have a match at index 10
+</span></span></span></code></pre></div><p>You learned how to match a specific amount of repeating letters, such as <code>a{5}</code> matching &ldquo;aaah.&rdquo;
+But what if you want to match from one to three recurring characters rather than exactly five?
+Here&rsquo;s <code>a{1,3}</code>: it matches &ldquo;a,&rdquo; &ldquo;aa,&rdquo; and &ldquo;aaa,&rdquo; but not &ldquo;aaaa.&rdquo;</p>
+<h2 id="posative-and-negative-lookahead-in-regex">Posative and Negative Lookahead in Regex</h2>
+<p>This is one of the more esoteric aspects of regex. But let&rsquo;s try to understand:</p>
+<ul>
+<li>
+<p><code>x(?=y)</code> - This expression will match all the occurence of &ldquo;x&rdquo; that if followed by &ldquo;y&rdquo;, without making &ldquo;y&rdquo; part of the match.</p>
+</li>
+<li>
+<p><code>x(?!y)</code> - This expression will match all the occurence of &ldquo;x&rdquo; that is <strong>NOT</strong> followed by &ldquo;y&rdquo;, without making &ldquo;y&rdquo; part of the match.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold">let</span> str <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;worldheyworldhello&#34;</span>;
+</span></span><span style="display:flex;"><span>str.match(<span style="color:#808000">/world(?=hello)/</span>); <span style="color:#998;font-style:italic">//[&#34;world&#34;, index: 8, input: &#34;worldheyworldhello&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>str.match(<span style="color:#808000">/world(?=hey)/</span>); <span style="color:#998;font-style:italic">//[&#34;world&#34;, index: 0, input: &#34;worldheyworldhello&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>str.match(<span style="color:#808000">/world(?!hey)/</span>); <span style="color:#998;font-style:italic">//[&#34;world&#34;, index: 8, input: &#34;worldheyworldhello&#34;]
+</span></span></span></code></pre></div><h2 id="capture-groups-in-regex">Capture groups in Regex</h2>
+<p>We&rsquo;ve all heard of the DRY (Don&rsquo;t Repeat Yourself) programming principle. Capture groups assist us in achieving this goal.The string to match is put between <code>/(string)/</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#808000">/(123)\1\1/g</span>;
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//Here \1 will be evaluated as &#34;123&#34; so the regex expression will be:
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// /123123123/g
+</span></span></span></code></pre></div><p>You can alse use multiple capture group as:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold">let</span> regex <span style="font-weight:bold">=</span> <span style="color:#808000">/(123+)(567+)\1\2/g</span>;
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//Will be same as /1233567712335677/g
+</span></span></span></code></pre></div><h2 id="comman-shorthands">Comman shorthands</h2>
+<ul>
+<li>
+<p>For matching only alphbate you can use <code>/[a-z]/</code> or <code>/[A-Z]/</code>. Or you can also use <code>/D/</code>.</p>
+</li>
+<li>
+<p>For matching only numeric you can use <code>/[0-9]/</code>. Alternatively you can also use <code>/d/</code>.</p>
+</li>
+<li>
+<p>For matching a non-word character such as &ldquo;!@#%^*&amp;&rdquo; you can use <code>/\W/</code>.</p>
+</li>
+<li>
+<p>For matching alphanumeric character you can use <code>/\w/</code>.</p>
+</li>
+</ul>
+<h2 id="flags-in-regex">Flags in Regex</h2>
+<p>Along with <code>/regex/g</code> in Javascript we have six flags which are used as needed. They are:</p>
+<ul>
+<li>
+<p><code>/regex/i</code>: The match is now case-insensitive. There is no difference between the letters &lsquo;C&rsquo; and &lsquo;c&rsquo;.</p>
+</li>
+<li>
+<p><code>/regex/s</code>: Allow wildcard period <code>.</code> to match with newline character <code>\n</code>.</p>
+</li>
+<li>
+<p><code>/regex/u</code> : For Unicode Support.</p>
+</li>
+<li>
+<p><code>/regex/y</code> : Enable full Unicode support.</p>
+</li>
+<li>
+<p><code>/regex/m</code>: Multiline more; only affects the behavior of ^ and $</p>
+</li>
+<li>
+<p><code>/regex/g</code>: Only the first match will be returned if this flag is not set.</p>
+</li>
+</ul>
+<h3 id="references">References</h3>
+<ul>
+<li>
+<p><a href="https://dev.to/carter/regular-expressions-regex-in-javascript-4m9h">https://dev.to/carter/regular-expressions-regex-in-javascript-4m9h</a></p>
+</li>
+<li>
+<p><a href="http://www.vitoshacademy.com/vba-regex-in-excel/">http://www.vitoshacademy.com/vba-regex-in-excel/</a></p>
+</li>
+</ul>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/javascript/">javascript</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-regex-cheat-sheat-2021%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-regex-cheat-sheat-2021%2f&amp;text=Javascript%20Regex%20cheatsheet%202021&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-regex-cheat-sheat-2021%2f&amp;title=Javascript%20Regex%20cheatsheet%202021"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share Javascript Regex cheatsheet 2021 on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-regex-cheat-sheat-2021%2f&title=Javascript%20Regex%20cheatsheet%202021">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-regex-cheat-sheat-2021%2f&amp;description=Javascript%20Regex%20cheatsheet%202021" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/post/parallel-programming-stl/"
+            data-toggle="tooltip" data-placement="top" title="Parallel Programming with C&#43;&#43;">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/post/counter-attack-candlestick/"
+            data-toggle="tooltip" data-placement="top" title="Candlestick Pattern - Understanding Counterattack candlestick pattern">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2023
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

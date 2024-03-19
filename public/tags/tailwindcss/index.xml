@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tailwindcss on InsightfulScript</title>
+    <link>http://localhost:1313/tags/tailwindcss/</link>
+    <description>Recent content in Tailwindcss on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Thu, 23 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tailwindcss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Customize Scrollbar in TailwindCSS</title>
+      <link>http://localhost:1313/collections/programming/tailwindcss/tailwindcss-scrollbar/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/tailwindcss/tailwindcss-scrollbar/</guid>
+      <description>How to Customize Scrollbar in TailwindCSS If you&amp;rsquo;re looking for a way to improve the look and feel of your website, you might want to consider using Tailwind CSS. This popular utility-first CSS framework can help you style your website in a way that&amp;rsquo;s both easy and efficient.</description>
+    </item>
+    <item>
+      <title>Tailwind Z-Index - How to Use It with Examples</title>
+      <link>http://localhost:1313/collections/programming/tailwindcss/tailwindcss-z-index/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/tailwindcss/tailwindcss-z-index/</guid>
+      <description>Tailwind Z-Index: How to Use It with Examples If you&amp;rsquo;ve ever worked with web design and front-end development, you know that positioning elements on top of each other can be tricky.</description>
+    </item>
+    <item>
+      <title>Tailwind Z-Index - How to Use It with Examples</title>
+      <link>http://localhost:1313/post/tailwindcss-z-index/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/post/tailwindcss-z-index/</guid>
+      <description>Tailwind Z-Index: How to Use It with Examples If you&amp;rsquo;ve ever worked with web design and front-end development, you know that positioning elements on top of each other can be tricky.</description>
+    </item>
+  </channel>
+</rss>

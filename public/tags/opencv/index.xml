@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opencv on InsightfulScript</title>
+    <link>http://localhost:1313/tags/opencv/</link>
+    <description>Recent content in Opencv on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Thu, 12 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenCV - Face Recognition using LBPH Classifier in C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-creating-own-dataset-cpp/</link>
+      <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-creating-own-dataset-cpp/</guid>
+      <description>OpenCV - Face Recognition using LBPH Classifier in C++ We learned HOW TO RECOGNIZE FACES in my OpenCV tutorial. Now, as shown below, we will gather and use our own data to recognize different faces using LBPH:</description>
+    </item>
+    <item>
+      <title>OpenCV - Face Detection using Haar cascade classifiers (C&#43;&#43;)</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-face-detection/</link>
+      <pubDate>Wed, 27 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-face-detection/</guid>
+      <description>OpenCV - Face Detection using Haar cascade classifiers (C++) The fact that computer vision makes very futuristic-sounding jobs a reality is one of the many reasons why it is a fascinating subject.</description>
+    </item>
+    <item>
+      <title>OpenCV - Removing Background from an image using GrabCut algorithm(C&#43;&#43;)</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-grabcut/</link>
+      <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-grabcut/</guid>
+      <description>OpenCV - Removing Background from an Image using GrabCut Algorithm (C++) This may be appropriate for you if you are a newbie in the field of computer vision, as I am.</description>
+    </item>
+    <item>
+      <title>OpenCV - Image Segmentation using Watershed algorithm C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-watershed/</link>
+      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-watershed/</guid>
+      <description>OpenCV - Image Segmentation using Watershed algorithm C++ The watershed technique is a well-known segmentation algorithm that is particularly good for extracting touching or overlapping items in photographs.&#xA;Marker-based Watershed algorithm We must start with user-defined markers when using the watershed method.</description>
+    </item>
+    <item>
+      <title>OpenCV - Stereo Vision and Depth Estimation using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-stereo-image-depth-estimation/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-stereo-image-depth-estimation/</guid>
+      <description>OpenCV - Stereo Vision and Depth Estimation using C++ Have you ever wondered how robots travel by themselves, grip various things, or avoid collisions while moving? For such purposes, stereo vision-based depth estimate is a common method.</description>
+    </item>
+    <item>
+      <title>OpenCV - Understanding Hough Transform Using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-hough-line-detection/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-hough-line-detection/</guid>
+      <description>OpenCV - Understanding Hough Transform Using C++ Before we can apply the Hough transform to images, we must first learn what a Hough space is, which we shall do through an example.</description>
+    </item>
+    <item>
+      <title>OpenCV - Understanding Convex Hull using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-convexhull/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-convexhull/</guid>
+      <description>OpenCV - Understanding Convex Hull using C++ Finding and analysing the forms present in an image is one technique to solving most computer vision problems, and getting the contour is one of them.</description>
+    </item>
+    <item>
+      <title>OpenCV - Contour Detection Using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/contour-detection/</link>
+      <pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/contour-detection/</guid>
+      <description>OpenCV - Contour Detection Using C++ Contour detection is an important task in computer vision, not only because of the obvious element of detecting contours of subjects in an image or video frame, but also because of the derivative processes associated with identifying contours.</description>
+    </item>
+    <item>
+      <title>OpenCV - Understanding Canny Edge Detection Using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/canny-edge-detection/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/canny-edge-detection/</guid>
+      <description>OpenCV - Understanding Canny Edge Detection Using C++ Edge detection is a type of image processing that identifies the borders (edges) of objects or regions inside a picture. The edges of an image are one of the most important aspects of it.</description>
+    </item>
+    <item>
+      <title>OpenCV - Understanding Low Pass And High Pass Filter using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/opencv-low-high-pass-filter/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/opencv-low-high-pass-filter/</guid>
+      <description>OpenCV - Understanding Low Pass And High Pass Filter using C++ In the past post, we took in a few basic insights regarding the Fourier change and why it merits learning.</description>
+    </item>
+    <item>
+      <title>OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/corernsubpixel/</link>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/corernsubpixel/</guid>
+      <description>OpenCV - Detecting corner location in subpixel(cornerSubPix()) using C++ A digital photo&amp;rsquo;s smallest component is called a &amp;ldquo;pixel&amp;rdquo;. Between pixel information is just inaccessible to the human sight. There are some applications that require more accuracy than a camera can provide.</description>
+    </item>
+    <item>
+      <title>calHist() - Calculate histogram using openCV and C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/calculate-histogram/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/calculate-histogram/</guid>
+      <description>calHist() - Calculate histogram using openCV and C++ In practically every element of computer vision, histograms are used. For threshold, we employ gray-scale histograms. For white balance, we employ histograms. For object tracking in photos, such as with the CamShift technique, we use colour histograms.</description>
+    </item>
+    <item>
+      <title>OpenCV - Image Rotation using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/image-rotation/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/image-rotation/</guid>
+      <description>OpenCV - Image Roatation using C++ Image editing is becoming increasingly popular as mobile phones have built-in capabilities that allow you to crop, rotate, and do other things with your images.</description>
+    </item>
+    <item>
+      <title>OpenCV - Fill Contour using C&#43;&#43;</title>
+      <link>http://localhost:1313/collections/programming/cpp/opencv/fill-contours-cpp/</link>
+      <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/cpp/opencv/fill-contours-cpp/</guid>
+      <description>Introduction Have you ever seen lines drawn around mountain ranges and elevations on topographical maps? Topographical contours are the names given to these lines. They provide an elevation profile of a terrain.</description>
+    </item>
+  </channel>
+</rss>

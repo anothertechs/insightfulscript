@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on InsightfulScript</title>
+    <link>http://localhost:1313/tags/react/</link>
+    <description>Recent content in React on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Router - A Simple Introduction For Beginners</title>
+      <link>http://localhost:1313/collections/programming/react/react-router/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-router/</guid>
+      <description>Understanding React Router: A Comprehensive Guide for Beginners If you&amp;rsquo;re a web developer who uses React, you know that building single-page applications can be a challenge. React Router is an essential tool for creating dynamic, client-side web applications.</description>
+    </item>
+    <item>
+      <title>react-calender - Building a calender app in React JS</title>
+      <link>http://localhost:1313/collections/programming/react/react-calender/</link>
+      <pubDate>Tue, 06 Sep 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-calender/</guid>
+      <description>React Calender In your react web app, managing and modifying dates is a common task. You may do things like add events or create reminders. You can do this by including a calendar in your web application.</description>
+    </item>
+    <item>
+      <title>Boost Your React App&#39;s Performance with useCallback() Hook</title>
+      <link>http://localhost:1313/collections/programming/react/react-usecallbackhook/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-usecallbackhook/</guid>
+      <description>Boost Your React App&amp;rsquo;s Performance with useCallback() Hook Are you looking for ways to boost your React app&amp;rsquo;s performance? Look no further than the useCallback() hook! In this article, we&amp;rsquo;ll explore how this powerful hook can help improve your app&amp;rsquo;s speed and user experience.</description>
+    </item>
+    <item>
+      <title>React JS - useMemo hook in React</title>
+      <link>http://localhost:1313/collections/programming/react/react-usememo-hook/</link>
+      <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-usememo-hook/</guid>
+      <description>ReactJS - useMemo hook in React In software development, we&amp;rsquo;re typically fixated on performance improvements and ways to speed up our products so that users have a better experience.&#xA;One strategy for improving performance is memoization.</description>
+    </item>
+    <item>
+      <title>A Beginner&#39;s Guide to React API Calls- Learn How to Make GET Requests with React</title>
+      <link>http://localhost:1313/collections/programming/react/react-api-call/</link>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-api-call/</guid>
+      <description>A Beginner&amp;rsquo;s Guide to React API Calls: Learn How to Make GET Requests with React If you&amp;rsquo;re a developer working with React, you know how challenging it can be to keep up with all the APIs available.</description>
+    </item>
+    <item>
+      <title>React JS - useReducer hook in react</title>
+      <link>http://localhost:1313/collections/programming/react/react-usereducer-hook/</link>
+      <pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-usereducer-hook/</guid>
+      <description>ReactJS - useReducer() hook in react Hooks in React introduced a new method of building and thinking about React apps. So far, one of the most popular hooks among developers is useReducer, which allows us to manage certain complex state manipulations and updates, and this is what we&amp;rsquo;ll learn about in this post.</description>
+    </item>
+    <item>
+      <title>React useLayoutEffect- A Comprehensive Guide</title>
+      <link>http://localhost:1313/collections/programming/react/react-uselayouteffect/</link>
+      <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-uselayouteffect/</guid>
+      <description>ReatJS - What is useLayoutEffect hook in react React is a well-known and rapidly developing JavaScript library in the web development industry. React is now an excellent alternative for developing interactive, modern real-world applications due to its ease of use and data-fetching capabilities.</description>
+    </item>
+    <item>
+      <title>React JS - Creating custom hooks in React</title>
+      <link>http://localhost:1313/collections/programming/react/react-creating-custom-hooks/</link>
+      <pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-creating-custom-hooks/</guid>
+      <description>ReactJS - Creating Custom hooks in React With the help of custom React hooks, you may provide your React applications additional, distinctive functionality.&#xA;Installing a third-party library designed to address your issue is frequently the simplest way to add a certain functionality to your application.</description>
+    </item>
+    <item>
+      <title>React JS - A complete guide to React refs</title>
+      <link>http://localhost:1313/collections/programming/react/react-createref-hook/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-createref-hook/</guid>
+      <description>ReactJS - A complete guide to refs and useRef() in React We will talk about how to directly manipulate DOM elements in React in this tutorial.&#xA;Although the React Framework constructs your components and abstracts your code from DOM manipulation, developers can still access it.</description>
+    </item>
+    <item>
+      <title>React useContext Hook- Simplifying State Management in React</title>
+      <link>http://localhost:1313/collections/programming/react/react-usecontext-hook/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-usecontext-hook/</guid>
+      <description>React useContext Hook: Simplifying State Management in React In a typical React application, data is passed top-down (from parent to child) by props, however this can be challenging for some prop types (such locale preference and UI theme), which are needed by numerous components that are nested at different levels within an application.</description>
+    </item>
+    <item>
+      <title>ReactJS - Understanding Higher Order Components in React</title>
+      <link>http://localhost:1313/collections/programming/react/react-higher-order-components/</link>
+      <pubDate>Thu, 16 Jun 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-higher-order-components/</guid>
+      <description>ReactJS - Understanding Higher-Order Components in React **A function that takes a component and returns a new component is known as a higher-order component.**React&amp;rsquo;s higher-order components (HOCs) were inspired by JavaScript&amp;rsquo;s higher-order functions.</description>
+    </item>
+    <item>
+      <title>Mastering React Conditional Rendering- A Comprehensive Guide</title>
+      <link>http://localhost:1313/collections/programming/react/react-conditional-rendering/</link>
+      <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-conditional-rendering/</guid>
+      <description>Mastering React Conditional Rendering: A Comprehensive Guide Conditional rendering is a crucial aspect of React that allows developers to render different components based on certain conditions. This feature helps to create dynamic and responsive user interfaces, making React a popular choice for building complex web applications.</description>
+    </item>
+    <item>
+      <title>Creating Responsive Drawer using Material-UI</title>
+      <link>http://localhost:1313/collections/programming/react/material-ui-responsive-drawer/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/material-ui-responsive-drawer/</guid>
+      <description>React Tutorial : Creating responsive Drawer using Material-UI In this article we are going to build a responsive Drawer which adjust itself according to screen size using material-ui framework. If you are new visit here for installing and getting started with Material-UI.</description>
+    </item>
+    <item>
+      <title>Creating Social Card using React and Material UI</title>
+      <link>http://localhost:1313/collections/programming/react/react-social-card/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-social-card/</guid>
+      <description>React Tutorial - Creating a social card using Material UI In this article we will create a simple social card using react&amp;rsquo;s materail UI framework.&#xA;The idea is to create 3 statless component namely SocialCard,CardFront,CardBack.</description>
+    </item>
+    <item>
+      <title>Understand React Stateful and Stateless components</title>
+      <link>http://localhost:1313/collections/programming/react/react-statefull-stateless/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-statefull-stateless/</guid>
+      <description>React js components : Stateful vs stateless What is state ? State is an object which is declared inside the constructor method of the class.They are mutable and are used to interact between different component of the class.</description>
+    </item>
+    <item>
+      <title>Understanding State and Props in React</title>
+      <link>http://localhost:1313/collections/programming/react/react-state-props/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-state-props/</guid>
+      <description>What are state and props in Reactjs In React js we develop different component to develop complex UI.To create dataflow between different component React uses state and porps. Because of state and props it is able to render component with dynamic data.</description>
+    </item>
+    <item>
+      <title>React 18 is out !</title>
+      <link>http://localhost:1313/collections/programming/react/react-18-alpha/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/react-18-alpha/</guid>
+      <description>React 18 is Out! react core team recently released an alpha version of react18. this version pays more attention to user experience and internal architecture changes, including adaptive concurrency functions,it gives you more control over dom rendering events.</description>
+    </item>
+    <item>
+      <title>React Tutorial - Creating a simple weather app using React and Material UI</title>
+      <link>http://localhost:1313/collections/programming/react/weather-app-using-react/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react/weather-app-using-react/</guid>
+      <description>React Tutorial - Creating weather App using Material UI In this article we will be building a weather app using react js material UI framework. We will also be using openweathermap API for fetching the weather data from the site.</description>
+    </item>
+  </channel>
+</rss>

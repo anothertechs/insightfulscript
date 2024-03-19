@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seo on InsightfulScript</title>
+    <link>http://localhost:1313/tags/seo/</link>
+    <description>Recent content in Seo on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Wed, 10 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Social Media Automation Tools</title>
+      <link>http://localhost:1313/collections/seo/social-media-automation-tools/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/seo/social-media-automation-tools/</guid>
+      <description>Best Social Media Automation Tools In the previous two decades, marketing has changed dramatically.To achieve customer loyalty, businesses must now be able to think on their feet.According to social media statistics, automation of digital marketing techniques, particularly social media, is critical.</description>
+    </item>
+  </channel>
+</rss>

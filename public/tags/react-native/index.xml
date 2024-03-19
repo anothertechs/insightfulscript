@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React Native on InsightfulScript</title>
+    <link>http://localhost:1313/tags/react-native/</link>
+    <description>Recent content in React Native on InsightfulScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
+    <webMaster>sample@gmail.com (Hatim Master)</webMaster>
+    <lastBuildDate>Thu, 13 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementing Biometric Authentication in React Native Made Easy</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-biomatric/</link>
+      <pubDate>Thu, 13 Apr 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-biomatric/</guid>
+      <description>Implementing Biometric Authentication in React Native Made Easy An extremely safe and practical method of user authentication is biometric authentication. To confirm a user&amp;rsquo;s identification, it uses physical or behavioural traits like fingerprints or facial recognition.</description>
+    </item>
+    <item>
+      <title>React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-modal/</link>
+      <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-modal/</guid>
+      <description>React Native Modal- A Beginner&amp;rsquo;s Guide to Creating User-Friendly Interfaces Introduction React Native is a popular JavaScript framework that allows developers to create mobile applications for iOS and Android using a single codebase.</description>
+    </item>
+    <item>
+      <title>Mastering React Native Styling Animation- Techniques, Tips, and Tricks</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-styling-animation/</link>
+      <pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-styling-animation/</guid>
+      <description>Animations have the power to enhance the user experience in a mobile application. With React Native Styling Animation, you can add beautiful and interactive animations to your app. This powerful feature provides developers with an easy and effective way to create dynamic animations that can captivate users.</description>
+    </item>
+    <item>
+      <title>React Native Styleshee- A Comprehensive Guide for Beginners</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-stylesheet/</link>
+      <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-stylesheet/</guid>
+      <description>React Native Stylesheet: A Comprehensive Guide for Beginners Introduction React Native has become an incredibly popular tool for building cross-platform mobile applications, and for good reason. It allows developers to write code once and deploy it on multiple platforms, without sacrificing the native look and feel that users have come to expect.</description>
+    </item>
+    <item>
+      <title>React Native Firebase- A Comprehensive Guide</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-firebase/</link>
+      <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-firebase/</guid>
+      <description>React Native Firebase: A Comprehensive Guide React Native Firebase is a powerful tool that combines the capabilities of Firebase, a mobile and web application development platform, with React Native, a popular framework for building mobile apps.</description>
+    </item>
+    <item>
+      <title>A Comprehansive Guid to React Native Elements</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-elements/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-elements/</guid>
+      <description>A Comprehansive Guid to React Native Elements React Native Elements (RNE) are a cross-platform user interface toolkit. These elements may now be utilised on the web, and your codebase can be shared between both React Native and React web projects.</description>
+    </item>
+    <item>
+      <title>React Native WebView Starter Guid</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-webview/</link>
+      <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-webview/</guid>
+      <description>WebViews in React Native allow access to any online site from within the mobile app.&#xA;In a React Native project, the WebView component is used to load webpages. It used to be included in React Native out of the box, but it has since been removed from the core and added to the React Native Community libraries; for additional information, see The Slimmening proposal.</description>
+    </item>
+    <item>
+      <title>A Comprehensive Guide to React Native Navigation Stack- Best Practices and Tips</title>
+      <link>http://localhost:1313/collections/programming/react-native/react-native-navigation-stack/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/react-native/react-native-navigation-stack/</guid>
+      <description>A Comprehensive Guide to React Native Navigation Stack: Best Practices and Tips React Native Navigation Stack is an essential component for building mobile applications using React Native. It provides a flexible and powerful navigation solution that can help you create intuitive and easy-to-use interfaces for your users.</description>
+    </item>
+  </channel>
+</rss>
