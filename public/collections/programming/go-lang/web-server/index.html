@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Go - Creating Web Server - InsightfulScript</title>
+<meta name="description" content="Go guide for creating simple webserver and understanding fundamentals">
+
+<meta name="author" content="Hatim Master"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "InsightfulScript",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/collections\/programming\/go-lang\/web-server\/",
+          "name": "Go creating web server"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hatim Master"
+  },
+  "headline": "Go - Creating Web Server",
+  "description" : "Go guide for creating simple webserver and understanding fundamentals",
+  "inLanguage" : "en",
+  "wordCount":  1381 ,
+  "datePublished" : "2024-03-26T00:00:00",
+  "dateModified" : "2024-03-26T00:00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "programming, golang" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/collections\/programming\/go-lang\/web-server\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Go - Creating Web Server" />
+<meta name="twitter:title" content="Go - Creating Web Server">
+<meta property="og:description" content="Go guide for creating simple webserver and understanding fundamentals">
+<meta name="twitter:card" content="Go guide for creating simple webserver and understanding fundamentals">
+<meta name="twitter:description" content="Go guide for creating simple webserver and understanding fundamentals">
+<meta property="og:image" content="http://localhost:1313/images/go-web-server.webp" />
+<meta name="twitter:image" content="http://localhost:1313/images/go-web-server.webp">
+
+<meta property="og:url" content="http://localhost:1313/collections/programming/go-lang/web-server/" />
+<link rel="canonical" href="http://localhost:1313/collections/programming/go-lang/web-server/">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InsightfulScript" />
+
+
+    <meta name="keywords" content="go,web,server,golang,tutorial,net,http">
+  
+
+    
+    <meta name="robots" content="index, follow">
+  
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" http://localhost:1313/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.123.7">
+<link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="InsightfulScript">
+<script src="http://localhost:1313/js/dark-mode.js"></script><script src="http://localhost:1313/vendor/lunr/lunr.min.js"></script><script src="http://localhost:1313/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY6TT5EQVC"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WY6TT5EQVC', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="http://localhost:1313/">InsightfulScript</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/tags"> Tags</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blogs"
+                  href="/collections/"> Blogs</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden
+                data-results-none="No results found for “{}”"
+                data-results-one="Found one result for “{}”"
+                data-results-many="Found 13579 results for “{}”"
+            >
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read More
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="collections-heading">
+              
+
+              
+
+              
+              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+                Go - Creating Web Server
+                
+              </h1>
+              
+              
+
+              
+
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        
+        
+          
+            <img src="/images/go-web-server.webp" alt="/images/go-web-server.webp" class="card-img-bottom rounded img-fluid lazyload">
+          
+        
+
+
+        
+      </div>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h2 id="introduction">Introduction</h2>
+<p>Web servers are the backbone of the modern online world, powering everything from simple websites to complex web applications. Developers invest significant time and effort into creating robust and efficient server systems that can handle a wide range of user requests and data processing tasks. In this landscape, Go shines with its powerful standard library, which includes comprehensive support for creating HTTP web servers. Unlike some other languages, setting up a basic web server in Go is straightforward and requires minimal configuration, thanks to its built-in features for handling HTTP requests and responses.</p>
+<p>The primary goal of this tutorial is to demystify the process of building a web server using Go and provide a solid understanding of its underlying principles. We&rsquo;ll start by exploring the basics of HTTP communication, including the GET and POST methods, which form the foundation of client-server interactions on the web. Through hands-on examples and practical exercises, you&rsquo;ll learn how to create endpoints, handle incoming requests, process data, and generate appropriate responses.</p>
+<h2 id="creating-web-server">Creating Web Server</h2>
+<p>In Go, creating a web server involves leveraging the powerful <code>net/http</code> package. The <code>net</code> package provides a portable interface for network communication, which serves as the foundation for building network applications. On top of this, the Go standard library&rsquo;s <code>http</code> package offers robust functionality for making HTTP requests and includes an HTTP server that can handle these requests effectively.</p>
+<p>To kickstart the process of creating a web server in Go, we&rsquo;ll follow a few key steps.</p>
+<ol>
+<li>
+<p>First, we&rsquo;ll create a server instance that includes the desired address and port number where the server will listen for incoming requests. The HTTP server instance acts as the backbone of our web server, defining its basic configuration and communication parameters.</p>
+</li>
+<li>
+<p>Once the HTTP server instance is set up, we&rsquo;ll start the server and initiate the listening process at the specified port, allowing the server to actively handle incoming HTTP requests from clients.</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="font-weight:bold">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#34;log&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">// Creating a server instance
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    server <span style="font-weight:bold">:=</span> <span style="font-weight:bold">&amp;</span>http.Server{
+</span></span><span style="display:flex;"><span>        Addr: <span style="color:#b84">&#34;:8080&#34;</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Server is starting at port 8080\n&#34;</span>)
+</span></span><span style="display:flex;"><span>    err <span style="font-weight:bold">:=</span> server.<span style="color:#900;font-weight:bold">ListenAndServe</span>()
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span> err <span style="font-weight:bold">!=</span> <span style="font-weight:bold">nil</span> {
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Something went wrong when creating webserver&#34;</span>)
+</span></span><span style="display:flex;"><span>        log.<span style="color:#900;font-weight:bold">Fatal</span>(err)
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>The code creates an HTTP server instance (<code>&amp;http.Server{}</code>) that listens on port 8080. It then starts the server (<code>server.ListenAndServe()</code>). If everything goes smoothly, the <code>ListenAndServe()</code> function returns <code>nil</code>, indicating that the server is running correctly.</p>
+<p>However, if any errors occur during server startup, such as port already in use or other issues, the <code>ListenAndServe()</code> function returns a non-nil error value. In such cases, the code logs the error and exits using <code>log.Fatal(err)</code>.</p>
+<p>In go programming there is simple version of creating server instance.The <code>http.ListenAndServe</code> function creates an HTTP server with default settings for you. It internally creates an <code>http.Server</code> instance with default configurations if you pass <code>nil</code> as the handler argument. This is a convenient way to quickly create and run a basic HTTP server without needing to explicitly create an <code>http.Server</code> object unless you need to customize the server settings (such as timeouts, TLS configuration, etc.).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b84">&#34;log&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Server is starting at port 8080\n&#34;</span>)
+</span></span><span style="display:flex;"><span>    err <span style="font-weight:bold">:=</span> http.<span style="color:#900;font-weight:bold">ListenAndServe</span>(<span style="color:#b84">&#34;:8080&#34;</span>,<span style="font-weight:bold">nil</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span> err <span style="font-weight:bold">!=</span> <span style="font-weight:bold">nil</span> {
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Something went wrong when creating webserver&#34;</span>)
+</span></span><span style="display:flex;"><span>        log.<span style="color:#900;font-weight:bold">Fatal</span>(err)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this example, <code>http.ListenAndServe</code> is used directly without creating an <code>http.Server</code> instance. The <code>nil</code> argument indicates that the default server settings should be used, making it a concise way to start a basic HTTP server in Go.</p>
+<h3 id="handling-request">Handling Request</h3>
+<p>In this section, we&rsquo;ll delve into how to make our server smart enough to handle incoming requests. Here are the key points we&rsquo;ll cover:</p>
+<p>A Go HTTP server comprises two essential parts: the server itself, which listens for requests from clients, and one or more request handlers responsible for responding to these requests. Our focus will be on setting up these request handlers using <code>http.HandleFunc</code> and then starting the server using <code>http.ListenAndServe</code>.</p>
+<h4 id="adding-request-handlers">Adding Request Handlers</h4>
+<p>Our server can start, but it lacks the ability to respond to requests. We&rsquo;ll use <code>http.HandleFunc</code> to instruct the server on which function to execute when it receives a specific type of request. This way, our server becomes equipped to respond appropriately based on the incoming requests.</p>
+<p><strong>Handling Requests</strong>: The <code>handleRequest</code> function will be pivotal here. It takes two vital parameters: <code>http.ResponseWriter</code> for sending responses back to clients and  <code>*http.Request</code> for handling incoming requests intelligently.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Server is starting at port 8080\n&#34;</span>)
+</span></span><span style="display:flex;"><span>    http.<span style="color:#900;font-weight:bold">HandleFunc</span>(<span style="color:#b84">&#34;/&#34;</span>, <span style="font-weight:bold">func</span>(w http.ResponseWriter, r <span style="font-weight:bold">*</span>http.Request){
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Got and Incoming Request %s\n&#34;</span>,r.URL.Path)
+</span></span><span style="display:flex;"><span>        io.<span style="color:#900;font-weight:bold">WriteString</span>(w, <span style="color:#b84">&#34;Hello Web!&#34;</span>)
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    err <span style="font-weight:bold">:=</span> http.<span style="color:#900;font-weight:bold">ListenAndServe</span>(<span style="color:#b84">&#34;:8080&#34;</span>,<span style="font-weight:bold">nil</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span> err <span style="font-weight:bold">!=</span> <span style="font-weight:bold">nil</span> {
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Something went wrong when creating webserver&#34;</span>)
+</span></span><span style="display:flex;"><span>        log.<span style="color:#900;font-weight:bold">Fatal</span>(err)
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>In the above code :-</p>
+<ol>
+<li>
+<p>The <code>http.HandleFunc(&quot;/&quot;, ...)</code> line sets up a request handler for the root path (&quot;/&quot;) of the server. When a client sends a request to the root URL, the function inside <code>http.HandleFunc</code> is executed.</p>
+</li>
+<li>
+<p>Inside the request handler function, <code>func(w http.ResponseWriter, r *http.Request)</code>, <code>w </code>is the <code>http.ResponseWriter</code> used to send a response back to the client, and <code>r</code> is the <code>http.Request</code> object containing information about the incoming request.</p>
+</li>
+</ol>
+<h2 id="creating-multiple-server">Creating Multiple Server</h2>
+<p>The flexibility of the <code>net/http</code>  package extends beyond just using your own <code>http.Handler</code>. You also have the freedom to utilize multiple HTTP servers within the same program, offering greater control and versatility in your web applications.</p>
+<p>In this section, we&rsquo;ll dive into updating your program to harness the power of multiple <code>http.Server</code> instances provided by the <code>net/http</code> package. This capability becomes invaluable when you require more fine-grained control over your servers or when the need arises to manage multiple servers simultaneously within a single application.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="font-weight:bold">func</span> <span style="color:#900;font-weight:bold">serverOneHandler</span>(w http.ResponseWriter,req <span style="font-weight:bold">*</span>http.Request) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">var</span> html <span style="color:#458;font-weight:bold">string</span> = <span style="color:#b84">`
+</span></span></span><span style="display:flex;"><span><span style="color:#b84">    &lt;h1&gt; Hello From Port 8080 &lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#b84">    `</span>
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Request to / had been made by %s\n&#34;</span>,req.Host)
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Print</span>(<span style="color:#b84">&#34;Header: &#34;</span>,req.RequestURI)
+</span></span><span style="display:flex;"><span>        io.<span style="color:#900;font-weight:bold">WriteString</span>(w,html)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">func</span> <span style="color:#900;font-weight:bold">serverTowHandler</span>(w http.ResponseWriter,req <span style="font-weight:bold">*</span>http.Request) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">var</span> html <span style="color:#458;font-weight:bold">string</span> = <span style="color:#b84">`
+</span></span></span><span style="display:flex;"><span><span style="color:#b84">    &lt;h1&gt; Hello From Port 8081 &lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#b84">    `</span>
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Request to / had been made by %s\n&#34;</span>,req.Host)
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Print</span>(<span style="color:#b84">&#34;Header: &#34;</span>,req.RequestURI)
+</span></span><span style="display:flex;"><span>        io.<span style="color:#900;font-weight:bold">WriteString</span>(w,html)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Starting Mulitple Server:\n&#34;</span>)
+</span></span><span style="display:flex;"><span>    http.<span style="color:#900;font-weight:bold">HandleFunc</span>(<span style="color:#b84">&#34;/server&#34;</span>,serverOneHandler)
+</span></span><span style="display:flex;"><span>    server <span style="font-weight:bold">:=</span> <span style="font-weight:bold">&amp;</span>http.Server{
+</span></span><span style="display:flex;"><span>        Addr: <span style="color:#b84">&#34;:8080&#34;</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">go</span> <span style="font-weight:bold">func</span>() {
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;SERVER STARTED AT PORT 8080\n&#34;</span>)
+</span></span><span style="display:flex;"><span>        err <span style="font-weight:bold">:=</span> server.<span style="color:#900;font-weight:bold">ListenAndServe</span>()
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">if</span> err <span style="font-weight:bold">!=</span> <span style="font-weight:bold">nil</span> {
+</span></span><span style="display:flex;"><span>            fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Something Went wrong check log file for details&#34;</span>)
+</span></span><span style="display:flex;"><span>            log.<span style="color:#900;font-weight:bold">Fatal</span>(err)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    server2 <span style="font-weight:bold">:=</span> <span style="font-weight:bold">&amp;</span>http.Server{
+</span></span><span style="display:flex;"><span>        Addr: <span style="color:#b84">&#34;:8081&#34;</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    http.<span style="color:#900;font-weight:bold">HandleFunc</span>(<span style="color:#b84">&#34;/server2&#34;</span>,serverTowHandler)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">go</span> <span style="font-weight:bold">func</span>() {
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;SERVER STARTED AT PORT 8081\n&#34;</span>)
+</span></span><span style="display:flex;"><span>        err <span style="font-weight:bold">:=</span> server2.<span style="color:#900;font-weight:bold">ListenAndServe</span>()
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">if</span> err <span style="font-weight:bold">!=</span> <span style="font-weight:bold">nil</span> {
+</span></span><span style="display:flex;"><span>            fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#b84">&#34;Something Went wrong check log file for details&#34;</span>)
+</span></span><span style="display:flex;"><span>            log.<span style="color:#900;font-weight:bold">Fatal</span>(err)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">select</span> {}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>
+<p>We start by defining two handler functions: <code>serverOneHandler</code> and <code>serverTwoHandler</code>. These functions are responsible for generating responses for requests directed to different paths (&quot;/server&quot; and &ldquo;/server2&rdquo;) and logging essential request details.</p>
+</li>
+<li>
+<p>Next, we create two instances of <code>http.Server</code>:<code>server</code> configured to listen on port 8080 and <code>server2</code> on port 8081. Each server is associated with its respective handler function using <code>http.HandleFunc</code>, ensuring that incoming requests to the specified paths are handled appropriately.</p>
+</li>
+<li>
+<p>The magic happens when we launch these servers concurrently using goroutines (<code>go func() { ... }()</code>). This concurrency ensures that both servers can run simultaneously, handling incoming requests independently and efficiently.</p>
+</li>
+<li>
+<p>As each server starts, a message is printed to the console confirming their initialization, along with error handling to gracefully handle any startup issues.</p>
+</li>
+<li>
+<p>Finally, we use the <code>select {}</code> statement to keep the main goroutine alive indefinitely, allowing our servers to continue running and processing requests.</p>
+</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>To sum up, the process of setting up and maintaining several HTTP servers in Go reveals the language&rsquo;s strong features and adaptability for web development.
+With Go&rsquo;s concurrency features, clear handler functions, and careful error handling, we can create scalable and durable web servers that can process different kinds of requests at once.</p>
+<p>The separation of concerns through distinct handler functions for different paths or functionalities enhances code organization and readability, while logging and error handling mechanisms ensure effective monitoring and debugging. Incorporating best practices such as graceful shutdown procedures, security considerations, and comprehensive testing further solidifies the server&rsquo;s reliability and resilience.</p>
+<p>As we navigate through the intricacies of Go&rsquo;s net/http package and concurrency model, we unlock the potential to build sophisticated web applications with multiple server instances catering to varied requirements. With proper configuration management, documentation, and performance optimization strategies in place, our Go-powered web servers stand ready to deliver exceptional performance, security, and user experience in the ever-evolving landscape of web development.</p>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <hr class="m-0"/>
+    </div>
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="http://localhost:1313/tags/programming/">programming</a>
+        
+        <a href="http://localhost:1313/tags/golang/">golang</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div>
+  <p>Use the share button below if you liked it.</p>
+</div>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+    <li>
+      <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fgo-lang%2fweb-server%2f" target="_blank" title="Share on Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+      </a>
+    </li>
+    
+    <li>
+      <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fgo-lang%2fweb-server%2f&amp;text=Go%20-%20Creating%20Web%20Server&amp;via=map%5bemail%3asample%40gmail.com%20gelegram%3a%40include_Hatim%20github%3aMaster52%20instagram%3ahatim_master%20linkedin%3ahatim-master%20name%3aHatim%20Master%20reddit%3ahatim112%20website%3a%2f%5d"
+        target="_blank" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+        </svg>
+      </a>
+    </li>
+
+
+    
+    <li>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fgo-lang%2fweb-server%2f&amp;title=Go%20-%20Creating%20Web%20Server"
+        target="_blank" title="Share on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+        </svg>
+      </a>
+    </li>
+
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="share Go - Creating Web Server on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fgo-lang%2fweb-server%2f&title=Go%20-%20Creating%20Web%20Server">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+        </svg>
+      </a>
+    </li>
+
+    
+    
+
+
+    
+    <li>
+      <a href="whatsapp://send?text=http%3a%2f%2flocalhost%3a1313%2fcollections%2fprogramming%2fgo-lang%2fweb-server%2f&amp;description=Go%20-%20Creating%20Web%20Server" target="_blank" rel="noopener"
+        title="Share on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<p class="text-muted">It makes me smile, when I see it.</p>
+        </div>
+      </section>
+      
+    </div>
+
+    
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-2 ">
+            <div class="card-body ">
+              
+              <img src="/images/insightful-log.webp" class="img-responsive img-50 img-round" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <div class="card-body p-1.1">
+              <p class="p-0 m-0"><small class="text-muted">Written By</small></p>
+              <p class="card-text fs-5 m-0">
+
+                
+                Hatim Master
+                
+
+              </p>
+              
+              <p class="card-text fs-6  m-0">Tech enthusiast and founder of InsightfulScript, passionately navigating the worlds of programming and machine learning</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/"
+            data-toggle="tooltip" data-placement="top" title="Implementing Biometric Authentication in React Native Made Easy">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read More</h3>
+        <hr />
+      </div>
+
+      
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-biomatric/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Implementing Biometric Authentication in React Native Made Easy</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  13 April 131312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;9&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Strengthen the security of your React Native app with biometric authentication. Our guide makes it simple and straightforward to implement.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-biomatric_hu9cb1892c08812a762d7bfa1d1ba5aba2_3519329_500x0_resize_q75_box.jpg" alt="/images/react-native-biomatric.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-modal/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">React Native Modal- A Beginner&#39;s Guide to Creating User-Friendly Interfaces</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  3 April 30312
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;12&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to use React Native Modal to create customizable pop-ups and dialogs for your mobile app. This guide will take you through the basics of creating user-friendly interfaces with easy-to-follow steps and examples.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-model-guide_hud77947122ec5bf723575dbf4adbc5a3e_1141034_500x0_resize_q75_box.jpg" alt="/images/react-native-model-guide.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="http://localhost:1313/collections/programming/react-native/react-native-styling-animation/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border">
+            <div class="card-body">
+                <h3 class="fw-bold post-title">Mastering React Native Styling Animation- Techniques, Tips, and Tricks</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  29 March 292912
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;15&nbsp;minutes
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Learn how to create stunning animations using React Native Styling Animation. Discover the best techniques, tips, and tricks to make your app stand out.
+
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/images/react-native-animation_hue9948f21c2412f542d57ba2f26b0bcf8_1158516_500x0_resize_q75_box.jpg" alt="/images/react-native-animation.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:sample@gmail.com" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Master52" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://reddit.com/u/hatim112" title="Reddit" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-reddit-alien"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hatim-master" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hatim_master" title="Instagram" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-instagram"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="/">Hatim Master</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2024
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://localhost:1313/">InsightfulScript</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="http://localhost:1313/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script>
+
+
+    
+  </body>
+</html>
+

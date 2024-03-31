@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>sample@gmail.com (Hatim Master)</managingEditor>
     <webMaster>sample@gmail.com (Hatim Master)</webMaster>
-    <lastBuildDate>Thu, 13 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/collections/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go - Creating Web Server</title>
+      <link>http://localhost:1313/collections/programming/go-lang/web-server/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate><author>sample@gmail.com (Hatim Master)</author>
+      <guid>http://localhost:1313/collections/programming/go-lang/web-server/</guid>
+      <description>Introduction Web servers are the backbone of the modern online world, powering everything from simple websites to complex web applications. Developers invest significant time and effort into creating robust and efficient server systems that can handle a wide range of user requests and data processing tasks.</description>
+    </item>
     <item>
       <title>Implementing Biometric Authentication in React Native Made Easy</title>
       <link>http://localhost:1313/collections/programming/react-native/react-native-biomatric/</link>
